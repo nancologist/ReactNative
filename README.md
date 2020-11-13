@@ -73,9 +73,17 @@ Directories:
 The Styling-Syntax of React-Native looks like CSS but it's not actually CSS!
 
 * ``onPress`` : This is equivalent to ``onClick`` and Click event listener in JS.
+
+TEST: Now on your mobilephone when you click on the "Change Text", the text changes! Magic!
 ___
 
 ## 1.9. React Native Apps Are Hard Work!
+React Native is about : _"Learn once, write everywhere!"_  
+and it's not Write Once!, because for different platforms you need to use if-statements sometimes in React-Native code, for example if it's an iOS ``do this`` but if it's an android phone ``do that``
+
+In React-Native you are also responisble for the responsive design like in web applications and css!
+___
+
 ## 1.10. React Native Alternatives
 ## 1.11. Course Requirements
 ## 1.12. Course Requirement Refreshers
