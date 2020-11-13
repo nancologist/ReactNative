@@ -143,9 +143,21 @@ ___
 ___
 
 # 2. Diving Into the Basics (COURSE GOALS APP)
+
 ## 2.1. Module Introduction
+___
+
 ## 2.2. How to work with React Native Components
+___
+
 ## 2.3. Setting Up A New Project
+1. ``expo init rn-app-2``
+2. "blank"
+3. Max goes with NPM and not Yarn, but i use Yarn!
+4. ``yarn start``
+5. press "i" to run on iOS simulator and "a" to run on Android Vritual Device (or use expo devtool)
+___
+
 ## 2.4. Planning the App
 ## 2.5. Working with Core Components
 ## 2.6. Getting Started with Styles
