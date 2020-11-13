@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Button, StyleSheet, TextInput, View} from 'react-native';
 
 export default function App() {
+    const [ getGoal, setGoal ] = useState('');
+    const [ getGoals, setGoals ] = useState([]);
+
+    const handleGoalInput = (enteredText) => {
+        setGoal(enteredText);
+    };
+
+    const addGoal = () => {
+        const newGoal = getGoal;
+
+        // setGoals([...getGoals, newGoal]); There's no guarantie that "getGoals" is the exactly last snapshot of its state, so we should use this instead:
+        setGoals( (prevGoals) => [...prevGoals, newGoal ] );
+    };
+
     return (
-        <View style={styles.screen}>
-            <View style={styles.inputContainer}>
+        <View style={ styles.screen }>
+            <View style={ styles.inputContainer }>
                 <TextInput
-                    placeholder={'Course Goal'}
-                    style={styles.input}
+                    onChangeText={ handleGoalInput }
+                    placeholder={ 'Course Goal' }
+                    style={ styles.input }
+                    value={ getGoal }
                 />
-                <Button title={'ADD'}/>
+                <Button title={'ADD'} onPress={ addGoal } />
             </View>
             <View>
 

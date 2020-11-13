@@ -185,6 +185,15 @@ ___
 ___
 
 ## 2.10. Working with State & Events
+* ``onChangeText``
+
+__TEST1__ : In Terminal you should see the text you entered in the input field.
+
+__Goal__ : Add the entered goal to the list of goals!
+
+ATTENTION -> ``prevGoals => ...`` 
+___
+
 ## 2.11. Outputting a List of Items
 ## 2.12. Styling List Items
 ## 2.13. Making it Scrollable with ScrollView!
