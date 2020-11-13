@@ -1,21 +1,21 @@
 import React from 'react';
-import { StyleSheet, TextInput, Button, View } from 'react-native';
+import {Button, StyleSheet, TextInput, View} from 'react-native';
 
 export default function App() {
-  return (
-    <View style={ styles.screen }>
-        <View style={ styles.inputContainer}>
-            <TextInput
-                placeholder={'Course Goal'}
-                style={ styles.input }
-            />
-            <Button title={'ADD'} />
-        </View>
-        <View>
+    return (
+        <View style={styles.screen}>
+            <View style={styles.inputContainer}>
+                <TextInput
+                    placeholder={'Course Goal'}
+                    style={styles.input}
+                />
+                <Button title={'ADD'}/>
+            </View>
+            <View>
 
+            </View>
         </View>
-    </View>
-  );
+    );
 }
 
 const styles = StyleSheet.create({
