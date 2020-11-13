@@ -4,10 +4,11 @@ import { StyleSheet, TextInput, Button, View } from 'react-native';
 export default function App() {
   return (
     <View style={{ padding: 50 }}>
-        <View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
             <TextInput
                 placeholder={'Course Goal'}
                 style={{
+                    width: 200, // or 80%
                     borderColor: 'black',
                     borderWidth: 1,
                     padding: 10
