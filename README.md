@@ -164,6 +164,7 @@ ___
 ## 2.5. Working with Core Components
 * ``<View>`` is like ``<div>``.
 * A text can be ONLY between ``<Text>`` tags!!!
+* ``flex`` sets how much can a child element take space of the parent relative to the other child elements.
 ___
 
 ## 2.6. Getting Started with Styles
@@ -173,6 +174,12 @@ ___
 ___
 
 ## 2.8. React Native Flexbox Deep Dive
+* A ``<View>`` different to the ``<div>`` is already a flexbox and applies it to its children by default in column direction!
+* We can change direction with ``flexDirection: 'row'``
+
+* By default the ``alighItems: 'stretch'``, so the child elements take the height of the parent by default, we can change for example by setting it to ``'center'``
+___
+
 ## 2.9. Inline Styles & StyleSheet Objects
 ## 2.10. Working with State & Events
 ## 2.11. Outputting a List of Items
