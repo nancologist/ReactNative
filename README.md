@@ -195,6 +195,8 @@ ATTENTION -> ``prevGoals => ...``
 ___
 
 ## 2.11. Outputting a List of Items
+___
+
 ## 2.12. Styling List Items
 ## 2.13. Making it Scrollable with ScrollView!
 ## 2.14. A Better List: FlatList
