@@ -167,6 +167,8 @@ ___
 ___
 
 ## 2.6. Getting Started with Styles
+___
+
 ## 2.7. Flexbox & Layouts (Intro)
 ## 2.8. React Native Flexbox Deep Dive
 ## 2.9. Inline Styles & StyleSheet Objects
