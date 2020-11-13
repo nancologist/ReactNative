@@ -141,3 +141,32 @@ Official React Native Docs: https://facebook.github.io/react-native/docs/getting
 ___
 ___
 ___
+
+# 2. Diving Into the Basics (COURSE GOALS APP)
+## 2.1. Module Introduction
+## 2.2. How to work with React Native Components
+## 2.3. Setting Up A New Project
+## 2.4. Planning the App
+## 2.5. Working with Core Components
+## 2.6. Getting Started with Styles
+## 2.7. Flexbox & Layouts (Intro)
+## 2.8. React Native Flexbox Deep Dive
+## 2.9. Inline Styles & StyleSheet Objects
+## 2.10. Working with State & Events
+## 2.11. Outputting a List of Items
+## 2.12. Styling List Items
+## 2.13. Making it Scrollable with ScrollView!
+## 2.14. A Better List: FlatList
+## 2.15. Splitting the App Into Components
+## 2.16. Passing Data Between Components
+## 2.17. Working with Touchable Components
+## 2.18. Deleting Items
+## 2.19. Adding a Modal Overlay
+## 2.20. More Flexbox Styling
+## 2.21. Closing the Modal & Clearing Input
+## 2.22. Finishing the Modal Styling
+## 2.23. Wrap Up
+## 2.24. Useful Resources & Links
+___
+___
+___
