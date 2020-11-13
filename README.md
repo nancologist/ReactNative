@@ -66,6 +66,15 @@ ___
 ___
 
 ## 1.8. Working on Our First App
+Directories:
+* .expo/ : some configs, you dont need to touch this.
+* assets/ : hold media like images of your application
+
+The Styling-Syntax of React-Native looks like CSS but it's not actually CSS!
+
+* ``onPress`` : This is equivalent to ``onClick`` and Click event listener in JS.
+___
+
 ## 1.9. React Native Apps Are Hard Work!
 ## 1.10. React Native Alternatives
 ## 1.11. Course Requirements
