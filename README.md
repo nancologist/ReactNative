@@ -45,7 +45,26 @@ We will use for the majority of the course Expo CLI!
 ___
 
 ## 1.6. Node.js Download
+___
+
 ## 1.7. Creating Our First React Native App
+1. Go to ``expo.io``
+2. Click on "Get Started"
+3. Install Node.js
+4. Install Expo: ``sudo npm install expo-cli --global``
+
+### Create EXPO App:
+1. ``cd to/folder/you/want``
+2. ``expo init APP_NAME``
+3. Choose "blank"
+4. ``cd APP_NAME/``
+5. ``npm start`` - Now you see Expo DevTool
+6. Go to your Android/iOS device and in the app store search for "Expo"
+7. Install it on your mobile device.
+8. Open the application
+9. then scan the QR-code which appeared on your computer after ``npm start`` - You have now the app on your mobile device
+___
+
 ## 1.8. Working on Our First App
 ## 1.9. React Native Apps Are Hard Work!
 ## 1.10. React Native Alternatives
