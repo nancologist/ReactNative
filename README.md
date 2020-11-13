@@ -118,6 +118,16 @@ We don't need to test the app on the real smartphone, we can use the simulartor.
 ___
 
 ## 1.14. Running the App on an iOS Simulator
+!ONLY POSSIBLE ON MACOS!
+
+1. Install Xcode
+2. Go to Xcode "Prefernces"
+3. Go to "Locations" tab and mace sure you have the Command Line Tools installed.
+4. Go to Menu > "Xcode" > "Open Dev Too" > "Simulator" > it opens an iOS device
+5. go to Expo dev tool and click on "run ios simulator"
+6. Now you see the app we created on the iOS Virtual Device!
+___
+
 ## 1.15. Course Outline
 ## 1.16. How to get the Most out of This Course
 ## 1.17. Useful Resources & Links
