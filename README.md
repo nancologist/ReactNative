@@ -181,6 +181,9 @@ ___
 ___
 
 ## 2.9. Inline Styles & StyleSheet Objects
+* ``StyleSheet.create()`` : can detect syntax errors in styling and also potential performance improvments
+___
+
 ## 2.10. Working with State & Events
 ## 2.11. Outputting a List of Items
 ## 2.12. Styling List Items
