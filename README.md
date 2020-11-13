@@ -1,6 +1,14 @@
 # 1. Getting Started
+
 ## 1.1. Welcome!
+___
+
 ## 1.2. What is React Native?
+* It's a collection of "special" React (normal React) components.
+* React Native then compiles theses cmps to the native widgets of iOS and Android.
+* gives you the interfaces to use the mobile device components like camera.
+___
+
 ## 1.3. Join our Online Learning Community
 ## 1.4. How React Native Works
 ## 1.5. Expo vs React Native CLI
