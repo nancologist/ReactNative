@@ -129,8 +129,15 @@ ___
 ___
 
 ## 1.15. Course Outline
+___
+
 ## 1.16. How to get the Most out of This Course
+___
+
 ## 1.17. Useful Resources & Links
+Official Expo Docs: https://docs.expo.io/versions/v34.0.0/introduction/installation/
+
+Official React Native Docs: https://facebook.github.io/react-native/docs/getting-started
 ___
 ___
 ___
