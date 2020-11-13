@@ -23,7 +23,27 @@ But the Logic in a React-Native app WON'T BE COMPILED to the native language (Ja
 It's like that: if you want to access the camera, your JS code will run a such a "JS Core VM" which through a __Bridge__ communicate with the Native Platform Modules and APIs.
 ___
 
-## 1.5. Expo vs React Native CLI
+## 1.5. Expo CLI vs React Native CLI
+To __create__ and __manage__ our React-Native app we have two approaches: Expo CLI or React-Native CLI
+
+### Expo CLI
+* 3rd party service
+* free to use
+* "Managed App Development" : it takes lot of complexities away for you!
+* lots of convenience and utlitiy features
+* Downside: You're __limited__ to the Expo ecosystem
+* It also gives a wrapper mobile app for your application to simulate and test during development.
+
+### React-Native CLI
+* offered by React Native Team
+* bare-bon dev (only a basic setup)
+* Downside: you are more on your own
+* Advantate: full flexiblity: Integrity with any native code.
+
+You can always switch (``eject``) from Expo to react native cli.  
+We will use for the majority of the course Expo CLI! 
+___
+
 ## 1.6. Node.js Download
 ## 1.7. Creating Our First React Native App
 ## 1.8. Working on Our First App
