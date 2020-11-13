@@ -159,7 +159,13 @@ ___
 ___
 
 ## 2.4. Planning the App
+___
+
 ## 2.5. Working with Core Components
+* ``<View>`` is like ``<div>``.
+* A text can be ONLY between ``<Text>`` tags!!!
+___
+
 ## 2.6. Getting Started with Styles
 ## 2.7. Flexbox & Layouts (Intro)
 ## 2.8. React Native Flexbox Deep Dive
