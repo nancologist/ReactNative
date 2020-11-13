@@ -89,8 +89,34 @@ ___
 ___
 
 ## 1.11. Course Requirements
+___
+
 ## 1.12. Course Requirement Refreshers
+___
+
 ## 1.13. Running the App on an Android Emulator
+We don't need to test the app on the real smartphone, we can use the simulartor.
+
+* For iOS simulater you need: Xcode
+
+* For Android you need: __Android Studio__
+    1. Download Android Studio
+    2. Install it
+    3. Open the Android Studio
+    4. Click on "Configure" and choose "SDK Manager"
+    5. Install some of the older versions of the Android (for the course you need Android 9.0 (Pie) to be installed)
+    6. Go to "SDK Tools"
+    7. Install also "Android Emulator", "SDK-Platform-Tools" and "SDK Build-Tools" and also "Intel x86 Emulator Accelerator" and also "Google Play Services" in the list.
+    8. Now go to start page again and then "Configure" > "AVD Manager"
+    9. "Create Virtual Device"
+    10. Click on for example "Pixel 2"
+    11. Choose android vers (for example "Pie")
+    12. After the installation click on Next and the "Finish"
+    13. Now launch this Emulator by clicking on the Green Play-Button.
+    14. After the boot of the virtual smart phone go back again to the Expo DevTool on your browser (localhost:19002) and then click on "Run on Android device/simulator".
+    15. Now we see the app we created previously here again on the Virtual Smartphone!
+___
+
 ## 1.14. Running the App on an iOS Simulator
 ## 1.15. Course Outline
 ## 1.16. How to get the Most out of This Course
