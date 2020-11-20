@@ -206,6 +206,13 @@ ___
 ___
 
 ## 2.13. Making it Scrollable with ScrollView!
+
+If in this small app which we made, you produce a lot of items for the list, it will goes out of the screen, and the SCROLLING IS NOT AUTOMATICALLY ACTIVE!!! So we should enable it with ``ScrollView`` cmp!
+
+``ScrollView`` has a lot of attributes, you can check them in the official docs.
+
+___
+
 ## 2.14. A Better List: FlatList
 ## 2.15. Splitting the App Into Components
 ## 2.16. Passing Data Between Components
