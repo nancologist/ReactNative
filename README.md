@@ -198,6 +198,13 @@ ___
 ___
 
 ## 2.12. Styling List Items
+
+* ``Text`` cmp support less styling features than ``View`` cmp, so we rap Text cmp with a View cmp.
+
+* ``marginVertical`` : it's like ``margin-top`` & ``margin-bottom`` in CSS together.
+
+___
+
 ## 2.13. Making it Scrollable with ScrollView!
 ## 2.14. A Better List: FlatList
 ## 2.15. Splitting the App Into Components
