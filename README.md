@@ -229,7 +229,9 @@ The solution is ``FlatList`` cmp it has two important attributes:
 
 ___
 
-## 2.15. Splitting the App Into Components
+## 2.15. Splitting the App Into Components (Own Components)
+___
+
 ## 2.16. Passing Data Between Components
 ## 2.17. Working with Touchable Components
 ## 2.18. Deleting Items
