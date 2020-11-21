@@ -33,7 +33,11 @@ export default function App() {
                 title={'Add New Goal'}
                 onPress={() => { setIsModalOpen(true) }}
             />
-            <GoalInput onAddGoal={addGoal} open={isModalOpen}/>
+            <GoalInput 
+                closeModal={ () => { setIsModalOpen(false); } }
+                onAddGoal={addGoal} 
+                open={isModalOpen}
+            />
             <FlatList 
                 data={getGoals}
                 keyExtractor={(item, index) => item.myKey}

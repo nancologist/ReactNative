@@ -8,6 +8,11 @@ export default (props) => {
         setGoal(enteredText);
     };
 
+    const handlePress = () => {
+        props.onAddGoal(goal);
+        setGoal(''); // Clear Input.
+    }
+
     return (
         <Modal visible={props.open} animationType={'slide'}>
             <View style={styles.inputContainer}>
@@ -17,6 +22,7 @@ export default (props) => {
                     style={styles.input}
                     value={goal}
                 />
+                <Button title={'Cancel'} color={'red'} onPress={props.closeModal} />
 
                 {/* 
                 Passing Data to a Function as Parameter and send it to the Parent Cmp:
@@ -25,7 +31,7 @@ export default (props) => {
                 {/* <Button title={'ADD'} onPress={props.onAddGoal.bind(this, goal)} /> */}
 
                 {/* Alt 2: (Much Easier than Alt 1) */}
-                <Button title={'ADD'} onPress={() => props.onAddGoal(goal)} />
+                <Button title={'ADD'} onPress={handlePress} />
 
             </View>
         </Modal>
