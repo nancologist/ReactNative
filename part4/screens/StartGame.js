@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 
 export default (props) => {
     return (
         <View style={styles.screen}>
-            <Text>The Game Screen</Text>
+            <Text styles={styles.title}>Start a new game!</Text>
+            <View style={styles.inputContainer}>
+                <Text>Select a number</Text>
+                <TextInput />
+                <View style={styles.btnContainer}>
+                    <Button title={'Reset'} onPress={() => {}} />
+                    <Button title={'Confirm'} onPress={() => {}} />
+                </View>
+            </View>
         </View>
     );
 };
@@ -14,5 +22,23 @@ const styles = StyleSheet.create({
         flex: 1, /* takes all spaces, it can take. */
         padding: 10,
         alignItems: 'center',
+    },
+
+    title: {
+        fontSize: 20,
+        marginVertical: 10
+    },
+
+    inputContainer: {
+        width: 300,
+        maxWidth: '80%',
+        alignItems: 'center'
+    },
+
+    btnContainer: {
+        flexDirection: 'row',
+        width: '100%',
+        justifyContent: 'space-between',
+        paddingHorizontal: 15
     },
 });

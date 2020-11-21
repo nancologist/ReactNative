@@ -446,6 +446,8 @@ ___
 ___
 
 ## 4.5. Working on the Layout
+___
+
 ## 4.6. Styling a View as a "Card" Container (with Drop Shadows & Rounded Corners)
 ## 4.7. React Native Styling vs CSS Styling
 ## 4.8. Extracting a Card Component (Presentational Component)
