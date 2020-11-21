@@ -279,3 +279,20 @@ ___
 ___
 ___
 ___
+
+# 3. Debugging React-Native Apps
+
+## 3.1. Module Introduction
+## 3.2. What To Debug & How To Debug?
+## 3.3. Running the App on a Real Device & Debugging
+## 3.4. Handling Error Messages
+## 3.5. Understanding Code Flow with console.log()
+## 3.6. Using the Remote Debugger & Breakpoints
+## 3.7. Working with the Device DevTools Overlay
+## 3.8. Debugging the UI & Using React Native Debugger
+## 3.9. Wrap Up
+## 3.10. Useful Resources & Links
+
+___
+___
+___
