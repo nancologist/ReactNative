@@ -422,6 +422,8 @@ ___
 # 4. Components, Styling, Layouts - Building Real Apps [GUESS A NUMBER APP]
 
 ## 4.1. Module Introduction
+___
+
 ## 4.2. Setup & App Planning
 ## 4.3. Adding a Custom Header Component
 ## 4.4. Adding a Screen Component
