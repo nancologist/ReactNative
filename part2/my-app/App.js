@@ -16,8 +16,12 @@ export default function App() {
         // setGoals([...getGoals, newGoal]); There's no guarantie that "getGoals" is the exactly last snapshot of its state, so we should use this instead:
         setGoals(prevGoals => [
             ...prevGoals,
-            { myKey: Math.random.toString(), val: newGoal } 
+            { myKey: Math.random().toString(), val: newGoal } 
         ]);
+    };
+
+    const removeGoal = goalKey => {
+        setGoals(currentGoals => currentGoals.filter(goal => goal.myKey !== goalKey));
     };
 
     return (
@@ -26,7 +30,13 @@ export default function App() {
             <FlatList 
                 data={getGoals}
                 keyExtractor={(item, index) => item.myKey}
-                renderItem={ data => <GoalItem myVal={data.item.val} onDelete={ () => console.log('Works!!!') } />}
+                renderItem={ data => 
+                    <GoalItem 
+                        myKey={data.item.myKey}
+                        myVal={data.item.val}
+                        onDelete={removeGoal} 
+                    />
+                }
             />
         </View>
     );

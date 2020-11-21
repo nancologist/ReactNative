@@ -254,6 +254,8 @@ __Our Goal:__ Delete the items by tapping the item using Touchable Component Fam
 ___
 
 ## 2.18. Deleting Items
+___
+
 ## 2.19. Adding a Modal Overlay
 ## 2.20. More Flexbox Styling
 ## 2.21. Closing the Modal & Clearing Input

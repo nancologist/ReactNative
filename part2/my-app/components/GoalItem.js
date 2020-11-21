@@ -2,7 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default (props) => (
-    <TouchableOpacity activeOpacity={0.8} onPress={props.onDelete}>
+    <TouchableOpacity 
+        activeOpacity={0.8}
+        onPress={ props.onDelete.bind(this, props.myKey) }
+    >
         <View style={styles.listItem}>
             <Text> {props.myVal} </Text>
         </View>
