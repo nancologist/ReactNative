@@ -34,15 +34,16 @@ export default (props) => {
 
 const styles = StyleSheet.create({
     inputContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1 /* No matter which value, Setting "flex" let <View> takes the whole height as the only children of Modal. */
     },
 
     input: {
         width: 200,
         borderColor: 'black',
         borderWidth: 1,
-        padding: 10
+        padding: 10,
+        marginBottom: 10
     }
 });

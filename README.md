@@ -263,6 +263,11 @@ ___
 ___
 
 ## 2.20. More Flexbox Styling
+
+* ``View`` cmp takes the height of its children, so without children it has height and width are 0.
+
+___
+
 ## 2.21. Closing the Modal & Clearing Input
 ## 2.22. Finishing the Modal Styling
 ## 2.23. Wrap Up
