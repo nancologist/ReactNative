@@ -409,7 +409,7 @@ ___
 
 ## 3.10. Useful Resources & Links
 
-* Expo Debugging Docs: https://docs.expo.io/versions/v34.0.0/workflow/debugging/
+* Expo Debugging Docs: https://docs.expo.io/versions/v34.0.0/woflow/debugging/
 
 * Chrome Dev Tools Docs: https://developers.google.com/web/tools/chrome-devtools/
 
@@ -425,6 +425,17 @@ ___
 ___
 
 ## 4.2. Setup & App Planning
+
+* You set the number which computer should guess.
+* after computered guessed a number:
+    * if it is not the correct number, you give computer a hint "greater" or "lower"
+    * If you give computer a WRONG hint
+    * if it's the correct number, computer has won!
+        * the message would be: "The AI found your number in X guesses"
+        * and under the msg , a btn with "RESET" to reset the game.
+
+___
+
 ## 4.3. Adding a Custom Header Component
 ## 4.4. Adding a Screen Component
 ## 4.5. Working on the Layout
