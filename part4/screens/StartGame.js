@@ -4,7 +4,7 @@ import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 export default (props) => {
     return (
         <View style={styles.screen}>
-            <Text styles={styles.title}>Start a new game!</Text>
+            <Text style={styles.title}>Start a new game!</Text>
             <View style={styles.inputContainer}>
                 <Text>Select a number</Text>
                 <TextInput />
@@ -32,7 +32,18 @@ const styles = StyleSheet.create({
     inputContainer: {
         width: 300,
         maxWidth: '80%',
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowRadius: 6,
+        shadowOpacity: 0.26,
+        backgroundColor: 'white',
+        elevation: 7, /* for Android */
+        padding: 20,
+        borderRadius: 10
     },
 
     btnContainer: {

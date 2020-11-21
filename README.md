@@ -449,6 +449,13 @@ ___
 ___
 
 ## 4.6. Styling a View as a "Card" Container (with Drop Shadows & Rounded Corners)
+
+* All the Shadow properties, like ``shadowColor``, ``shadowOffset``, ... ONLY WORK ON __iOS__.
+
+* For that you can use ``elevation`` for the Android, which would NOT work on iOS.
+
+___
+
 ## 4.7. React Native Styling vs CSS Styling
 ## 4.8. Extracting a Card Component (Presentational Component)
 ## 4.9. Color Theming with Constants
