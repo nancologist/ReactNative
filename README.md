@@ -257,6 +257,11 @@ ___
 ___
 
 ## 2.19. Adding a Modal Overlay
+
+* ``<Modal>`` cmp - (__Our Goal:__ We want to show the GoalInput cmp in a modal!)
+
+___
+
 ## 2.20. More Flexbox Styling
 ## 2.21. Closing the Modal & Clearing Input
 ## 2.22. Finishing the Modal Styling

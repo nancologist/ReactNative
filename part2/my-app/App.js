@@ -11,6 +11,7 @@ import GoalInput from './components/GoalInput';
 
 export default function App() {
     const [ getGoals, setGoals ] = useState([]);
+    const [ isModalOpen, setIsModalOpen ] = useState(false);
 
     const addGoal = (newGoal) => {
         // setGoals([...getGoals, newGoal]); There's no guarantie that "getGoals" is the exactly last snapshot of its state, so we should use this instead:
@@ -18,6 +19,8 @@ export default function App() {
             ...prevGoals,
             { myKey: Math.random().toString(), val: newGoal } 
         ]);
+
+        setIsModalOpen(false);
     };
 
     const removeGoal = goalKey => {
@@ -26,7 +29,11 @@ export default function App() {
 
     return (
         <View style={ styles.screen }>
-            <GoalInput onAddGoal={addGoal}/>
+            <Button 
+                title={'Add New Goal'}
+                onPress={() => { setIsModalOpen(true) }}
+            />
+            <GoalInput onAddGoal={addGoal} open={isModalOpen}/>
             <FlatList 
                 data={getGoals}
                 keyExtractor={(item, index) => item.myKey}
