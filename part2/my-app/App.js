@@ -10,16 +10,9 @@ import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
 
 export default function App() {
-    const [ getGoal, setGoal ] = useState('');
     const [ getGoals, setGoals ] = useState([]);
 
-    const handleGoalInput = (enteredText) => {
-        setGoal(enteredText);
-    };
-
-    const addGoal = () => {
-        const newGoal = getGoal;
-
+    const addGoal = (newGoal) => {
         // setGoals([...getGoals, newGoal]); There's no guarantie that "getGoals" is the exactly last snapshot of its state, so we should use this instead:
         setGoals(prevGoals => [
             ...prevGoals,
@@ -29,11 +22,7 @@ export default function App() {
 
     return (
         <View style={ styles.screen }>
-            <GoalInput 
-                goal={getGoal}
-                textChanged={handleGoalInput}
-                btnClicked={addGoal}
-            />
+            <GoalInput onAddGoal={addGoal}/>
             <FlatList 
                 data={getGoals}
                 keyExtractor={(item, index) => item.myKey}

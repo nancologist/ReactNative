@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, View, TextInput, StyleSheet } from 'react-native';
 
-export default (props) => (
-    <View style={styles.inputContainer}>
-        <TextInput
-            onChangeText={props.textChanged}
-            placeholder={'Course Goal'}
-            style={styles.input}
-            value={props.goal}
-        />
-        <Button title={'ADD'} onPress={props.btnClicked} />
-    </View>
-);
+export default (props) => {
+    const [ goal, setGoal ] = useState('');
+    
+    const handleGoalInput = (enteredText) => {
+        setGoal(enteredText);
+    };
+
+    return (
+        <View style={styles.inputContainer}>
+            <TextInput
+                onChangeText={handleGoalInput}
+                placeholder={'Course Goal'}
+                style={styles.input}
+                value={goal}
+            />
+        
+            {/* 
+                Passing Data to a Function as Parameter and send it to the Parent Cmp:
+                Alt 1: 
+            */}
+            {/* <Button title={'ADD'} onPress={props.onAddGoal.bind(this, goal)} /> */}
+            
+            {/* Alt 2: (Much Easier than Alt 1) */}
+            <Button title={'ADD'} onPress={() => props.onAddGoal(goal)} />
+
+        </View>
+    );
+}
 
 const styles = StyleSheet.create({
     inputContainer: {

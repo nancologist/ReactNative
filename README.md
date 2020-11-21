@@ -233,6 +233,12 @@ ___
 ___
 
 ## 2.16. Passing Data Between Components
+
+Mori: I have done it in the __2.15__ myself.
+* This is __HOW TO PASS DATA TO A FUNCTION AS PARAMETER AND SEND IT TO THE PARENT CMP__!!! ``GoalInput.js``
+
+___
+
 ## 2.17. Working with Touchable Components
 ## 2.18. Deleting Items
 ## 2.19. Adding a Modal Overlay
