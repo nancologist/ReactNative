@@ -296,7 +296,28 @@ ___
 # 3. Debugging React-Native Apps
 
 ## 3.1. Module Introduction
+___
+
 ## 3.2. What To Debug & How To Debug?
+
+What to debug?
+* __Cashing App__, like:
+    * Syntax errors.
+    * bugs (``undefined``, usw)
+    * "Unavoidable" errors: (network errors, request and resp errors)
+* __Logical errors__
+    * ...
+* __Wrong styling and layout__
+    * different devices
+    * very small devices
+
+How to debug?
+* READ the error messages carefully!
+* using ``console.log()``
+* Chrome Debugger + Breakpoints
+
+___
+
 ## 3.3. Running the App on a Real Device & Debugging
 ## 3.4. Handling Error Messages
 ## 3.5. Understanding Code Flow with console.log()
