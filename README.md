@@ -405,7 +405,15 @@ You can use ``Profiler`` you can optimize RERENDERINGs in you app, for example t
 ___
 
 ## 3.9. Wrap Up
+___
+
 ## 3.10. Useful Resources & Links
+
+* Expo Debugging Docs: https://docs.expo.io/versions/v34.0.0/workflow/debugging/
+
+* Chrome Dev Tools Docs: https://developers.google.com/web/tools/chrome-devtools/
+
+___
 
 ___
 ___
