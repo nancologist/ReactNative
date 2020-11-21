@@ -240,6 +240,13 @@ Mori: I have done it in the __2.15__ myself.
 ___
 
 ## 2.17. Working with Touchable Components
+
+__Our Goal:__ Delete the items by tapping the item using Touchable Component Family!
+
+* ``TouchableOpacity`` gives user feedback by making the UI element transpaernt when he touches it. We can configure the opacity's change with ``activeOpacity``
+
+___
+
 ## 2.18. Deleting Items
 ## 2.19. Adding a Modal Overlay
 ## 2.20. More Flexbox Styling
