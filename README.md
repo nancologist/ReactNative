@@ -214,6 +214,21 @@ If in this small app which we made, you produce a lot of items for the list, it 
 ___
 
 ## 2.14. A Better List: FlatList
+
+``ScrollView`` is great for a long list, but it's NOT suitable for a list which you DON'T KNOW how LONG it will be or which might be very very long. For shorter lists which exceeds screen ``ScrollView`` would be ok.
+
+The problem of ``ScrollView`` is that it LOADS ALL the contents IN ADVANCE, even the ones which are not on the screen!!! It SLOWS DOWN YOUR APP!
+
+The solution is ``FlatList`` cmp it has two important attributes: 
+* ``data`` (should point to an ARRAY)
+* ``renderItem``
+* elements in the ARRAY should be objects which have a ``key`` prop. (``key`` should be string)
+* If you enter sth except "key" or "id" as key you should specify it using ``keyExtractor`` as attr of the ``FlatList`` cmp.
+
+* FlatList cmp ONLY renders what's REQUIRED.
+
+___
+
 ## 2.15. Splitting the App Into Components
 ## 2.16. Passing Data Between Components
 ## 2.17. Working with Touchable Components

@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import {Button, StyleSheet, Text, TextInput, View, ScrollView} from 'react-native';
+import {
+    Button, 
+    StyleSheet, 
+    Text, 
+    TextInput, 
+    View, 
+    ScrollView,
+    FlatList
+} from 'react-native';
 
 export default function App() {
     const [ getGoal, setGoal ] = useState('');
@@ -13,7 +21,10 @@ export default function App() {
         const newGoal = getGoal;
 
         // setGoals([...getGoals, newGoal]); There's no guarantie that "getGoals" is the exactly last snapshot of its state, so we should use this instead:
-        setGoals( (prevGoals) => [...prevGoals, newGoal ] );
+        setGoals(prevGoals => [
+            ...prevGoals,
+            { myKey: Math.random.toString(), val: newGoal } 
+        ]);
     };
 
     return (
@@ -27,19 +38,15 @@ export default function App() {
                 />
                 <Button title={'ADD'} onPress={ addGoal } />
             </View>
-            <ScrollView>
-                {
-                    getGoals.map(
-                        (goal, index) => 
-                            <View 
-                                key={index}
-                                style={ styles.listItem } 
-                            >
-                                <Text> {goal} </Text>
-                            </View>
-                    )
-                }
-            </ScrollView>
+            <FlatList 
+                data={getGoals}
+                keyExtractor={(item, index) => item.myKey}
+                renderItem={ data => (
+                    <View style={ styles.listItem }>
+                        <Text> {data.item.val} </Text>
+                    </View>
+                )}
+            />
         </View>
     );
 }
