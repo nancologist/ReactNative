@@ -363,6 +363,24 @@ ___
 ___
 
 ## 3.7. Working with the Device DevTools Overlay
+
+Debugging with Expo:
+* on iOS device + Mac: ``CMD+D``
+* on Android device + Mac/Windows: ``CMD/CTRL+M``
+
+* Other Features:
+    * Reloading App, you can also do that using:
+        * Android, also with hotkey ``RR``
+        * iOS:, also with hotkey ``CMD+R / CTRL+R``
+    
+    * Enable Hot Reloading
+
+    * Show Performance Monitor
+        * Shows how your app uses the smartphone resources
+        * ATTENTION: As we are in develop mode, the performance is worse than in production mode.
+
+___
+
 ## 3.8. Debugging the UI & Using React Native Debugger
 ## 3.9. Wrap Up
 ## 3.10. Useful Resources & Links
