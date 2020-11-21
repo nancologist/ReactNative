@@ -319,6 +319,23 @@ How to debug?
 ___
 
 ## 3.3. Running the App on a Real Device & Debugging
+
+Don't forget, with Expo, you can easily run your app on real devices, too!
+
+Simply download the Expo app from the App Stores and scan the barcode the Expo DevTools (that browser tab which opened when you ran npm start) show.
+
+On iOS devices, you don't scan the barcode with the Expo app but instead with your normal device camera (simply point it at the barcode and you should be prompted whether you want to open that app in the Expo app).
+
+On Android devices, you find an integrated barcode scanner in the Expo app.
+
+---
+
+With the app running on a real device, you can debug it from there, too. Shake the device a little to bring up the developer menu.
+
+There, you can enable the remote debugger and the other features covered in this module.
+
+___
+
 ## 3.4. Handling Error Messages
 ## 3.5. Understanding Code Flow with console.log()
 ## 3.6. Using the Remote Debugger & Breakpoints
