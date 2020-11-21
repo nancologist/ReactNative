@@ -275,7 +275,20 @@ ___
 ___
 
 ## 2.23. Wrap Up
+___
+
 ## 2.24. Useful Resources & Links
+
+These links might also be helpful:
+
+* Official Docs: https://facebook.github.io/react-native/docs/getting-started
+
+* Overview of available Components & APIs: https://facebook.github.io/react-native/docs/components-and-apis
+
+Expo Docs: https://docs.expo.io/versions/latest/
+
+___
+
 ___
 ___
 ___
