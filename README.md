@@ -322,7 +322,7 @@ ___
 
 Don't forget, with Expo, you can easily run your app on real devices, too!
 
-Simply download the Expo app from the App Stores and scan the barcode the Expo DevTools (that browser tab which opened when you ran npm start) show.
+Simply download the Expo app from the App Stores and scan the barcode the Expo DevTools (that browser tab which opened when you ran ``npm start``) show.
 
 On iOS devices, you don't scan the barcode with the Expo app but instead with your normal device camera (simply point it at the barcode and you should be prompted whether you want to open that app in the Expo app).
 
@@ -337,8 +337,31 @@ There, you can enable the remote debugger and the other features covered in this
 ___
 
 ## 3.4. Handling Error Messages
+
+_Mori: I did not code with! - Check the video._
+
+___ 
+
 ## 3.5. Understanding Code Flow with console.log()
+
+_Mori: I did not code with! - Check the video._
+
+___
+
 ## 3.6. Using the Remote Debugger & Breakpoints
+
+1. Debugging with Expo:
+    * on iOS device + Mac: ``CMD+D``
+    * on Android device + Mac/Windows: ``CMD/CTRL+M``
+
+2. In the menu choose "Debug Remote JS" (The Connection in Expo DevTool should be set to "LAN" or "Local") 
+
+3. Chrome DevTool > Source tab
+
+4. use debugging tool and breakpoints
+
+___
+
 ## 3.7. Working with the Device DevTools Overlay
 ## 3.8. Debugging the UI & Using React Native Debugger
 ## 3.9. Wrap Up
