@@ -22,17 +22,20 @@ export default (props) => {
                     style={styles.input}
                     value={goal}
                 />
-                <Button title={'Cancel'} color={'red'} onPress={props.closeModal} />
-
-                {/* 
-                Passing Data to a Function as Parameter and send it to the Parent Cmp:
-                Alt 1: 
-                */}
-                {/* <Button title={'ADD'} onPress={props.onAddGoal.bind(this, goal)} /> */}
-
-                {/* Alt 2: (Much Easier than Alt 1) */}
-                <Button title={'ADD'} onPress={handlePress} />
-
+                <View style={styles.btnContainer}>
+                    <View style={styles.btn}>
+                        <Button title={'Cancel'} color={'red'} onPress={props.closeModal} />
+                    </View>
+                    {/* 
+                    Passing Data to a Function as Parameter and send it to the Parent Cmp:
+                    Alt 1: 
+                    */}
+                    {/* <Button title={'ADD'} onPress={props.onAddGoal.bind(this, goal)} /> */}
+                    {/* Alt 2: (Much Easier than Alt 1) */}
+                    <View style={styles.btn}>
+                        <Button title={'ADD'} onPress={handlePress} />
+                    </View>
+                </View>
             </View>
         </Modal>
     );
@@ -45,11 +48,21 @@ const styles = StyleSheet.create({
         flex: 1 /* No matter which value, Setting "flex" let <View> takes the whole height as the only children of Modal. */
     },
 
+    btnContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '85%'
+    },
+
     input: {
-        width: 200,
+        width: '85%',
         borderColor: 'black',
         borderWidth: 1,
         padding: 10,
         marginBottom: 10
+    },
+
+    btn: {
+        width: 80
     }
 });

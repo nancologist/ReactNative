@@ -272,6 +272,8 @@ ___
 ___
 
 ## 2.22. Finishing the Modal Styling
+___
+
 ## 2.23. Wrap Up
 ## 2.24. Useful Resources & Links
 ___
