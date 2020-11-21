@@ -437,6 +437,11 @@ ___
 ___
 
 ## 4.3. Adding a Custom Header Component
+
+* Remember: ``View`` cmp is already a Flexbox by default for styling
+
+___
+
 ## 4.4. Adding a Screen Component
 ## 4.5. Working on the Layout
 ## 4.6. Styling a View as a "Card" Container (with Drop Shadows & Rounded Corners)
