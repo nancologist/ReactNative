@@ -418,3 +418,46 @@ ___
 ___
 ___
 ___
+
+# 4. Components, Styling, Layouts - Building Real Apps [GUESS A NUMBER APP]
+
+## 4.1. Module Introduction
+## 4.2. Setup & App Planning
+## 4.3. Adding a Custom Header Component
+## 4.4. Adding a Screen Component
+## 4.5. Working on the Layout
+## 4.6. Styling a View as a "Card" Container (with Drop Shadows & Rounded Corners)
+## 4.7. React Native Styling vs CSS Styling
+## 4.8. Extracting a Card Component (Presentational Component)
+## 4.9. Color Theming with Constants
+## 4.10. Configuring & Styling a TextInput
+## 4.11. Cleaning User Input & Controlling the Soft Keyboard
+## 4.12. Resetting & Confirming User Input
+## 4.13. Showing an Alert
+## 4.14. Time to Finish the "Confirmation Box"
+## 4.15. Adding Random Number Generation
+## 4.16. Switching Between Multiple "Screens"
+## 4.17. Adding Game Features: Hints & Validation
+## 4.18. Checking the "Win" Condition with useEffect()
+## 4.19. Finishing the Game Logic
+## 4.20. Adding Custom Fonts
+## 4.21. Installing expo-font
+## 4.22. A Synthetic Style "Cascade": Custom Wrapper Components & Global Styles
+## 4.23. Adding Local Images
+## 4.24. Styling Images
+## 4.25. Working with Network (Web) Images
+## 4.26. A Closer Look at the "Text" Component (and what you can do with it)
+## 4.27. <View> vs <Text> - A Summary
+## 4.28. Building a Custom Button Component
+## 4.29. Adding Icons
+## 4.30. Exploring UI Libraries
+## 4.31. Managing Past Guesses as a List
+## 4.32. Styling List Items & Lists
+## 4.33. ScrollView & Flexbox (Yes, that works!)
+## 4.34. Using FlatList Instead of ScrollView
+## 4.35. Wrap Up
+## 4.36. Useful Resources & Links
+
+___
+___
+___
