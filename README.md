@@ -33,6 +33,7 @@ To __create__ and __manage__ our React-Native app we have two approaches: Expo C
 * lots of convenience and utlitiy features
 * Downside: You're __limited__ to the Expo ecosystem
 * It also gives a wrapper mobile app for your application to simulate and test during development.
+* (Mori: I think this is somewhoe like `create react app`)
 
 ### React-Native CLI
 * offered by React Native Team
