@@ -63,7 +63,7 @@ ___
 6. Go to your Android/iOS device and in the app store search for "Expo"
 7. Install it on your mobile device.
 8. Open the application
-9. then scan the QR-code which appeared on your computer after ``npm start`` - You have now the app on your mobile device
+9. then scan the QR-code which appeared on your computer after ``npm start`` - You have now the app on your mobile device (On iOS you should go to Camera App but on Android you can scan QR code directly from the Expo app)
 ___
 
 ## 1.8. Working on Our First App
