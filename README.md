@@ -86,7 +86,7 @@ In React-Native you are also responisble for the responsive design like in web a
 ___
 
 ## 1.10. React Native Alternatives
-* React-Native changes VERY fast and the new versions of it come out like every month!
+* React-Native changes VERY fast and the new versions of it come out like every month! So sometimes you need to adjust your react-native app.
 ___
 
 ## 1.11. Course Requirements
