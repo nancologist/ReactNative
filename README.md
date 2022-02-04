@@ -75,7 +75,7 @@ The Styling-Syntax of React-Native looks like CSS but it's not actually CSS!
 
 * ``onPress`` : This is equivalent to ``onClick`` and Click event listener in JS.
 
-TEST: Now on your mobilephone when you click on the "Change Text", the text changes! Magic!
+TEST: Now on your mobile phone when you click on the "Change Text", the text changes! Magic!
 ___
 
 ## 1.9. React Native Apps Are Hard Work!
