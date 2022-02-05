@@ -177,10 +177,12 @@ ___
 2. "blank"
 3. ``yarn start``
 4. press "i" to run on iOS simulator and "a" to run on Android Vritual Device (or use expo devtool)
-test
 ___
 
 ## 2.4. Planning the App
+We are going to create a "Goal app" where you can store the goals in a list and then by clicking on each item to delete the goal.
+
+This app is to help to learn the core features of React Native.
 ___
 
 ## 2.5. Working with Core Components
