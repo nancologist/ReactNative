@@ -16,9 +16,8 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <View
-        style={styles.inputContainer}
-      >
+
+      <View style={styles.inputContainer}>
         <TextInput
           onChangeText={handleGoalInput}
           placeholder="Your Goals..."
