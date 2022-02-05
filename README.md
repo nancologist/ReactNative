@@ -210,10 +210,14 @@ By default, the `<View>` has something like `display: flex;` of CSS.
 ___
 
 ## 2.8. React Native Flexbox Deep Dive
+Mori: I DID NOT WATCH THIS LECTURE COMPLETELY, BECAUSE IT SHOULD WORK ALMOST LIKE CSS FLEXBOX...
+
 * A ``<View>`` different to the ``<div>`` is already a flexbox and applies it to its children by default in column direction!
 * We can change direction with ``flexDirection: 'row'``
 
 * By default the ``alighItems: 'stretch'``, so the child elements take the height of the parent by default, we can change for example by setting it to ``'center'``
+
+* ReactNative Flexbox cheatsheet: https://reactnative.dev/docs/flexbox
 ___
 
 ## 2.9. Inline Styles & StyleSheet Objects
