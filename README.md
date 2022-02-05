@@ -221,7 +221,7 @@ Mori: I DID NOT WATCH THIS LECTURE COMPLETELY, BECAUSE IT SHOULD WORK ALMOST LIK
 ___
 
 ## 2.9. Inline Styles & StyleSheet Objects
-* ``StyleSheet.create()`` : can detect syntax errors in styling and also potential performance improvments
+* Why not outsourcing style objects without using StyleSheet.create() ??? because ``StyleSheet.create()`` : can detect syntax errors in styling and also potential performance improvments.
 ___
 
 ## 2.10. Working with State & Events
