@@ -187,7 +187,7 @@ ___
 
 ## 2.5. Working with Core Components
 * ``<View>`` is like ``<div>``.
-* A text can be ONLY between ``<Text>`` tags!!!
+* A text can be ONLY between ``<Text>`` tags!!! and not directly between `<view></view>` . It's different than HTML.
 * ``flex`` sets how much can a child element take space of the parent relative to the other child elements.
 ___
 
