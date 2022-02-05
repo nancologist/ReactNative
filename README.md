@@ -225,7 +225,11 @@ ___
 ___
 
 ## 2.10. Working with State & Events
-* ``onChangeText``
+* ``onChangeText`` : like `onChange` in ReactJS
+
+* `console.log()` : You see the logs on the terminal, where the Expo is running.  
+  Alternatively you can see the logs in the browser localhost:19002 > "Click on the device" > log is there.
+
 
 __TEST1__ : In Terminal you should see the text you entered in the input field.
 
