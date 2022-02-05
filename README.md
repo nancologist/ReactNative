@@ -189,9 +189,18 @@ ___
 * ``<View>`` is like ``<div>``.
 * A text can be ONLY between ``<Text>`` tags!!! and not directly between `<view></view>` . It's different than HTML.
 * ``flex`` sets how much can a child element take space of the parent relative to the other child elements.
+
+To check all the React Native components: https://reactnative.dev/docs/components-and-apis
 ___
 
 ## 2.6. Getting Started with Styles
+We can not see the `TextInput` when the app renders. That's because it's in the top of device display so we should add stylings to fix it.
+
+Every component has its own allowed Style-properties , for example for `<view></view>` : https://reactnative.dev/docs/view-style-props
+
+Style values should be in `Number` type and they will be interpreted with pixel unit, for example: `padding: 10` means like in css: `padding: '10px'`
+
+Now if you click above "ADD" button. On android you see the soft keyboard opens but for iOS you should: go to Xcode top menu > "Hardware" > "Keyboard" > "Toggle Software Keyboard" (Mori: for newer version of Xcode: Xcode-Menu > "I/O" > "Keyboard" > "Toggle Software Keyboard")  
 ___
 
 ## 2.7. Flexbox & Layouts (Intro)

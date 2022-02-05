@@ -1,10 +1,18 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TextInput, Button } from 'react-native';
 
 export default function App() {
   return (
-    <View>
+    <View style={{ padding: 50 }}>
       <View>
-        {/* Input Placeholder */}
+        <TextInput
+            placeholder="Your Goals..."
+            style={{
+                borderColor: 'black',
+                borderBottomWidth: 1,
+                padding: 10
+            }}
+        />
+        <Button title="Add" />
       </View>
       <View>
         {/* List of Goals Placeholder */}
