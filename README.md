@@ -204,6 +204,9 @@ Now if you click above "ADD" button. On android you see the soft keyboard opens 
 ___
 
 ## 2.7. Flexbox & Layouts (Intro)
+We want to bring the button next to the TextInput instead of being blow of it.
+
+By default, the `<View>` has something like `display: flex;` of CSS.
 ___
 
 ## 2.8. React Native Flexbox Deep Dive
