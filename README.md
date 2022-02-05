@@ -98,24 +98,45 @@ ___
 ## 1.13. Running the App on an Android Emulator
 We don't need to test the app on the real smartphone, we can use the simulartor.
 
-* For iOS simulater you need: Xcode
+### For iOS simulater you need: Xcode
+https://docs.expo.dev/workflow/ios-simulator/
 
-* For Android you need: __Android Studio__
-    1. Download Android Studio
-    2. Install it
-    3. Open the Android Studio
-    4. Click on "Configure" and choose "SDK Manager"
-    5. Install some of the older versions of the Android (for the course you need Android 9.0 (Pie) to be installed)
-    6. Go to "SDK Tools"
-    7. Install also "Android Emulator", "SDK-Platform-Tools" and "SDK Build-Tools" and also "Intel x86 Emulator Accelerator" and also "Google Play Services" in the list.
-    8. Now go to start page again and then "Configure" > "AVD Manager"
-    9. "Create Virtual Device"
-    10. Click on for example "Pixel 2"
-    11. Choose android vers (for example "Pie")
-    12. After the installation click on Next and the "Finish"
-    13. Now launch this Emulator by clicking on the Green Play-Button.
-    14. After the boot of the virtual smart phone go back again to the Expo DevTool on your browser (localhost:19002) and then click on "Run on Android device/simulator".
-    15. Now we see the app we created previously here again on the Virtual Smartphone!
+### For Android you need: __Android Studio__
+https://docs.expo.dev/workflow/android-studio-emulator/
+
+1. Download Android Studio
+2. On MacOS make sure that you follow these steps:
+   * If you are on macOS or Linux, add an environment variable pointing to the Android SDK location in ~/.bash_profile (or ~/.zshenv if you use Zsh) - eg. export ANDROID_SDK=/your/path/here. Copy and paste these two lines to do this automatically for Bash and Zsh:
+   [ -d "$HOME/Library/Android/sdk" ] && ANDROID_SDK=$HOME/Library/Android/sdk || ANDROID_SDK=$HOME/Android/Sdk
+   echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+   
+    * On macOS, you will also need to add platform-tools to your ~/.bash_profile (or ~/.zshenv if you use Zsh) - eg. export PATH=/your/path/here:$PATH. Copy and paste this line to do this automatically for Bash and Zsh:
+   echo "export PATH=$HOME/Library/Android/sdk/platform-tools:\$PATH" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+   
+    * Make sure that you can run `adb` from your terminal.
+
+2. Install it
+3. Open the Android Studio
+4. Click on "Configure" and choose "SDK Manager"
+5. Install some of the older versions of the Android (for the course you need Android 9.0 (Pie) to be installed)
+6. Go to "SDK Tools"
+7. Install also "Android Emulator", "SDK-Platform-Tools" and "SDK Build-Tools" and also "Intel x86 Emulator Accelerator" and also "Google Play Services" in the list.
+8. ~~Now go to start page again and then "Configure" > "AVD Manager"~~
+   2022 => Click on "More Action" > "SDK Manager"
+9. "Create Virtual Device"
+10. Click on for example "Pixel 2"
+10. Make sure that you have one of the latest SDKs installed
+11. Add `Android 9.0 (Pie)` and one other latests version of Android
+11. Now in the "SDK Tools" Tab (2nd tab) make sure that `Android Emulator` , `Android SDK Platform-Tools` (Mori: maybe this one's name is changed to this `Android SDK Command-line Tools`Android Build Tools` `Android SDK Tools` and `Intel x86 Emulator...` are all installed
+11. If you get error on `Intel x86 HAXM`, try to install it directly from Intel repo: https://github.com/intel/haxm/releases
+11. On the welcome page of Android Studio go again to "More Actions" and then "Virtual Device Manager"
+12. Choose "Pixel 2" (for course) - (the devices with PlayStore are recommended)
+12. After the installation click on Next and the "Finish"
+13. Now launch the device by clicking on the Green Play-Button.
+14. Turn the device on.
+15. now go back to the `rn-first-app` project > `npm start`
+16. localhost:19002 > "Run on Android device/emulator"
+17. Instead of the above step you can press `a` in terminal (where the Expo is running) and then it launches the `rn-first-app` on the android-studio device.
 ___
 
 ## 1.14. Running the App on an iOS Simulator
