@@ -145,7 +145,7 @@ ___
 1. Install Xcode
 2. Go to Xcode "Prefernces"
 3. Go to "Locations" tab and mace sure you have the Command Line Tools installed.
-4. Go to Menu > "Xcode" > "Open Dev Too" > "Simulator" > it opens an iOS device
+4. Go to Menu > "Xcode" > "Open Dev Tool" > "Simulator" > it opens an iOS device
 5. go to Expo dev tool and click on "run ios simulator"
 6. Now you see the app we created on the iOS Virtual Device!
 ___
@@ -173,11 +173,10 @@ ___
 ___
 
 ## 2.3. Setting Up A New Project
-1. ``expo init rn-app-2``
+1. ``expo init rn-complete-guide``
 2. "blank"
-3. Max goes with NPM and not Yarn, but i use Yarn!
-4. ``yarn start``
-5. press "i" to run on iOS simulator and "a" to run on Android Vritual Device (or use expo devtool)
+3. ``yarn start``
+4. press "i" to run on iOS simulator and "a" to run on Android Vritual Device (or use expo devtool)
 ___
 
 ## 2.4. Planning the App
