@@ -5,6 +5,10 @@ const GoalInput = (props) => {
   const [ enteredGoal, setEnteredGoal ] = useState('');
 
   const addGoal = () => {
+    if (enteredGoal.length === 0) {
+      return;
+    }
+
     props.handleGoals(prev => [
       ...prev,
       { uid: Math.random().toString(), value: enteredGoal }

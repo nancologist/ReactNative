@@ -420,10 +420,23 @@ ___
 
 2. In the menu choose "Debug Remote JS" (The Connection in Expo DevTool should be set to "LAN" or "Local") 
 
-3. Chrome DevTool > Source tab
+3. Chrome DevTool > "Source" tab
 
-4. use debugging tool and breakpoints
+4. In left menu of "Source" tab , go to a file which beginns with `debuggerWorker... .js` > open `Users/morteza/Desktop/...`
 
+5. Now here you can see the folder structure in `src` (in uncompiled/not-built version of your code!!!)
+
+6. For example there set a breakpoint on Line 8 `GoalInput.js > addGoal() > if (enteredGoal.lenght === 0)`
+    ![img.png](imgs/img.png)
+
+7. Now in the app, add a new goal and press "ADD"
+
+8. In DevTool now you see that the this line is highlighted and it pauses the app.
+
+9. You can now bring the app to next step or backward, etc using control buttons in DevTool:
+    ![img.png](imgs/img2.png)
+   
+__For more information on chrome's debugging tool__: https://developers.google.com/web/tools/chrome-devtools/
 ___
 
 ## 3.7. Working with the Device DevTools Overlay
