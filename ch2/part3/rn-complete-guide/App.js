@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { StyleSheet, View, TextInput, Button, Text, FlatList } from 'react-native';
+import { StyleSheet, View, Button, FlatList } from 'react-native';
 import { StatusBar } from 'expo-status-bar'
 
 import GoalItem from './components/GoalItem';
@@ -7,10 +7,12 @@ import GoalInput from './components/GoalInput';
 
 export default function App() {
   const [ goals, setGoals ] = useState([]);
+  const [ modalOpen, setModalOpen ] = useState(false);
 
   return (
     <View style={styles.screen}>
-      <GoalInput handleGoals={setGoals} />
+      <Button title="Add New Goal" onPress={() => { setModalOpen(true) }} />
+      <GoalInput handleGoals={setGoals} open={modalOpen} />
 
       <FlatList
         data={goals}

@@ -308,6 +308,9 @@ ___
 ___
 
 ## 2.19. Adding a Modal Overlay
+https://reactnative.dev/docs/modal
+
+We want to move GoalInput view to a Modal.
 
 * ``<Modal>`` cmp - (__Our Goal:__ We want to show the GoalInput cmp in a modal!)
 
