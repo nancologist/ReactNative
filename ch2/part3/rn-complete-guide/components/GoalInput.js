@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 import {Button, TextInput, View, StyleSheet, Modal} from 'react-native'
 
 const GoalInput = (props) => {
@@ -26,8 +26,16 @@ const GoalInput = (props) => {
           style={styles.input}
           value={enteredGoal}
         />
-        <Button title="Cancel" onPress={props.closeModal} color="red" />
-        <Button title="Add" onPress={addGoal} />
+
+        <View style={styles.ctrls}>
+          <View style={styles.btn}>
+            <Button title="Cancel" onPress={props.closeModal} color="red" />
+          </View>
+          <View style={styles.btn}>
+            <Button title="Add" onPress={addGoal} />
+          </View>
+        </View>
+
       </View>
     </Modal>
   );
@@ -45,6 +53,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 10,
     width: '80%'
+  },
+  ctrls: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '60%'
+  },
+  btn: {
+    width: '40%'
   }
 });
 
