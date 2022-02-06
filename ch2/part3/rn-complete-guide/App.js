@@ -15,7 +15,7 @@ export default function App() {
       <FlatList
         data={goals}
         keyExtractor={(item, index) => item.uid}
-        renderItem={data => <GoalItem title={data.item.value} />}
+        renderItem={data => <GoalItem item={data.item} handleGoals={setGoals} />}
       />
       <StatusBar style="auto" />
     </View>

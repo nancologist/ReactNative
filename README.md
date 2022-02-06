@@ -291,7 +291,7 @@ __Our Goal:__ Delete the items by tapping the item using Touchable Component Fam
 
 * ``TouchableOpacity`` gives user feedback by making the UI element transpaernt when he touches it. We can configure the opacity's change with ``activeOpacity``
 
-* ``TouchableHighlight`` ...
+* ``TouchableHighlight`` ... (props: underlayColor, ...)
 
 * ``TouchableNativeFeedback`` only works on Android devices.
 

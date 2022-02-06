@@ -1,10 +1,17 @@
-import {Text, View, StyleSheet} from 'react-native'
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 
 const GoalItem = (props) => {
+  const title = props.item.value
+  const deleteItem = () => {
+    props.handleGoals(prev => prev.filter(goal => goal.uid !== props.item.uid))
+  };
+
   return (
-    <View style={styles.listItem} >
-      <Text>{props.title}</Text>
-    </View>
+    <TouchableOpacity onPress={deleteItem} >
+      <View style={styles.listItem} >
+        <Text>{title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
