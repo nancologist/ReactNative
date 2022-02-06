@@ -11,8 +11,12 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <Button title="Add New Goal" onPress={() => { setModalOpen(true) }} />
-      <GoalInput handleGoals={setGoals} open={modalOpen} />
+      <Button title="Add New Goal" onPress={ () => { setModalOpen(true) } } />
+      <GoalInput
+        closeModal={ () => { setModalOpen(false) } }
+        handleGoals={setGoals}
+        open={modalOpen}
+      />
 
       <FlatList
         data={goals}

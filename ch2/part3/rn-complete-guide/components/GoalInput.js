@@ -10,6 +10,7 @@ const GoalInput = (props) => {
       { uid: Math.random().toString(), value: enteredGoal }
     ])
     setEnteredGoal('');
+    props.closeModal()
   };
 
   const handleGoalInput = (value) => {
@@ -33,13 +34,14 @@ const GoalInput = (props) => {
 
 const styles = StyleSheet.create({
   inputContainer: {
+    flex: 1,
     alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   },
   input: {
     borderColor: 'black',
     borderWidth: 1,
+    marginBottom: 10,
     padding: 10,
     width: '80%'
   }

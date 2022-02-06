@@ -317,8 +317,13 @@ We want to move GoalInput view to a Modal.
 ___
 
 ## 2.20. More Flexbox Styling
+Now we should fix styling of modal (`GoalInput.js`)
 
 * ``View`` cmp takes the height of its children, so without children it has height and width are 0.
+
+* `flex` (in inputContainer) : `flex` allows you to control how much space your different items inside of a flexbox take.  
+  
+When you have only one item like our case now, you only need to set a value for `flex` (value can be 1,2,3,... if there is only one single item there it does not matter). It ensures that this single item inside of `View` takes the full space.
 
 ___
 
