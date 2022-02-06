@@ -361,12 +361,16 @@ ___
 ## 3.2. What To Debug & How To Debug?
 
 What to debug?
-* __Cashing App__, like:
+* __Error Messages / App Crashes__, like:
     * Syntax errors.
-    * bugs (``undefined``, usw)
+    * bugs (e.g. ``undefined``, usw)
     * "Unavoidable" errors: (network errors, request and resp errors)
+
 * __Logical errors__
-    * ...
+    * undesired or unexpetcted app behaviour
+    * unexpected / unhandled user behaviour
+    * sequence of steps leads to errors
+
 * __Wrong styling and layout__
     * different devices
     * very small devices
@@ -375,7 +379,7 @@ How to debug?
 * READ the error messages carefully!
 * using ``console.log()``
 * Chrome Debugger + Breakpoints
-
+* Mori: Webstorm Debugger 
 ___
 
 ## 3.3. Running the App on a Real Device & Debugging
