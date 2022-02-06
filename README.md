@@ -266,11 +266,13 @@ The problem of ``ScrollView`` is that it LOADS ALL the contents IN ADVANCE, even
 The solution is ``FlatList`` cmp it has two important attributes: 
 * ``data`` (should point to an ARRAY)
 * ``renderItem``
-* elements in the ARRAY should be objects which have a ``key`` prop. (``key`` should be string)
+
+* elements in the ARRAY should be objects which have a ``key`` prop (NEW: or `id`). (``key`` should be string)
+* In `<FlatList>` you can use `keyExtractor` (which by default has this function as value: `(item, index) => item.key`) to customize the above prop.  
+
 * If you enter sth except "key" or "id" as key you should specify it using ``keyExtractor`` as attr of the ``FlatList`` cmp.
 
 * FlatList cmp ONLY renders what's REQUIRED.
-
 ___
 
 ## 2.15. Splitting the App Into Components (Own Components)
