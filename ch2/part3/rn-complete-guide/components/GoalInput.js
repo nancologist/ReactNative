@@ -26,6 +26,7 @@ const GoalInput = (props) => {
           style={styles.input}
           value={enteredGoal}
         />
+        <Button title="Cancel" onPress={props.closeModal} color="red" />
         <Button title="Add" onPress={addGoal} />
       </View>
     </Modal>
