@@ -331,6 +331,7 @@ ___
 ___
 
 ## 2.22. Finishing the Modal Styling
+IMPORTANT: to giving style to `<Button />`s you MUST wrap it in a `<View>` as you see in this lecture!
 ___
 
 ## 2.23. Wrap Up
