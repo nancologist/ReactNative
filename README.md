@@ -297,6 +297,11 @@ __Our Goal:__ Delete the items by tapping the item using Touchable Component Fam
 
 * ``TouchableWithoutFeedback`` : as the name suggests, it has no visual effects when touching.
 
+when you go to TouchableOpacity page, REACT NATIVE SUGGESTS:
+
+_If you're looking for a more extensive and future-proof way to handle touch-based input, check out the Pressable API._
+
+https://reactnative.dev/docs/pressable
 ___
 
 ## 2.18. Deleting Items
