@@ -460,7 +460,7 @@ ___
 
 ## 3.8. Debugging the UI & Using React Native Debugger
 
-* __Inspector:__ In Menu of Expo App on Mobile Device
+* __Inspector:__ In Menu of Expo App on Mobile Device (`Show Element Inspector`)
 * You can check the components
 
 There is a better tool: __React-Native Debugger__
@@ -468,9 +468,10 @@ There is a better tool: __React-Native Debugger__
 1. Search for "React-Native Debugger"
 2. Go to https://github.com/jhen0409/react-native-debugger
 3. Go to Release Page of it : https://github.com/jhen0409/react-native-debugger/releases
-4. Download the compatible one for your Desktop OS.
-5. Install it.
-6. Back to debugger app, use these keys: ``CMD+T``
+4. Download the compatible one for your Desktop OS and install it.
+4. Open the installed app
+5. On the virtual mobile device choose `JS Remote Debugger`
+6. Back to debugger app, use these keys: ``CMD+T`` (=> iOS or cmd+m for android)
 7. Enable "Remote JS Debug" on the virtual mobile device.
 
 You see all the components structure. This is MUCH NICER than other Debugger which we learned! It has also Redux debugging tool for the React-Native.

@@ -9,8 +9,6 @@ export default function App() {
   const [ goals, setGoals ] = useState([]);
   const [ modalOpen, setModalOpen ] = useState(false);
 
-  console.log(goals)
-
   return (
     <View style={styles.screen}>
       <Button title="Add New Goal" onPress={ () => { setModalOpen(true) } } />
