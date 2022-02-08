@@ -603,7 +603,16 @@ ___
 ___
 
 ## 4.17. Adding Game Features: Hints & Validation
+Another usecase of `useRef()` is like a state manager, because it can survive the component rerendering and keep the data!
+
+Mori: also in this use case `useRef()` works somehow like `computed` in Vue. Because when it gets updated, it does not cause a component rerendering. But `useState()`s cause rerendering when they get updated!
+
+ERROR: `useEffect()` die eine Abhaengigkeit von einem useState() hat, muss nach diesem useState() abgerufen werden!!!!!
+___
+
 ## 4.18. Checking the "Win" Condition with useEffect()
+___
+
 ## 4.19. Finishing the Game Logic
 ## 4.20. Adding Custom Fonts
 ## 4.21. Installing expo-font
