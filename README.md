@@ -591,6 +591,8 @@ ___
 ___
 
 ## 4.13. Showing an Alert
+___
+
 ## 4.14. Time to Finish the "Confirmation Box"
 ## 4.15. Adding Random Number Generation
 ## 4.16. Switching Between Multiple "Screens"
