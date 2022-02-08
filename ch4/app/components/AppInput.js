@@ -1,7 +1,17 @@
-import { useState } from 'react';
+import {useState, forwardRef, useRef, useImperativeHandle} from 'react';
 import {TextInput, StyleSheet} from 'react-native'
 
-const AppInput = props => {
+const AppInput = (props, ref) => {
+  // const inputRef = useRef();
+  useImperativeHandle(ref, () => ({
+    reset: () => {
+      setEnteredVal('')
+    },
+    getValue: () => {
+      return enteredVal
+    }
+  }));
+
   const [enteredVal, setEnteredVal] = useState('');
   const handleChange = value => {
     setEnteredVal(
@@ -30,4 +40,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AppInput;
+export default forwardRef(AppInput);
