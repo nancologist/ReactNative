@@ -581,7 +581,12 @@ ___
 * `keyboardType = 'number-pad'` : When mobile softkeyboard opens, it presents the NumPad. (ONLY for complete Numbers (integers) on iOS. For Android we need another approach to prevent user to enter a floating number)
 ___
 
-## 4.11. Cleaning User Input & Controlling the Soft Keyboard
+## 4.11. Cleaning User Input & Controlling the Soft Keyboard (Input Validation)
+- With adding this regex in AppInput.js now it's impossible to add a comma from Android numpad
+
+- iOS Problem: The Keyboard does not want to close (When we tap outside of it or try to close it)! For this problem we use `<TouchableWithoutFeedback>` and `Keyboard` API from react-native (`StartGame.js`)
+___
+
 ## 4.12. Resetting & Confirming User Input
 ## 4.13. Showing an Alert
 ## 4.14. Time to Finish the "Confirmation Box"

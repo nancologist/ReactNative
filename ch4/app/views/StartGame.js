@@ -1,35 +1,37 @@
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import Card from '../components/Card';
 import AppInput from '../components/AppInput';
 import Color from '../constants/color';
 
 const StartGame = props => {
   return (
-    <View style={styles.screen}>
-      <Text style={styles.title}>Start a New Game!</Text>
+    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}>
+      <View style={styles.screen}>
+        <Text style={styles.title}>Start a New Game!</Text>
 
-      <Card style={styles.inputContainer}>
-        <Text>Select a Number</Text>
-        <AppInput
-          autoCapitalize='none'
-          autoCorrect={false}
-          blurOnSubmit
-          keyboardType={'number-pad'}
-          maxLength={2}
-          style={styles.input}
-        />
+        <Card style={styles.inputContainer}>
+          <Text>Select a Number</Text>
+          <AppInput
+            autoCapitalize='none'
+            autoCorrect={false}
+            blurOnSubmit
+            keyboardType={'number-pad'}
+            maxLength={2}
+            style={styles.input}
+          />
 
-        <View style={styles.buttonContainer}>
-          <View style={styles.button}>
-            <Button title={'Reset'} onPress={() => {}} color={Color.secondary} />
+          <View style={styles.buttonContainer}>
+            <View style={styles.button}>
+              <Button title={'Reset'} onPress={() => {}} color={Color.secondary} />
+            </View>
+            <View style={styles.button}>
+              <Button title={'Confirm'} onPress={() => {}} color={Color.primary} />
+            </View>
           </View>
-          <View style={styles.button}>
-            <Button title={'Confirm'} onPress={() => {}} color={Color.primary} />
-          </View>
-        </View>
-      </Card>
+        </Card>
 
-    </View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
