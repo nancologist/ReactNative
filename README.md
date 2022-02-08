@@ -597,6 +597,8 @@ ___
 ___
 
 ## 4.15. Adding Random Number Generation
+___
+
 ## 4.16. Switching Between Multiple "Screens"
 ## 4.17. Adding Game Features: Hints & Validation
 ## 4.18. Checking the "Win" Condition with useEffect()
