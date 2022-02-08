@@ -553,6 +553,9 @@ That's why many but absolutely not all CSS properties are supported in React Nat
 ___
 
 ## 4.8. Extracting a Card Component (Presentational Component)
+
+___
+
 ## 4.9. Color Theming with Constants
 ## 4.10. Configuring & Styling a TextInput
 ## 4.11. Cleaning User Input & Controlling the Soft Keyboard
