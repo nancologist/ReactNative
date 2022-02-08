@@ -21,7 +21,7 @@ const StartGame = props => {
     }
 
     setConfirmed(true);
-    setSelectedNumber(num)
+    setSelectedNumber(num);
     appInput.current.reset();
     Keyboard.dismiss();
   };
@@ -38,7 +38,7 @@ const StartGame = props => {
       <Card style={styles.summaryContainer}>
         <Text>You selected</Text>
         <NumberCmp number={selectedNumber} />
-        <Button title={'START GAME'} />
+        <Button title={'START GAME'} onPress={() => props.onSubmit(selectedNumber)} />
       </Card>
     )
   }

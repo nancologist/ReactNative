@@ -600,6 +600,8 @@ ___
 ___
 
 ## 4.16. Switching Between Multiple "Screens"
+___
+
 ## 4.17. Adding Game Features: Hints & Validation
 ## 4.18. Checking the "Win" Condition with useEffect()
 ## 4.19. Finishing the Game Logic
