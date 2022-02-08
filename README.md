@@ -588,6 +588,8 @@ ___
 ___
 
 ## 4.12. Resetting & Confirming User Input
+___
+
 ## 4.13. Showing an Alert
 ## 4.14. Time to Finish the "Confirmation Box"
 ## 4.15. Adding Random Number Generation
