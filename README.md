@@ -560,6 +560,27 @@ ___
 ___
 
 ## 4.10. Configuring & Styling a TextInput
+In `AppInput.js` because we define the 
+
+```
+style={{
+    ...styles.appInput,
+    ...props.style
+}}
+```
+
+after 
+
+```
+{ ...props }
+```
+
+so `style` will override the `props.style` otherwise the `styles.appInput` would have no effect!
+___
+
+* `keyboardType = 'number-pad'` : When mobile softkeyboard opens, it presents the NumPad. (ONLY for complete Numbers (integers) on iOS. For Android we need another approach to prevent user to enter a floating number)
+___
+
 ## 4.11. Cleaning User Input & Controlling the Soft Keyboard
 ## 4.12. Resetting & Confirming User Input
 ## 4.13. Showing an Alert
