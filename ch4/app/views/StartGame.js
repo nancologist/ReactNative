@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Aler
 import Card from '../components/Card';
 import AppInput from '../components/AppInput';
 import Color from '../constants/color';
+import NumberCmp from '../components/NumberCmp';
 
 const StartGame = props => {
   const [selectedNumber, setSelectedNumber] = useState(0);
@@ -22,6 +23,7 @@ const StartGame = props => {
     setConfirmed(true);
     setSelectedNumber(num)
     appInput.current.reset();
+    Keyboard.dismiss();
   };
 
   const appInput = useRef();
@@ -32,7 +34,13 @@ const StartGame = props => {
 
   let confirmedOutput;
   if (confirmed) {
-    confirmedOutput = <Text>Chosen Number {selectedNumber}</Text>
+    confirmedOutput = (
+      <Card style={styles.summaryContainer}>
+        <Text>You selected</Text>
+        <NumberCmp number={selectedNumber} />
+        <Button title={'START GAME'} />
+      </Card>
+    )
   }
 
   return (
@@ -95,6 +103,10 @@ const styles = StyleSheet.create({
   input: {
     width: 50,
     textAlign: 'center'
+  },
+  summaryContainer: {
+    alignItems: 'center',
+    marginTop: 20
   }
 });
 

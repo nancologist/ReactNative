@@ -594,6 +594,8 @@ ___
 ___
 
 ## 4.14. Time to Finish the "Confirmation Box"
+___
+
 ## 4.15. Adding Random Number Generation
 ## 4.16. Switching Between Multiple "Screens"
 ## 4.17. Adding Game Features: Hints & Validation
