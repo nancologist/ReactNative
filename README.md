@@ -616,15 +616,35 @@ ___
 ## 4.19. Finishing the Game Logic
 ___
 
-## 4.20. Adding Custom Fonts
-## 4.21. Installing expo-font
-## 4.22. A Synthetic Style "Cascade": Custom Wrapper Components & Global Styles
-## 4.23. Adding Local Images
-## 4.24. Styling Images
-## 4.25. Working with Network (Web) Images
-## 4.26. A Closer Look at the "Text" Component (and what you can do with it)
-## 4.27. <View> vs <Text> - A Summary
-## 4.28. Building a Custom Button Component
+## 4.20. Adding AppLoading
+In the next lecture, we'll add the AppLoading component.
+
+We will do this by importing it like this:
+
+`import { AppLoading } from 'expo';`
+This might fail for you - depending on the version of Expo you're using to follow along.
+
+If it does fail, try this alternative way of adding it:
+
+`expo install expo-app-loading`
+`import AppLoading from 'expo-app-loading';`
+___
+
+## 4.21. Adding Custom Fonts
+1. run `expo install expo-font`
+2. For `AppLoading` : ``expo install expo-app-loading``
+
+Test: the "Start a New Game!" should have now the new Font!
+___
+
+## 4.22. Installing expo-font
+## 4.23. A Synthetic Style "Cascade": Custom Wrapper Components & Global Styles
+## 4.24. Adding Local Images
+## 4.25. Styling Images
+## 4.26. Working with Network (Web) Images
+## 4.27. A Closer Look at the "Text" Component (and what you can do with it)
+## 4.28. <View> vs <Text> - A Summary
+## 4.29. Building a Custom Button Component
 ## 4.29. Adding Icons
 ## 4.30. Exploring UI Libraries
 ## 4.31. Managing Past Guesses as a List
