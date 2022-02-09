@@ -14,8 +14,12 @@ export default function App() {
   const [userNum, setUserNum] = useState();
   const startGame = (selectedNum) => {
     setUserNum(selectedNum);
-    setGuessRounds(0);
   }
+
+  const resetGame = () => {
+    setGuessRounds(0);
+    setUserNum(null);
+  };
 
   return (
     <View style={styles.screen}>
@@ -25,7 +29,11 @@ export default function App() {
           <Game winningNum={userNum} onGameOver={gameOverHandler} /> :
 
           guessRounds > 0 ?
-            <GameOver /> :
+            <GameOver
+              onReset={resetGame}
+              roundsCount={guessRounds}
+              winningNum={userNum}
+            /> :
             <StartGame onSubmit={startGame} />
       }
     </View>

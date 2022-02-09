@@ -614,6 +614,8 @@ ___
 ___
 
 ## 4.19. Finishing the Game Logic
+___
+
 ## 4.20. Adding Custom Fonts
 ## 4.21. Installing expo-font
 ## 4.22. A Synthetic Style "Cascade": Custom Wrapper Components & Global Styles
