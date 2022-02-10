@@ -658,6 +658,15 @@ Hence for all expo-* packages, npm install can be used but expo install is the p
 ___
 
 ## 4.23. A Synthetic Style "Cascade": Custom Wrapper Components & Global Styles
+You can't add the `fontFamily` on styling of `<View>` !!! You should add it directly to the styling `<Text>`
+
+You have 2 options to make a styling global:
+
+1. Create your own cmp for example like `components/BodyText.js` and use it everywhere.
+
+2. Exporting a global style object like: `default-styles.js`
+___
+
 ## 4.24. Adding Local Images
 ## 4.25. Styling Images
 ## 4.26. Working with Network (Web) Images

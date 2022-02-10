@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   headerTitle: {
-    color: 'black'
+    color: 'black',
+    fontSize: 18,
+    fontFamily: 'open-sans-bold'
   }
 });
 

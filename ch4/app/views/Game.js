@@ -3,6 +3,7 @@ import {useState, useRef, useEffect} from 'react'
 
 import NumberCmp from '../components/NumberCmp'
 import Card from '../components/Card'
+import DefaultStyles from '../constants/default-styles'
 
 // A Game Rule: It should not guess the user's choice on first try!
 const generateNum = (min, max, exclude) => {
@@ -63,7 +64,7 @@ const Game = (props) => {
 
   return (
     <View style={styles.screen}>
-      <Text>CPU's Guess</Text>
+      <Text style={DefaultStyles.bodyText}>CPU's Guess</Text>
       <NumberCmp number={pcGuess} />
       <Card style={styles.buttonContainer}>
         <Button title={'LOWER'} onPress={() => generateNextGuess('lower')} />
