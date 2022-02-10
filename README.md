@@ -672,6 +672,11 @@ Using `<Image />` you can use local and network images.
 ___
 
 ## 4.25. Styling Images
+On Image-cmp `resizeMode` is helpful to correct aspect ratio of the image
+
+it has values: 'contain' , 'cover' (default) , ...
+___
+
 ## 4.26. Working with Network (Web) Images
 ## 4.27. A Closer Look at the "Text" Component (and what you can do with it)
 ## 4.28. <View> vs <Text> - A Summary
