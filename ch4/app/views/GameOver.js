@@ -1,7 +1,10 @@
 import { View, Text, StyleSheet, Button, Image } from 'react-native';
 import DefaultStyles from '../constants/default-styles';
 
-const mountain = require('../assets/success.png');
+let mountain = require('../assets/success.png');
+mountain = {
+  uri: 'https://cdn.pixabay.com/photo/2016/05/05/23/52/mountain-summit-1375015_960_720.jpg'
+}
 
 const GameOver = (props) => {
   return (
@@ -9,6 +12,7 @@ const GameOver = (props) => {
       <Text style={DefaultStyles.title}>PC WON!!!</Text>
       <View style={styles.imageContainer}>
         <Image
+          fadeDuration={300}
           source={mountain}
           style={styles.image}
           resizeMode={'cover'}

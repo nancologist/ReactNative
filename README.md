@@ -678,6 +678,13 @@ it has values: 'contain' , 'cover' (default) , ...
 ___
 
 ## 4.26. Working with Network (Web) Images
+For a network image you should set the value of `source` prop in Image-cmp to an object!
+
+For images from network having `width` and `height` on Image-cmp is a must!
+
+with `fadeDuration` you can set the fade-in time in milliseconds.
+___
+
 ## 4.27. A Closer Look at the "Text" Component (and what you can do with it)
 ## 4.28. <View> vs <Text> - A Summary
 ## 4.29. Building a Custom Button Component
