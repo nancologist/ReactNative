@@ -668,6 +668,9 @@ You have 2 options to make a styling global:
 ___
 
 ## 4.24. Adding Local Images
+Using `<Image />` you can use local and network images.
+___
+
 ## 4.25. Styling Images
 ## 4.26. Working with Network (Web) Images
 ## 4.27. A Closer Look at the "Text" Component (and what you can do with it)
