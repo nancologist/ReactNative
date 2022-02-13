@@ -731,7 +731,14 @@ More about Expo Icons: https://docs.expo.dev/guides/icons/
 ___
 
 ## 4.30. Exploring UI Libraries
+There are a lot of UI Libraries for React Native to make the life easier.
+
+Here are a list of some of them: https://docs.expo.dev/guides/userinterface/
+___
+
 ## 4.31. Managing Past Guesses as a List
+___
+
 ## 4.32. Styling List Items & Lists
 ## 4.33. ScrollView & Flexbox (Yes, that works!)
 ## 4.34. Using FlatList Instead of ScrollView

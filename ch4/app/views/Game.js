@@ -1,4 +1,4 @@
-import {View, StyleSheet, Text, Alert} from 'react-native';
+import {View, StyleSheet, Text, Alert, FlatList} from 'react-native';
 import {useState, useRef, useEffect} from 'react'
 import { Ionicons } from '@expo/vector-icons';
 
@@ -21,23 +21,19 @@ const generateNum = (min, max, exclude) => {
 };
 
 const Game = (props) => {
-  const [pcGuess, setPcGuess] = useState(
-    generateNum(1, 100, props.winningNum)
-  );
-
+  const firstGuess = generateNum(1, 100, props.winningNum)
+  const [pcGuess, setPcGuess] = useState(firstGuess);
+  const currentMax = useRef(100);
+  const currentMin = useRef(1);
   const { winningNum, onGameOver } = props;
+  const [guesses, setGuesses] = useState([firstGuess]);
 
   useEffect(() => {
     if (pcGuess === props.winningNum) {
-      props.onGameOver(rounds)
+      props.onGameOver(guesses.length)
       // Alert.alert('WON', 'PC WON GAME!!!!')
     }
-  }, [pcGuess, winningNum, onGameOver])
-
-  const [rounds , setRounds] = useState(0);
-
-  const currentMax = useRef(100);
-  const currentMin = useRef(1);
+  }, [pcGuess, winningNum, onGameOver]);
 
   const generateNextGuess = (direction) => {
     const isUserHintCorrect =
@@ -53,15 +49,14 @@ const Game = (props) => {
       return;
     }
 
+    setGuesses(prev => [pcGuess, ...prev])
     if (direction === 'lower') {
       currentMax.current = pcGuess;
     } else {
-      currentMin.current = pcGuess;
+      currentMin.current = pcGuess + 1;
     }
-
     const nextNum = generateNum(currentMin.current, currentMax.current, pcGuess);
     setPcGuess(nextNum);
-    setRounds(prev => prev + 1);
   }
 
   return (
@@ -76,6 +71,14 @@ const Game = (props) => {
           <Ionicons name={'md-add'} size={24} color={'white'} />
         </AppButton>
       </Card>
+
+      <View>
+        <FlatList
+          data={guesses}
+          keyExtractor={(item, index) => item * index}
+          renderItem={({ item }) => <Text>Previous Guess: {item}</Text>}
+        />
+      </View>
     </View>
   );
 };
