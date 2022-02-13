@@ -1,5 +1,6 @@
-import {View, StyleSheet, Text, Button, Alert} from 'react-native';
+import {View, StyleSheet, Text, Alert} from 'react-native';
 import {useState, useRef, useEffect} from 'react'
+import { Ionicons } from '@expo/vector-icons';
 
 import NumberCmp from '../components/NumberCmp'
 import Card from '../components/Card'
@@ -68,8 +69,12 @@ const Game = (props) => {
       <Text style={DefaultStyles.bodyText}>CPU's Guess</Text>
       <NumberCmp number={pcGuess} />
       <Card style={styles.buttonContainer}>
-        <AppButton onPress={() => generateNextGuess('lower')}>LOWER</AppButton>
-        <AppButton onPress={() => generateNextGuess('greater')}>GREATER</AppButton>
+        <AppButton onPress={() => generateNextGuess('lower')}>
+          <Ionicons name={'md-remove'} size={24} color={'white'} />
+        </AppButton>
+        <AppButton onPress={() => generateNextGuess('greater')}>
+          <Ionicons name={'md-add'} size={24} color={'white'} />
+        </AppButton>
       </Card>
     </View>
   );

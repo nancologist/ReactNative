@@ -725,6 +725,11 @@ We want to have a unified button for both Android and iOS
 ___
 
 ## 4.29. Adding Icons
+package: `@expo/vector-icons`
+
+More about Expo Icons: https://docs.expo.dev/guides/icons/
+___
+
 ## 4.30. Exploring UI Libraries
 ## 4.31. Managing Past Guesses as a List
 ## 4.32. Styling List Items & Lists
