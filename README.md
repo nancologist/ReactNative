@@ -686,6 +686,11 @@ with `fadeDuration` you can set the fade-in time in milliseconds.
 ___
 
 ## 4.27. A Closer Look at the "Text" Component (and what you can do with it)
+* Note: You can have Text-cmp inside another Text-cmp.
+* Style of <Text> cmp will be inherited by its <Text> child. This is an exception! Otherwise as we said in this course, the Styling of a a React-Native element will not be inherited by its children elments.
+* By default the <Text> wraps its text into the next line if it has no more space in display of the device. But if you don't want that the <Text> wraps, you can set the `numberOfLins` prop, maybe combined with `ellipsizeMode` to truncate instead of wrapping line.
+___
+
 ## 4.28. <View> vs <Text> - A Summary
 ## 4.29. Building a Custom Button Component
 ## 4.29. Adding Icons

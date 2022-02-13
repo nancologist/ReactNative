@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Button, Image } from 'react-native';
 import DefaultStyles from '../constants/default-styles';
+import Color from '../constants/color';
 
 let mountain = require('../assets/success.png');
 mountain = {
@@ -18,8 +19,13 @@ const GameOver = (props) => {
           resizeMode={'cover'}
         />
       </View>
-      <Text style={DefaultStyles.bodyText}>Number of Rounds: {props.roundsCount}</Text>
-      <Text style={DefaultStyles.bodyText}>Number was: {props.winningNum}</Text>
+      <View style={styles.resultContainer}>
+        <Text style={{ ...DefaultStyles.bodyText, ...styles.resultText }}>
+          Your phone needed{' '}
+          <Text style={styles.highlight}>{props.roundsCount}</Text> rounds to guess the number{' '}
+          <Text style={styles.highlight}>{props.winningNum}</Text>.
+        </Text>
+      </View>
       <Button title={'NEW GAME'} onPress={props.onReset} />
     </View>
   );
@@ -43,6 +49,18 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%'
+  },
+  resultText: {
+    textAlign: 'center',
+    fontSize: 20
+  },
+  highlight: {
+    color: Color.primary,
+    fontFamily: 'open-sans-bold'
+  },
+  resultContainer: {
+    marginHorizontal: 30,
+    marginVertical: 15
   }
 });
 
