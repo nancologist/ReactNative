@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import AppInput from '../components/AppInput';
 import Color from '../constants/color';
 import NumberCmp from '../components/NumberCmp';
+import AppButton from '../components/AppButton';
 
 const StartGame = props => {
   const [selectedNumber, setSelectedNumber] = useState(0);
@@ -38,7 +39,9 @@ const StartGame = props => {
       <Card style={styles.summaryContainer}>
         <Text>You selected</Text>
         <NumberCmp number={selectedNumber} />
-        <Button title={'START GAME'} onPress={() => props.onSubmit(selectedNumber)} />
+        <AppButton
+          onPress={() => props.onSubmit(selectedNumber)}
+        >START GAME</AppButton>
       </Card>
     )
   }

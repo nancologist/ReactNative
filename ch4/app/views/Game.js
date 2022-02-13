@@ -4,6 +4,7 @@ import {useState, useRef, useEffect} from 'react'
 import NumberCmp from '../components/NumberCmp'
 import Card from '../components/Card'
 import DefaultStyles from '../constants/default-styles'
+import AppButton from '../components/AppButton'
 
 // A Game Rule: It should not guess the user's choice on first try!
 const generateNum = (min, max, exclude) => {
@@ -67,8 +68,8 @@ const Game = (props) => {
       <Text style={DefaultStyles.bodyText}>CPU's Guess</Text>
       <NumberCmp number={pcGuess} />
       <Card style={styles.buttonContainer}>
-        <Button title={'LOWER'} onPress={() => generateNextGuess('lower')} />
-        <Button title={'GREATER'} onPress={() => generateNextGuess('greater')} />
+        <AppButton onPress={() => generateNextGuess('lower')}>LOWER</AppButton>
+        <AppButton onPress={() => generateNextGuess('greater')}>GREATER</AppButton>
       </Card>
     </View>
   );
@@ -84,8 +85,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 20,
-    width: 300,
-    maxWidth: '80%'
+    width: 400,
+    maxWidth: '90%'
   }
 });
 

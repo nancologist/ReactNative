@@ -721,6 +721,9 @@ This differs from the behavior of <View> (or actually any other component - <Tex
 ___
 
 ## 4.29. Building a Custom Button Component
+We want to have a unified button for both Android and iOS
+___
+
 ## 4.29. Adding Icons
 ## 4.30. Exploring UI Libraries
 ## 4.31. Managing Past Guesses as a List

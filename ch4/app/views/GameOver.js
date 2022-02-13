@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Button, Image } from 'react-native';
 import DefaultStyles from '../constants/default-styles';
 import Color from '../constants/color';
+import AppButton from '../components/AppButton';
 
 let mountain = require('../assets/success.png');
 mountain = {
@@ -26,7 +27,7 @@ const GameOver = (props) => {
           <Text style={styles.highlight}>{props.winningNum}</Text>.
         </Text>
       </View>
-      <Button title={'NEW GAME'} onPress={props.onReset} />
+      <AppButton onPress={props.onReset}>NEW GAME</AppButton>
     </View>
   );
 };
