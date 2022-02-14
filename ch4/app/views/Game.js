@@ -1,6 +1,7 @@
 import {View, StyleSheet, Text, Alert, FlatList} from 'react-native';
 import {useState, useRef, useEffect} from 'react'
 import { Ionicons } from '@expo/vector-icons';
+import Styles from '../constants/default-styles';
 
 import NumberCmp from '../components/NumberCmp'
 import Card from '../components/Card'
@@ -49,7 +50,6 @@ const Game = (props) => {
       return;
     }
 
-    setGuesses(prev => [pcGuess, ...prev])
     if (direction === 'lower') {
       currentMax.current = pcGuess;
     } else {
@@ -57,6 +57,15 @@ const Game = (props) => {
     }
     const nextNum = generateNum(currentMin.current, currentMax.current, pcGuess);
     setPcGuess(nextNum);
+    setGuesses(prev => [nextNum, ...prev])
+  }
+
+  const renderItem = ({ item, index }) => {
+    const roundNum = guesses.length - index
+    return (<View style={styles.listItem}>
+      <Text style={Styles.bodyText} >#{roundNum}</Text>
+      <Text style={Styles.bodyText} >Previous Guess: {item}</Text>
+    </View>);
   }
 
   return (
@@ -74,9 +83,10 @@ const Game = (props) => {
 
       <View>
         <FlatList
+          contentContainerStyle={styles.list}
           data={guesses}
           keyExtractor={(item, index) => item * index}
-          renderItem={({ item }) => <Text>Previous Guess: {item}</Text>}
+          renderItem={renderItem}
         />
       </View>
     </View>
@@ -95,6 +105,19 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 400,
     maxWidth: '90%'
+  },
+  list: {
+    alignItems: 'center'
+  },
+  listItem: {
+    backgroundColor: 'white',
+    borderColor: '#ccc',
+    borderWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 10,
+    padding: 15,
+    width: '80%'
   }
 });
 

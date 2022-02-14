@@ -740,6 +740,9 @@ ___
 ___
 
 ## 4.32. Styling List Items & Lists
+* IMPORTANT: FlatList component should be styles with the prop `contentContainerStyle`. You can NOT use `style` prop on FlatList to style the whole list.
+___
+
 ## 4.33. ScrollView & Flexbox (Yes, that works!)
 ## 4.34. Using FlatList Instead of ScrollView
 ## 4.35. Wrap Up
