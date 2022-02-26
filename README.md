@@ -744,6 +744,11 @@ ___
 ___
 
 ## 4.33. ScrollView & Flexbox (Yes, that works!)
+Just like for `<FlatList>` you should also use `contentContainerStyle` to style the `<ScrollView>`.
+
+`flexGrow` : read it in the official docs!
+___
+
 ## 4.34. Using FlatList Instead of ScrollView
 ## 4.35. Wrap Up
 ## 4.36. Useful Resources & Links
