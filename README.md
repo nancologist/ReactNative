@@ -765,6 +765,12 @@ ___
 # 5. Responsive & Adaptive User Interfaces and Apps
 
 ## 5.1. Module Introduction
+Your App should looks like good on both iOS and Android and also on different size of devices.
+
+You also should make your App responsive when the device rotates! Responsivness for both landscape and protrait modes.
+
+We will work on the App from the previous chapter.
+___
 
 ## 5.2. Finding Improvement Opportunities
 
