@@ -790,6 +790,8 @@ And also on the Game-Over screen, you don't see the Restart button anymore!
 ___
 
 ## 5.3. Working with More Flexible Styling Rules
+empty
+___
 
 ## 5.4. Introducing the Dimensions API
 

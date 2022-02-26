@@ -92,8 +92,9 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     alignItems: 'center',
-    maxWidth: '80%',
-    width: 300
+    maxWidth: '95%',
+    minWidth: 300,
+    width: '80%'
   },
   buttonContainer: {
     flexDirection: 'row',
