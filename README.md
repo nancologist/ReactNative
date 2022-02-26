@@ -773,6 +773,21 @@ We will work on the App from the previous chapter.
 ___
 
 ## 5.2. Finding Improvement Opportunities
+Let's assume the market we are targeting may use very small devices:
+
+1. Go to Android Studio
+2. "More Actions" > "Virtual Device Manager" > "Create device"
+3. Choose for example "3.7inch WVGA Nexus"
+4. Download the Android OS > and boot the device
+
+Now you should see the application looks like this:
+
+![app on small device](imgs/app-on-small-device.png)
+
+which does not look that good. And also the app does not scroll!
+
+And also on the Game-Over screen, you don't see the Restart button anymore!
+___
 
 ## 5.3. Working with More Flexible Styling Rules
 

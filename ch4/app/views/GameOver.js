@@ -4,9 +4,9 @@ import Color from '../constants/color';
 import AppButton from '../components/AppButton';
 
 let mountain = require('../assets/success.png');
-mountain = {
-  uri: 'https://cdn.pixabay.com/photo/2016/05/05/23/52/mountain-summit-1375015_960_720.jpg'
-}
+// mountain = {
+//   uri: 'https://cdn.pixabay.com/photo/2016/05/05/23/52/mountain-summit-1375015_960_720.jpg'
+// }
 
 const GameOver = (props) => {
   return (
