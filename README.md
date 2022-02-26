@@ -750,6 +750,8 @@ Just like for `<FlatList>` you should also use `contentContainerStyle` to style 
 ___
 
 ## 4.34. Using FlatList Instead of ScrollView
+___
+
 ## 4.35. Wrap Up
 ## 4.36. Useful Resources & Links
 
