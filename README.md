@@ -761,3 +761,47 @@ ___
 ___
 ___
 ___
+
+# 5. Responsive & Adaptive User Interfaces and Apps
+
+## 5.1. Module Introduction
+
+## 5.2. Finding Improvement Opportunities
+
+## 5.3. Working with More Flexible Styling Rules
+
+## 5.4. Introducing the Dimensions API
+
+## 5.5. Using Dimensions in "if" Checks
+
+## 5.6. Calculating Sizes Dynamically
+
+## 5.7. Problems with Different Device Orientations
+
+## 5.8. Controlling Orientation & Using the KeyboardAvoidingView
+
+## 5.9. Listening to Orientation Changes
+
+## 5.10. Rendering Different Layouts
+
+## 5.11. Fixing the GameOver Screen
+
+## 5.12. Updating All Code to Update Dynamically
+
+## 5.13. Expo's ScreenOrientation API
+
+## 5.14. Introducing the Platform API
+
+## 5.15. Working with Platform.select() and Platform in "if" Checks
+
+## 5.16. Using Platform-specific Code Files
+
+## 5.17. Using the SafeAreaView
+
+## 5.18. Wrap Up
+
+## 5.19. Useful Resources & Links
+
+___
+___
+___
