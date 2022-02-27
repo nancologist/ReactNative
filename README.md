@@ -858,6 +858,7 @@ We can for example render the buttons to the left and right of the NumberContain
 ___
 
 ## 5.11. Fixing the GameOver Screen
+___
 
 ## 5.12. Updating All Code to Update Dynamically
 
