@@ -794,6 +794,12 @@ empty
 ___
 
 ## 5.4. Introducing the Dimensions API
+`Dimension` is an object, which gives you information about width/length and available pixels of the device.
+
+`Dimensions.get('window').width` : This is the width of the device.
+
+for the width of button you could have use precentage, but Max wanted here to show the `Dimensions` API.
+___
 
 ## 5.5. Using Dimensions in "if" Checks
 
