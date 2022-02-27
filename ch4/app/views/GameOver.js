@@ -12,25 +12,25 @@ let mountain = require('../assets/success.png');
 const GameOver = (props) => {
   return (
     <ScrollView>
-    <View style={styles.screen}>
-      <Text style={DefaultStyles.title}>PC WON!!!</Text>
-      <View style={styles.imageContainer}>
-        <Image
-          fadeDuration={300}
-          source={mountain}
-          style={styles.image}
-          resizeMode={'cover'}
-        />
+      <View style={styles.screen}>
+        <Text style={DefaultStyles.title}>PC WON!!!</Text>
+        <View style={styles.imageContainer}>
+          <Image
+            fadeDuration={300}
+            source={mountain}
+            style={styles.image}
+            resizeMode={'cover'}
+          />
+        </View>
+        <View style={styles.resultContainer}>
+          <Text style={{ ...DefaultStyles.bodyText, ...styles.resultText }}>
+            Your phone needed{' '}
+            <Text style={styles.highlight}>{props.roundsCount}</Text> rounds to guess the number{' '}
+            <Text style={styles.highlight}>{props.winningNum}</Text>.
+          </Text>
+        </View>
+        <AppButton onPress={props.onReset}>NEW GAME</AppButton>
       </View>
-      <View style={styles.resultContainer}>
-        <Text style={{ ...DefaultStyles.bodyText, ...styles.resultText }}>
-          Your phone needed{' '}
-          <Text style={styles.highlight}>{props.roundsCount}</Text> rounds to guess the number{' '}
-          <Text style={styles.highlight}>{props.winningNum}</Text>.
-        </Text>
-      </View>
-      <AppButton onPress={props.onReset}>NEW GAME</AppButton>
-    </View>
     </ScrollView>
   );
 };

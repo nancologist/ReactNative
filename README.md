@@ -1072,6 +1072,18 @@ You can use the `.android` and `.ios` on any files in ReactNative.
 ___
 
 ## 5.17. Using the SafeAreaView
+On the iPhone we have notch for frontcamera and Iris Sensor which takes part of the view. Also the Home-screen-Task-Manager Bar on the iPhone covers part of the dispaly and overlap our app. Also on android devices you could have notch or other covering parts on your app.  
+
+For example on the `GameOver` Screen you can see that the Task-Manager Bar covers a part of the "NEW GAME" button:
+
+![img.png](imgs/safe-area-view.png)
+
+For these cases ReactNative has a solution, the `SafeAreaView` component.
+
+`SafeAreaView` should be used on the top most view! And it's the App.js
+
+Now we have Spacings around the notch and the task-manager-bar.
+___
 
 ## 5.18. Wrap Up
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Header from './components/Header';
 import StartGame from './views/StartGame';
 import Game from './views/Game';
@@ -43,7 +43,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       <Header title={'Guess a number!'} />
       {
         userNum && guessRounds <= 0 ?
@@ -57,7 +57,7 @@ export default function App() {
             /> :
             <StartGame onSubmit={startGame} />
       }
-    </View>
+    </SafeAreaView>
   );
 }
 
