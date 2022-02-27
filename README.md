@@ -1040,6 +1040,16 @@ It has couple of featuers:
 ___
 
 ## 5.14. Introducing the Platform API
+Now we want to recognize the end user device if it's an Android or iOS.
+
+For example on iOS the buttons "Reset" and "Confirm" look differently than the buttons on Android. It's because that the `Button` cmp from React-Native is almose the ONLY component which adjust itself to the Platform (iOS or Android) it runs on it.
+
+Goal: We want to have different looks for our `Header` cmp on Android and iOS.
+
+__To recognize the client device React-Native has the `Platform` API.__
+
+* `Platform.OS` has one of the values: `"ios"` , `"android"` , `"windows"` , `"macos"` , `"web"` 
+___
 
 ## 5.15. Working with Platform.select() and Platform in "if" Checks
 
