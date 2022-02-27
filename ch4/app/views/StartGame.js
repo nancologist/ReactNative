@@ -20,12 +20,10 @@ const StartGame = props => {
         Dimensions.get('window').width / 4
       )
     };
-    Dimensions.addEventListener('change', updateLayout);
+    const subscription = Dimensions.addEventListener('change', updateLayout);
 
     // Clean Up
-    return () => {
-      Dimensions.addEventListener('change', updateLayout);
-    }
+    return () => subscription?.remove()
   });
 
   const submitInput = () => {

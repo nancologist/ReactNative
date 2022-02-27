@@ -1,3 +1,5 @@
+// noinspection JSVoidFunctionReturnValueUsed
+
 import {View, StyleSheet, Text, Alert, FlatList, Dimensions} from 'react-native';
 import {useState, useRef, useEffect} from 'react'
 import { Ionicons } from '@expo/vector-icons';
@@ -28,6 +30,21 @@ const Game = (props) => {
   const currentMin = useRef(1);
   const { winningNum, onGameOver } = props;
   const [guesses, setGuesses] = useState([firstGuess]);
+  const [deviceDimension, setDeviceDimension] = useState({
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
+  })
+
+  useEffect(() => {
+    const dimensionSubscription = Dimensions.addEventListener('change', ({ window }) => {
+      setDeviceDimension({
+        height: window.height,
+        width: window.width
+      })
+    })
+
+    return () => dimensionSubscription?.remove()
+  })
 
   useEffect(() => {
     if (pcGuess === props.winningNum) {
@@ -69,8 +86,35 @@ const Game = (props) => {
   }
 
   let listContainerStyle = styles.listContainer
-  if (Dimensions.get('window').width < 350) {
+  if (deviceDimension.width < 350) {
     listContainerStyle = styles.listContainerBig
+  }
+
+  // For small smarphones AND the big smarphones in landscape mode
+  if (deviceDimension.height < 500) {
+    return (
+      <View style={styles.screen}>
+        <Text style={DefaultStyles.title}>CPU's Guess</Text>
+        <View style={styles.controls}>
+          <AppButton onPress={() => generateNextGuess('lower')}>
+            <Ionicons name={'md-remove'} size={24} color={'white'} />
+          </AppButton>
+          <NumberCmp number={pcGuess} />
+          <AppButton onPress={() => generateNextGuess('greater')}>
+            <Ionicons name={'md-add'} size={24} color={'white'} />
+          </AppButton>
+        </View>
+
+        <View style={listContainerStyle}>
+          <FlatList
+            contentContainerStyle={styles.list}
+            data={guesses}
+            keyExtractor={(item, index) => item * index}
+            renderItem={renderItem}
+          />
+        </View>
+      </View>
+    )
   }
 
   return (
@@ -103,6 +147,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     padding: 10
+  },
+  controls: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '80%'
   },
   buttonContainer: {
     flexDirection: 'row',

@@ -852,6 +852,10 @@ The Problem is that in `StratGameScreen.js` where we seet the `styles.button` , 
 ___
 
 ## 5.10. Rendering Different Layouts
+We we run the game the `Game.js` screen does not look good in Landscape mode. One solution is to change the styling a little bit, because of the height of `Game.js`. ALTERNATIVELY we can render another layout base on the available width/height
+
+We can for example render the buttons to the left and right of the NumberContainer when the app is in landscape mode.
+___
 
 ## 5.11. Fixing the GameOver Screen
 
