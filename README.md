@@ -1086,8 +1086,17 @@ Now we have Spacings around the notch and the task-manager-bar.
 ___
 
 ## 5.18. Wrap Up
+___
 
 ## 5.19. Useful Resources & Links
+Attached, you find the code snapshots for this module (you also find those attached to multiple lectures in the module).
+
+These resources might also be helpful:
+
+* Dimensions API - Official Docs: https://facebook.github.io/react-native/docs/dimensions#docsNav
+
+* Platform-specific Code - Official Docs: https://facebook.github.io/react-native/docs/platform-specific-code
+___
 
 ___
 ___
