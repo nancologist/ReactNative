@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button, Image } from 'react-native';
+import { View, Text, StyleSheet, Button, Image, Dimensions, ScrollView } from 'react-native';
 import DefaultStyles from '../constants/default-styles';
 import Color from '../constants/color';
 import AppButton from '../components/AppButton';
@@ -10,6 +10,7 @@ let mountain = require('../assets/success.png');
 
 const GameOver = (props) => {
   return (
+    <ScrollView>
     <View style={styles.screen}>
       <Text style={DefaultStyles.title}>PC WON!!!</Text>
       <View style={styles.imageContainer}>
@@ -29,6 +30,7 @@ const GameOver = (props) => {
       </View>
       <AppButton onPress={props.onReset}>NEW GAME</AppButton>
     </View>
+    </ScrollView>
   );
 };
 
@@ -39,13 +41,13 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   imageContainer: {
-    borderRadius: 150,
+    borderRadius: Dimensions.get('window').width * 0.7 / 2,
     borderWidth: 3,
     borderColor: 'black',
-    height: 300,
+    height: Dimensions.get('window').width * 0.7,
     overflow: 'hidden',
-    width: 300,
-    marginVertical: 30
+    width: Dimensions.get('window').width * 0.7,
+    marginVertical: Dimensions.get('window').height / 20
   },
   image: {
     width: '100%',
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
   },
   resultText: {
     textAlign: 'center',
-    fontSize: 20
+    fontSize: Dimensions.get('window').height < 400 ? 16 : 20
   },
   highlight: {
     color: Color.primary,
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
   },
   resultContainer: {
     marginHorizontal: 30,
-    marginVertical: 15
+    marginVertical: Dimensions.get('window').height / 40
   }
 });
 

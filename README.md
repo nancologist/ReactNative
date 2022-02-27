@@ -806,6 +806,8 @@ We want to reduce the gap between the number and the box of the plus/minus butto
 ___
 
 ## 5.6. Calculating Sizes Dynamically
+The GameOver Screen is also defect.
+___
 
 ## 5.7. Problems with Different Device Orientations
 
