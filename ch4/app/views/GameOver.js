@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Button, Image, Dimensions, ScrollView } from 'r
 import DefaultStyles from '../constants/default-styles';
 import Color from '../constants/color';
 import AppButton from '../components/AppButton';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 let mountain = require('../assets/success.png');
 // mountain = {

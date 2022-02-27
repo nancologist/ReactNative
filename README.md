@@ -1025,6 +1025,19 @@ Also remove the styles you're now setting as inline styles from the StyleSheet a
 ___
 
 ## 5.13. Expo's ScreenOrientation API
+`Dimensions` API is the official api to use in React-Native. However, Expo also has a similar API `ScreenOrientation`:
+
+`expo install expo-screen-orientation`
+
+It has couple of featuers:
+
+* `ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT OR LANDSCAPE)` : This locks the orientation in one of both modes.
+
+* `ScreenOrientation.getOrientatinAsync()` : Gets the orientation
+
+* `ScreenOrienation.addOrientationChangeListener` : similar to `Dimenstions.addEventlistener('change', Fn)` . But it tells you directly if the phone device is in Landscape or Portrait mode
+
+___
 
 ## 5.14. Introducing the Platform API
 
