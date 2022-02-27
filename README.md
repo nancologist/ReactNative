@@ -802,6 +802,8 @@ for the width of button you could have use precentage, but Max wanted here to sh
 ___
 
 ## 5.5. Using Dimensions in "if" Checks
+We want to reduce the gap between the number and the box of the plus/minus buttons and also we want to make sure that the round boxes are down there.
+___
 
 ## 5.6. Calculating Sizes Dynamically
 
