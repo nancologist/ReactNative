@@ -1052,6 +1052,16 @@ __To recognize the client device React-Native has the `Platform` API.__
 ___
 
 ## 5.15. Working with Platform.select() and Platform in "if" Checks
+`Platform.select({ ios: any , android: any })` does the if-check for us!
+
+`TouchableNativeFeedback` : it has a built-in object which gives us the riple-effect on android
+
+__ONLY Capital Variables CAN be used as JSX elements!!__
+
+Test: Now on Android you see that you have the riple-effect on the button!!! And on the other hand in the iOS you see that we have the opacity-effect!
+
+And we also add the `View` to the `AppButton` cmp to correct the ripple-effect on the Android to only fills out the button and not around it!
+___
 
 ## 5.16. Using Platform-specific Code Files
 
