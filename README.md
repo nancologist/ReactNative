@@ -1064,6 +1064,12 @@ And we also add the `View` to the `AppButton` cmp to correct the ripple-effect o
 ___
 
 ## 5.16. Using Platform-specific Code Files
+You can also use the prefix `.android` and `.ios` on your files, and then React-Native uses the one which is passing for the current platform!!
+
+For example if you have `MyCmp.android.js` and `MyCmp.ios.js` then you should import it like this: `import MyCmp from 'path/to/MyCmp'` and then REactNative recognize those two files.
+
+You can use the `.android` and `.ios` on any files in ReactNative.
+___
 
 ## 5.17. Using the SafeAreaView
 
