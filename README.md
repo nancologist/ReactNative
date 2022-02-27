@@ -1101,3 +1101,93 @@ ___
 ___
 ___
 ___
+
+# 6. Navigation with React Navigation
+
+## 6.1. Module Introduction
+
+## 6.2. Planning the App
+
+## 6.3. Adding Screens
+
+## 6.4. Adding AppLoading
+
+## 6.5. Adding Fonts
+
+## 6.6. React Navigation Docs
+
+## 6.7. Installing React Navigation & Adding Navigation to the App
+
+## 6.8. MUST READ: Installing Different Navigators
+
+## 6.9. Creating a StackNavigator
+
+## 6.10. React Navigation & Code Attachments
+
+## 6.11. Navigating Between Screens
+
+## 6.12. Alternative Navigation Syntax
+
+## 6.13. Navigation to the "Meal Details" Screen
+
+## 6.14. Pushing, Popping & Replacing
+
+## 6.15. Outputting a Grid of Categories
+
+## 6.16. Configuring the Header with Navigation Options
+
+## 6.17. Passing & Reading Params Upon Navigation
+
+## 6.18. Setting Dynamic Navigation Options
+
+## 6.19. Default Navigation Options & Config
+
+## 6.20. Grid Styling & Some Refactoring
+
+## 6.21. Adding Meal Models & Data
+
+## 6.22. Loading Meals for Categories
+
+## 6.23. Rendering a Meals List
+
+## 6.24. Passing Data to the Meal Detail Screen
+
+## 6.25. Header Buttons: Using the Correct Version
+
+## 6.26. Adding Header Buttons
+
+## 6.27. Fixing the Shadows
+
+## 6.28. Adding Tabs-based Navigation
+
+## 6.29. Setting Icons and Configuring Tabs
+
+## 6.30. navigationOptions inside of a Navigator
+
+## 6.31. Adding MaterialBottomTabs
+
+## 6.32. Adding a Favorites Stack
+
+## 6.33. Adding a Menu Button & Drawer Navigation
+
+## 6.34. Configuring the Drawer
+
+## 6.35. More Navigation Config & Styling
+
+## 6.36. Adding a DefaultText Component
+
+## 6.37. Adding the MealDetail Screen Content
+
+## 6.38. Time for the "Filters" Screen Content!
+
+## 6.39. Passing Data Between Component & Navigation Options (Header)
+
+## 6.40. [React Refresher] useEffect() & useCallback()
+
+## 6.41. Wrap Up
+
+## 6.42. Useful Resources & Links
+
+___
+___
+___
