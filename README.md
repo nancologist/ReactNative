@@ -829,8 +829,22 @@ Now we want to make our responsive to the DEVICE ROTATION in the next lecture!
 ___
 
 ## 5.8. Controlling Orientation & Using the KeyboardAvoidingView
+One Solution is to make StartGame scrollable so it works also in landscape mode.
+
+On the `STartGame` we have two other problems: 1. Layout does not look good 2. Keyboard is too big in landscape mode!
+
+`KeyboardAvoidingView` is a React-Native component to wrap your component inside a <ScrollView>  to make sure that your Soft-Keyboard NEVER cover the input field, in which you are typing with the soft-keyboard!
+
+Props:
+* `keyboardVerticalOffset` : which sets the ammount of input-field sliding up
+* `position` : `padding` | `position`
+
+
+Notation: On __Android__ you can use `disableFullscreenUI={true}` on the `TextInput` component to avoid the keyboard cover the whole screen when you focus on the input field. Otherwise, keyboard covering the whole screen is the default behaviour by android.
+___
 
 ## 5.9. Listening to Orientation Changes
+___
 
 ## 5.10. Rendering Different Layouts
 

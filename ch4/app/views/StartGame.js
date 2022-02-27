@@ -1,7 +1,7 @@
 import {useRef, useState} from 'react'
 import {
   View, Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert,
-  Dimensions
+  Dimensions, ScrollView, KeyboardAvoidingView
 } from 'react-native';
 import Card from '../components/Card';
 import AppInput from '../components/AppInput';
@@ -50,35 +50,42 @@ const StartGame = props => {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}>
-      <View style={styles.screen}>
-        <Text style={styles.title}>Start a New Game!</Text>
+    <ScrollView>
+      <KeyboardAvoidingView
+        behavior={'position'}
+        keyboardVerticalOffset={30}
+      >
+        <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}>
+          <View style={styles.screen}>
+            <Text style={styles.title}>Start a New Game!</Text>
 
-        <Card style={styles.inputContainer}>
-          <Text>Select a Number</Text>
-          <AppInput
-            autoCapitalize='none'
-            autoCorrect={false}
-            blurOnSubmit
-            keyboardType={'number-pad'}
-            maxLength={2}
-            ref={appInput}
-            style={styles.input}
-          />
+            <Card style={styles.inputContainer}>
+              <Text>Select a Number</Text>
+              <AppInput
+                autoCapitalize='none'
+                autoCorrect={false}
+                blurOnSubmit
+                keyboardType={'number-pad'}
+                maxLength={2}
+                ref={appInput}
+                style={styles.input}
+              />
 
-          <View style={styles.buttonContainer}>
-            <View style={styles.button}>
-              <Button title={'Reset'} onPress={clearInput} color={Color.secondary} />
-            </View>
-            <View style={styles.button}>
-              <Button title={'Confirm'} onPress={submitInput} color={Color.primary} />
-            </View>
+              <View style={styles.buttonContainer}>
+                <View style={styles.button}>
+                  <Button title={'Reset'} onPress={clearInput} color={Color.secondary} />
+                </View>
+                <View style={styles.button}>
+                  <Button title={'Confirm'} onPress={submitInput} color={Color.primary} />
+                </View>
+              </View>
+            </Card>
+
+            {confirmedOutput}
           </View>
-        </Card>
-
-        {confirmedOutput}
-      </View>
-    </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
+    </ScrollView>
   );
 };
 
