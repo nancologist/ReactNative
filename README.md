@@ -844,6 +844,11 @@ Notation: On __Android__ you can use `disableFullscreenUI={true}` on the `TextIn
 ___
 
 ## 5.9. Listening to Orientation Changes
+Now if we go back to Portrait mode we see that style is defect!
+
+The Problem is that in `StratGameScreen.js` where we seet the `styles.button` , we use `Dimension.get('window')`. And createStyles only gets calculated when the App starts!
+
+`Dimensions.addEventListener('change')` this gets triggered when user rotates the device.
 ___
 
 ## 5.10. Rendering Different Layouts

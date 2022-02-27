@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react'
+import {useRef, useState, useEffect} from 'react'
 import {
   View, Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Alert,
   Dimensions, ScrollView, KeyboardAvoidingView
@@ -11,8 +11,23 @@ import AppButton from '../components/AppButton';
 
 const StartGame = props => {
   const [selectedNumber, setSelectedNumber] = useState(0);
-
+  const [btnWidth, setBtnWidth] = useState(Dimensions.get('window').width / 4);
   const [confirmed, setConfirmed] = useState(false);
+
+  useEffect(() => {
+    const updateLayout = () => {
+      setBtnWidth(
+        Dimensions.get('window').width / 4
+      )
+    };
+    Dimensions.addEventListener('change', updateLayout);
+
+    // Clean Up
+    return () => {
+      Dimensions.addEventListener('change', updateLayout);
+    }
+  });
+
   const submitInput = () => {
     const num = parseInt(appInput.current.getValue())
     if (isNaN(num) || num <= 0 || num > 99) {
@@ -72,10 +87,10 @@ const StartGame = props => {
               />
 
               <View style={styles.buttonContainer}>
-                <View style={styles.button}>
+                <View style={{ width: btnWidth }}>
                   <Button title={'Reset'} onPress={clearInput} color={Color.secondary} />
                 </View>
-                <View style={styles.button}>
+                <View style={{ width: btnWidth }}>
                   <Button title={'Confirm'} onPress={submitInput} color={Color.primary} />
                 </View>
               </View>
@@ -112,10 +127,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 15
   },
-  button: {
-    // width: 100
-    width: Dimensions.get('window').width / 4
-  },
+  // button: {
+  //   // width: 100
+  //   width: Dimensions.get('window').width / 4
+  // },
   input: {
     width: 50,
     textAlign: 'center'
