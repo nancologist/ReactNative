@@ -810,6 +810,23 @@ The GameOver Screen is also defect.
 ___
 
 ## 5.7. Problems with Different Device Orientations
+Let's rotate the devices!  
+* iOS: In the top-bar menu > "Device" > "Rotate Left"
+* Android: the rotate-left icon
+
+But now you see that your app is still portrait! The reason is that the by default Expo locks the app in `app.json > "orientation": "portrait",`
+
+For some apps it is useful, because for some apps it does not make sense to have landscape mode. In contrary some apps (like some game apps) needs only to be in landscape mode so: `"orientation": "portrait"`
+
+`"orientation": "default"` : This rotates the app when the device rotates.
+
+If you change it in the `app.json` you need to restart the expo and app on your end devices.
+
+
+ERROR: On the "3.7inch WVGA Nexus One" if the app does not rotate.
+
+Now we want to make our responsive to the DEVICE ROTATION in the next lecture!
+___
 
 ## 5.8. Controlling Orientation & Using the KeyboardAvoidingView
 
