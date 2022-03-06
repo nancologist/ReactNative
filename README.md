@@ -1122,6 +1122,33 @@ ___
 ___
 
 ## 6.4. Adding AppLoading
+In the next lecture, we'll add the __AppLoading__ component.
+
+We will do this by importing it like this:
+
+`import { AppLoading } from 'expo';`  
+
+This might fail for you - depending on the version of Expo you're using to follow along.
+
+If it does fail, try this alternative way of adding it:
+
+`expo install expo-app-loading`  
+`import AppLoading from 'expo-app-loading';`
+
+Also add the following prop to the `<AppLoading />` component (in your JSX code):
+
+`onError={(err) => console.log(err)}`  
+
+In the end, you should have:
+
+```jsx
+<AppLoading
+startAsync={fetchFonts}
+onFinish={() => setFontLoaded(true)}
+onError={(err) => console.log(err)}
+/>
+```
+___
 
 ## 6.5. Adding Fonts
 
