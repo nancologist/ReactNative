@@ -1109,6 +1109,14 @@ We want to build an app where we can navigate through pages.
 ___
 
 ## 6.2. Planning the App
+Our build have following features:
+* it can read recepies
+* it can favorite recepies
+* Setting filters
+* ...
+
+![app meals sketches](./imgs/app-plan-meals-app.png)
+___
 
 ## 6.3. Adding Screens
 
