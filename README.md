@@ -1105,6 +1105,8 @@ ___
 # 6. Navigation with React Navigation
 
 ## 6.1. Module Introduction
+We want to build an app where we can navigate through pages.
+___
 
 ## 6.2. Planning the App
 
