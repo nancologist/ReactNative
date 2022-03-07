@@ -1157,6 +1157,8 @@ And then for `AppLoading` follow the steps in lecture __6.4.__ please.
 ___
 
 ## 6.6. React Navigation Docs
+In case you want to dive into the official docs as well (we'll go through the installation in the next lectures, together), you can find the official docs here: https://reactnavigation.org/docs/4.x/getting-started
+___
 
 ## 6.7. Installing React Navigation & Adding Navigation to the App
 
