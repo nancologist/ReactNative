@@ -1161,8 +1161,54 @@ In case you want to dive into the official docs as well (we'll go through the in
 ___
 
 ## 6.7. Installing React Navigation & Adding Navigation to the App
+Mobile App Navigation compared to Web app navigations. What are the differences?  
+In a web app the URL is the reference for the navigation so when you go to another page, the URL changes. For example in a ReactJS SPA, if you change the URL, there you have __React Router__ which then react to this change and renders different pages.  
+
+But in the mobile app we don't have any URL! Instead you tap buttons and tabs.  
+With the help of `react-navigation` which is built for ReactNative we can navigate around in a ReactNative app.
+
+`npm install --save react-navigation`  
+
+Mori: To be on the same boat with the course i install version 4: `npm install --save react-navigation@4`  
+
+Then you should also the following packages too:
+
+`expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`  
+
+
+___
 
 ## 6.8. MUST READ: Installing Different Navigators
+If you're using React Navigation v4 or higher, everything works as shown in this module but there is one important difference: You need to install the different navigators which we'll use in this module (StackNavigator, DrawerNavigator, TabsNavigator) separately.
+
+So when we use the __StackNavigator__ (= next lecture), run:  
+
+`npm install --save react-navigation-stack`  
+
+before you start using it (with v3 and lower, it was part of react-navigation itself).
+
+Also add this import in the file where you are using `createStackNavigator`:  
+
+```js
+import { createStackNavigator } from 'react-navigation-stack';
+```  
+
+Same for __TabsNavigator__ (used a little bit later in this module):  
+
+`npm install --save react-navigation-tabs`   
+
+```js
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+```  
+
+And also for __DrawerNavigator__ (also used later in this module):  
+
+`npm install --save react-navigation-drawer`  
+
+```js
+import { createDrawerNavigator } from 'react-navigation-drawer';
+```
+___
 
 ## 6.9. Creating a StackNavigator
 
