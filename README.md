@@ -1211,6 +1211,9 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 ___
 
 ## 6.9. Creating a StackNavigator
+The simplest navigation which you find in any mobile app is going back and forth between the different pages of the app. The pages and screens of a mobile app are managed on a so called __Stack__.  
+When the mobile app user goes to a new page, this page will be pushed on the top of that stack. So because of that it's called __StackNavigator__.
+___
 
 ## 6.10. React Navigation & Code Attachments
 

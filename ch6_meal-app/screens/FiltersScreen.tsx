@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-const FiltersScreen = (props) => {
+const FiltersScreen = (props: {}) => {
   return (
     <View style={styles.screen}>
       <Text>The Favorites Screen</Text>

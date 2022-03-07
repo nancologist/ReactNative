@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-const CategoriesScreen = (props) => {
+const CategoriesScreen = (props: {}) => {
   return (
     <View style={styles.screen}>
       <Text>The Categories Screen</Text>
