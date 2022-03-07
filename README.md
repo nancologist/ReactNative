@@ -1258,8 +1258,21 @@ I basically show all of that throughout the lectures - I'm just summing it up he
 ___
 
 ## 6.11. Navigating Between Screens
+___
 
 ## 6.12. Alternative Navigation Syntax
+The "navigate to new screen" syntax shown in the previous lecture (and throughout this module) is pretty explicit/ clear, that's why I chose it for this introduction to React Navigation.
+
+But instead of
+
+props.navigation.navigate({routeName: 'SomeIdentifier'});
+you can also use
+
+props.navigation.navigate('SomeIdentifier');
+This alternative is of course a bit shorter, other than that, it has no advantage or disadvantages compared to the more explicit one.
+
+Throughout the course, I'll use both alternatives.
+___
 
 ## 6.13. Navigation to the "Meal Details" Screen
 
