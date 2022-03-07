@@ -1151,6 +1151,10 @@ onError={(err) => console.log(err)}
 ___
 
 ## 6.5. Adding Fonts
+if you don't have the `expo-font` you should install it: `expo install expo` (Mori: In my case it has been already installed with the project)
+
+And then for `AppLoading` follow the steps in lecture __6.4.__ please.
+___
 
 ## 6.6. React Navigation Docs
 
