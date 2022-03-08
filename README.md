@@ -1275,6 +1275,7 @@ Throughout the course, I'll use both alternatives.
 ___
 
 ## 6.13. Navigation to the "Meal Details" Screen
+___
 
 ## 6.14. Pushing, Popping & Replacing
 

@@ -1,0 +1,34 @@
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { NavigationStackProp } from "react-navigation-stack";
+
+type Props = {
+  navigation: NavigationStackProp
+};
+
+const CategoryMealsScreen = (props: Props) => {
+  const goToMeal = () => {
+    props.navigation.navigate({
+      routeName: 'MealDetail'
+    });
+  };
+
+  return (
+    <View style={styles.screen}>
+      <Text>The Meals by Category Screen</Text>
+      <Button
+        title={'Go to Meal Details!'}
+        onPress={goToMeal}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  screen: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center'
+  }
+});
+
+export default CategoryMealsScreen;

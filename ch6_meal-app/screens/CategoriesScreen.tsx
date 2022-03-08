@@ -8,14 +8,14 @@ type Props = {
 const CategoriesScreen = (props: Props) => {
   const goToMealsByCat = () => {
     // props.navigation.navigate('MealsByCategory') Simpled Way
-    props.navigation.navigate({ routeName: 'MealsByCategory' })
+    props.navigation.navigate({ routeName: 'CategoryMeals' })
   };
 
   return (
     <View style={styles.screen}>
       <Text>The Categories Screen</Text>
       <Button
-        title={'Go to Meals!'}
+        title={'Go to CategoryMeals!'}
         onPress={goToMealsByCat}
       />
     </View>
