@@ -1290,6 +1290,10 @@ ___
 ___
 
 ## 6.15. Outputting a Grid of Categories
+Using `numColumns` on `<FlatList />` you can output a grid! The default value of it is `1`.
+
+You don't need `keyExtractor` of <FlatList/> on the newer versions of ReactNative if your Item has an `id` but for reference we add it to our FlatList cmp.
+___
 
 ## 6.16. Configuring the Header with Navigation Options
 
