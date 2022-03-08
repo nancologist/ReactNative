@@ -1278,6 +1278,16 @@ ___
 ___
 
 ## 6.14. Pushing, Popping & Replacing
+* `navigation.push(NameOfMappedCmp)` : The difference with `.navigate()` is that with `.push()` you can go to page which you are already on that page! For example if you want to have a page using the same component but different contents, this feature of `.push()` could be useful. It's not possible with `.navigate()`.
+
+* `navigation.goBack()` : Using it you can go to previous page programmatically. It pops off the screen we are on and brings us back.
+
+* `navigation.pop()` : It's almost the same as `.goBack()` , but it ONLY works if you use the __StackNavigator__. The `goBack()` works on any type of Navigator.
+
+* `navigation.popToTop()` : This function will pops off all the screen and brings you back to the route screen in the navigator!
+
+* `navigation.replace()` : This will add the page to the stack but also removes the current page from the stack.
+___
 
 ## 6.15. Outputting a Grid of Categories
 
