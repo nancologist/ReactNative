@@ -1296,6 +1296,11 @@ You don't need `keyExtractor` of <FlatList/> on the newer versions of ReactNativ
 ___
 
 ## 6.16. Configuring the Header with Navigation Options
+You can add the `.navigationOptions` to your CMP on fly and add title or other stuffs for the navigation! It has some useful props:
+
+* `headerTitle` : to set the title of the screen.
+* ...
+___
 
 ## 6.17. Passing & Reading Params Upon Navigation
 

@@ -1,23 +1,31 @@
-import {Text, View, StyleSheet, Button, FlatList, ListRenderItem} from 'react-native';
-import { NavigationStackProp } from 'react-navigation-stack';
+import {
+  Text, View, StyleSheet, Button, FlatList, ListRenderItem, TouchableOpacity,
+  Platform
+} from 'react-native';
+import { NavigationStackScreenComponent as NSSC } from 'react-navigation-stack';
 
 import { CATEGORIES } from "../data/dummy-data";
 import Category from "../models/category";
+import Color from "../constants/Color";
 
-type Props = {
-  navigation: NavigationStackProp
-};
+const CategoriesScreen: NSSC  = (props) => {
 
-const renderGridItem: ListRenderItem<Category> = (itemData) => {
-  const category = itemData.item
-  return (
-    <View style={styles.gridItem}>
-      <Text>{category.title}</Text>
-    </View>
-  )
-};
+  const renderGridItem: ListRenderItem<Category> = (itemData) => {
+    const category = itemData.item
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.navigate({ routeName: 'CategoryMeals' })
+        }}
+        style={styles.gridItem}
+      >
+        <View>
+          <Text>{category.title}</Text>
+        </View>
+      </TouchableOpacity>
+    )
+  };
 
-const CategoriesScreen = (props: Props) => {
   return (
     <FlatList
       data={CATEGORIES}
@@ -27,6 +35,14 @@ const CategoriesScreen = (props: Props) => {
     />
   );
 };
+
+CategoriesScreen.navigationOptions = {
+  headerTitle: 'Meal Categories',
+  headerStyle: {
+    backgroundColor: Platform.OS === 'android' ? Color.primary : ''
+  },
+  headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary
+}
 
 const styles = StyleSheet.create({
   gridItem: {
