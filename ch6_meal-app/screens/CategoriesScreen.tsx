@@ -15,7 +15,12 @@ const CategoriesScreen: NSSC  = (props) => {
     return (
       <TouchableOpacity
         onPress={() => {
-          props.navigation.navigate({ routeName: 'CategoryMeals' })
+          props.navigation.navigate({
+            routeName: 'CategoryMeals',
+            params: {
+              categoryId: itemData.item.id
+            }
+          })
         }}
         style={styles.gridItem}
       >

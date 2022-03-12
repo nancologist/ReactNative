@@ -1303,6 +1303,9 @@ You can add the `.navigationOptions` to your CMP on fly and add title or other s
 ___
 
 ## 6.17. Passing & Reading Params Upon Navigation
+* `params` : to send data in the new screen using navigation
+* `navigation.getParam(paramKey)`
+___
 
 ## 6.18. Setting Dynamic Navigation Options
 
