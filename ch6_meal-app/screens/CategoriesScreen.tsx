@@ -43,10 +43,10 @@ const CategoriesScreen: NSSC  = (props) => {
 
 CategoriesScreen.navigationOptions = {
   headerTitle: 'Meal Categories',
-  headerStyle: {
-    backgroundColor: Platform.OS === 'android' ? Color.primary : ''
-  },
-  headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary
+    headerStyle: {
+      backgroundColor: Platform.OS === 'android' ? Color.primary : ''
+    },
+    headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary
 }
 
 const styles = StyleSheet.create({
