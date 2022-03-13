@@ -5,28 +5,27 @@ import { NavigationStackScreenComponent as NSSC } from 'react-navigation-stack';
 
 import { CATEGORIES } from "../data/dummy-data";
 import Category from "../models/category";
+import CategoryGridTile from "../components/CategoryGridTile";
 
 const CategoriesScreen: NSSC  = (props) => {
 
   const renderGridItem: ListRenderItem<Category> = (itemData) => {
-    const category = itemData.item
-    return (
-      <TouchableOpacity
-        onPress={() => {
-          props.navigation.navigate({
-            routeName: 'CategoryMeals',
-            params: {
-              categoryId: itemData.item.id
-            }
-          })
-        }}
-        style={styles.gridItem}
-      >
-        <View>
-          <Text>{category.title}</Text>
-        </View>
-      </TouchableOpacity>
-    )
+    const category = itemData.item;
+
+    const selectTile = () => {
+      props.navigation.navigate({
+        routeName: 'CategoryMeals',
+        params: {
+          categoryId: itemData.item.id
+        }
+      })
+    };
+
+    return <CategoryGridTile
+      color={itemData.item.color}
+      onSelect={selectTile}
+      title={itemData.item.title}
+    />;
   };
 
   return (
@@ -40,11 +39,6 @@ const CategoriesScreen: NSSC  = (props) => {
 };
 
 const styles = StyleSheet.create({
-  gridItem: {
-    flex: 1,
-    height: 150,
-    margin: 15
-  },
   screen: {
     alignItems: 'center',
     flex: 1,

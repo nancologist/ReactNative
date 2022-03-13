@@ -1326,6 +1326,7 @@ __React Native Screens__ Package:
 ___
 
 ## 6.20. Grid Styling & Some Refactoring
+___
 
 ## 6.21. Adding Meal Models & Data
 
