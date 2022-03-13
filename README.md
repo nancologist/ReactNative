@@ -1308,6 +1308,12 @@ ___
 ___
 
 ## 6.18. Setting Dynamic Navigation Options
+GOAL: We want to output the Category title in the header of our app.
+
+We can achieve our GOAL here using `navigationOptions` just like in the `CategoriesScreen`, BUT the challenge here is that we set the navigationOptions after the component function has been renderes. So here we should use the __function form__ of the `navigationOptions`.
+
+TEST: Now when we navigate into the category screens we see the title in the header.
+___
 
 ## 6.19. Default Navigation Options & Config
 

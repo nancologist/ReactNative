@@ -1,12 +1,9 @@
-import { Text, View, StyleSheet, Button } from 'react-native';
-import { NavigationStackProp } from "react-navigation-stack";
+import {Text, View, StyleSheet, Button, Platform} from 'react-native';
 import {CATEGORIES} from "../data/dummy-data";
+import { NavigationStackScreenComponent as NSSC } from 'react-navigation-stack';
+import Color from "../constants/Color";
 
-type Props = {
-  navigation: NavigationStackProp
-};
-
-const CategoryMealsScreen = (props: Props) => {
+const CategoryMealsScreen: NSSC = (props) => {
   const catId = props.navigation.getParam('categoryId');
   const selectedCategory = CATEGORIES.find(cat => cat.id === catId)!
 
@@ -30,6 +27,19 @@ const CategoryMealsScreen = (props: Props) => {
       />
     </View>
   );
+};
+
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+  const catId = navigationData.navigation.getParam('categoryId');
+  const selectedCategory = CATEGORIES.find(cat => cat.id === catId)!;
+
+  return {
+    headerTitle: selectedCategory.title,
+    headerStyle: {
+      backgroundColor: Platform.OS === 'android' ? Color.primary : ''
+    },
+    headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary
+  };
 };
 
 const styles = StyleSheet.create({
