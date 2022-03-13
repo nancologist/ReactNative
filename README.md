@@ -1329,6 +1329,7 @@ ___
 ___
 
 ## 6.21. Adding Meal Models & Data
+TEST: Now when we tap the categories we can see their meals!
 ___
 
 ## 6.22. Loading Meals for Categories
