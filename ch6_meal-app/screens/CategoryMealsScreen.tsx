@@ -1,14 +1,17 @@
-import {Text, View, StyleSheet, Button, Platform, FlatList} from 'react-native';
+import {Text, View, StyleSheet, Button, Platform, FlatList, ListRenderItem} from 'react-native';
 import {CATEGORIES, MEALS} from "../data/dummy-data";
 import { NavigationStackScreenComponent as NSSC } from 'react-navigation-stack';
 import Color from "../constants/Color";
+import Meal from "../models/meal";
+import MealItem from "../components/MealItem";
 
 const CategoryMealsScreen: NSSC = (props) => {
-  const renderMealItem = itemData => {
+  const renderMealItem: ListRenderItem<Meal> = itemData => {
     return (
-      <View>
-        <Text>{itemData.item.title}</Text>
-      </View>
+      <MealItem
+        meal={itemData.item}
+        onSelectMeal={() => {}}
+      />
     );
   };
 
@@ -28,6 +31,7 @@ const CategoryMealsScreen: NSSC = (props) => {
       <FlatList
         data={displayedMeals}
         renderItem={renderMealItem}
+        style={{ marginTop: 15, width: '90%' }}
       />
     </View>
   );

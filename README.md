@@ -1336,6 +1336,8 @@ TEST: Now when we tap the categories we can see their meals!
 ___
 
 ## 6.23. Rendering a Meals List
+using the `ImageBackground` component you can wrap it around the content you want to show in foreground and show the image behind it! So easy!
+___
 
 ## 6.24. Passing Data to the Meal Detail Screen
 

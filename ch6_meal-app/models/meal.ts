@@ -7,7 +7,7 @@ export default class Meal {
     public affordability: 'luxurious' | 'pricey' | 'affordable',
     public complexity: 'challenging' | 'hard' | 'simple',
     public imageUrl: string,
-    public duration: number,
+    public durationInMin: number,
     public ingredients: string[],
     public steps: string[],
     public isGlutenFree: boolean,
@@ -21,7 +21,7 @@ export default class Meal {
     this.affordability = affordability
     this.complexity = complexity
     this.imageUrl = imageUrl
-    this.duration = duration
+    this.durationInMin = durationInMin
     this.ingredients = ingredients
     this.steps = steps
     this.isGlutenFree = isGlutenFree
