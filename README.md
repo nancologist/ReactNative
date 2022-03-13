@@ -1316,6 +1316,14 @@ TEST: Now when we navigate into the category screens we see the title in the hea
 ___
 
 ## 6.19. Default Navigation Options & Config
+We can outsource repeated parts of the `navigationOptions`.
+
+Notice that if you have a same key in `defaultNavigationOptions` and `navigationOptions` it will be overwritten by the later one, which is plausible!  
+
+__React Native Screens__ Package:  
+* Installation: This package should be installed by expo out of the box but to ensure you can run `npm install --save react-native-screens`
+* What it does is: It allows you to ensure that under the hood ReactNative uses the native optimized screen components provided by Android and iOS (in Android it is called the __Fragment__ and on iOS it is __UI View Controller__) and that improved the performance a bit more.
+___
 
 ## 6.20. Grid Styling & Some Refactoring
 

@@ -1,12 +1,10 @@
 import {
   Text, View, StyleSheet, Button, FlatList, ListRenderItem, TouchableOpacity,
-  Platform
 } from 'react-native';
 import { NavigationStackScreenComponent as NSSC } from 'react-navigation-stack';
 
 import { CATEGORIES } from "../data/dummy-data";
 import Category from "../models/category";
-import Color from "../constants/Color";
 
 const CategoriesScreen: NSSC  = (props) => {
 
@@ -40,14 +38,6 @@ const CategoriesScreen: NSSC  = (props) => {
     />
   );
 };
-
-CategoriesScreen.navigationOptions = {
-  headerTitle: 'Meal Categories',
-    headerStyle: {
-      backgroundColor: Platform.OS === 'android' ? Color.primary : ''
-    },
-    headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary
-}
 
 const styles = StyleSheet.create({
   gridItem: {
