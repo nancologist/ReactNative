@@ -1344,6 +1344,14 @@ tags: `navigate` , `params` , `navigationOptions`
 ___
 
 ## 6.25. Header Buttons: Using the Correct Version
+In the next lecture, we'll add a package named `react-navigation-header-buttons`.
+
+In order to avoid errors, make sure you're using the correct version of that package => Version 6
+
+You can install that via `npm install --save react-navigation-header-buttons@6`
+
+(instead of just npm install --save react-navigation-header-buttons which I use in the next lecture)
+___
 
 ## 6.26. Adding Header Buttons
 
