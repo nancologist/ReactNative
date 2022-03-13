@@ -1,14 +1,14 @@
 import {Text, View, StyleSheet, Button} from 'react-native';
-import {NavigationStackProp} from "react-navigation-stack";
+import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
+import {MEALS} from "../data/dummy-data";
 
-type Props = {
-  navigation: NavigationStackProp
-};
+const MealScreen: NSSC = (props) => {
+  const mealId = props.navigation.getParam('mealId');
+  const selectedMeal = MEALS.find(meal => meal.id === mealId)!
 
-const MealScreen = (props: Props) => {
   return (
     <View style={styles.screen}>
-      <Text>The Meal Screen</Text>
+      <Text>{selectedMeal.title}</Text>
       <Button
         title={'Go back to Category!'}
         onPress={() => { props.navigation.popToTop() }}
@@ -16,6 +16,15 @@ const MealScreen = (props: Props) => {
     </View>
   );
 };
+
+MealScreen.navigationOptions = (navData) => {
+  const mealId = navData.navigation.getParam('mealId')
+  const selectedMeal = MEALS.find(meal => meal.id === mealId)!
+
+  return {
+    headerTitle: selectedMeal.title
+  }
+}
 
 const styles = StyleSheet.create({
   screen: {

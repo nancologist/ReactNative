@@ -1340,6 +1340,8 @@ using the `ImageBackground` component you can wrap it around the content you wan
 ___
 
 ## 6.24. Passing Data to the Meal Detail Screen
+tags: `navigate` , `params` , `navigationOptions`
+___
 
 ## 6.25. Header Buttons: Using the Correct Version
 

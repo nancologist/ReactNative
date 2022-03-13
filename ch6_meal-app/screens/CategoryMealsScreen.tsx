@@ -10,7 +10,11 @@ const CategoryMealsScreen: NSSC = (props) => {
     return (
       <MealItem
         meal={itemData.item}
-        onSelectMeal={() => {}}
+        onSelectMeal={() => {
+          props.navigation.navigate({ routeName: 'MealDetail', params: {
+            mealId: itemData.item.id
+          }});
+        }}
       />
     );
   };
