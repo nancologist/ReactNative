@@ -1,6 +1,8 @@
 import {Text, View, StyleSheet, Button} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {MEALS} from "../data/dummy-data";
+import {HeaderButtons, Item} from "react-navigation-header-buttons";
+import AppHeaderButton from "../components/AppHeaderButton";
 
 const MealScreen: NSSC = (props) => {
   const mealId = props.navigation.getParam('mealId');
@@ -22,7 +24,23 @@ MealScreen.navigationOptions = (navData) => {
   const selectedMeal = MEALS.find(meal => meal.id === mealId)!
 
   return {
-    headerTitle: selectedMeal.title
+    headerTitle: selectedMeal.title,
+
+    headerRight: () => {
+      const handlePress = () => {
+        console.log('Mark as favorite!')
+      };
+
+      return (
+        <HeaderButtons HeaderButtonComponent={AppHeaderButton}>
+          <Item
+            iconName={'ios-star'}
+            onPress={handlePress}
+            title={'Favorite'}
+          />
+        </HeaderButtons>
+      );
+    }
   }
 }
 

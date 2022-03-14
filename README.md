@@ -1354,6 +1354,15 @@ You can install that via `npm install --save react-navigation-header-buttons@6`
 ___
 
 ## 6.26. Adding Header Buttons
+Tags: `navigationOptions` , `headerRight`
+
+With `headerRight` you can render something in the right side of nvigation header.
+
+But the problem is if you set the value of `headerRight` to a JSX directly (without using a package) it's very hard to get the right styling for different platforms. So we need to install the: `react-navigation-header-buttons` (in this course the version 6 of it: `npm install --save react-navigation-header-buttons@6`)
+
+
+We also need the __VECTOR ICONS__ to have some icons:  `npm install --save @expo/vector-icons`
+___
 
 ## 6.27. Fixing the Shadows
 
