@@ -47,9 +47,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.26,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
-
-    // Android
-    elevation: 3
   },
 
   gridItem: {
@@ -59,7 +56,10 @@ const styles = StyleSheet.create({
 
     // Fixing the Ripple Effect on Android by Pressing the Tile:
     borderRadius: 10,
-    overflow: "hidden"
+    overflow: Platform.OS === 'android' && Platform.Version >= 21 ? 'hidden' : 'visible',
+
+    // Android
+    elevation: 5
   },
 
   title: {

@@ -1365,6 +1365,8 @@ We also need the __VECTOR ICONS__ to have some icons:  `npm install --save @expo
 ___
 
 ## 6.27. Fixing the Shadows
+Problem: Shadow was gone on our Tiles.
+___
 
 ## 6.28. Adding Tabs-based Navigation
 
