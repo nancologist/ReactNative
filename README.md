@@ -1379,13 +1379,14 @@ You have always only __one__ root navigator in your app and you can have other n
 
 Tags: install , react-navigation-tabs , react-navigation > 4
 
-ERROR after installation of the above package! Solution: Reset Cache and Restart Expo: `expo r -c`
+ERROR after installation of the above package! Solution: `npm install --save react-native-reanimated@1.5` and then Reset Cache and Restart Expo: `expo r -c`
 
 
 TEST: Now we have two tabs to switch!
 ___
 
 ## 6.29. Setting Icons and Configuring Tabs
+___
 
 ## 6.30. navigationOptions inside of a Navigator
 
