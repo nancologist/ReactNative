@@ -1369,6 +1369,21 @@ Problem: Shadow was gone on our Tiles.
 ___
 
 ## 6.28. Adding Tabs-based Navigation
+We can tabs at the bottom of the screen which is typical for mobile apps.
+
+For that from version 4 of react-navigation you should install `npm install --save react-navigation-tabs` 
+
+You can have a whole stackNavigator as an Item in the __TabNavigator__!
+
+You have always only __one__ root navigator in your app and you can have other navigators nested in that. So here we set our __TabNavigator__ as our Root Navigator instead of the stack navigator.
+
+Tags: install , react-navigation-tabs , react-navigation > 4
+
+ERROR after installation of the above package! Solution: Reset Cache and Restart Expo: `expo r -c`
+
+
+TEST: Now we have two tabs to switch!
+___
 
 ## 6.29. Setting Icons and Configuring Tabs
 
