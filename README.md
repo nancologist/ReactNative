@@ -1415,6 +1415,20 @@ In such a case, the `navigationOptions` configure the "nested navigator" (which 
 ___
 
 ## 6.31. Adding MaterialBottomTabs
+Tags: Android Tabs
+
+TheNow in Android the tabs are not typical for an Android Device but they look like iOS tabs:
+
+![ios-tab](imgs/ios-design-tabs.png)
+
+It's actually not a big problem and you can use these tabs also on Android, but we could have a better match for android. First we should install a package:
+
+`npm install --save react-navigation-material-bottom-tabs`
+
+We also need another package:  
+
+`npm install --save react-native-paper`
+___
 
 ## 6.32. Adding a Favorites Stack
 
