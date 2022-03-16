@@ -1432,6 +1432,10 @@ ___
 
 ## 6.32. Adding a Favorites Stack
 
+TEST: Now you see that we have two different StackNavigation for each one of these two tabs (Meals and Favorites).  
+That means when we switch between these two tabs the page we were on it in each stack stay there when we come back on its tab!
+___
+
 ## 6.33. Adding a Menu Button & Drawer Navigation
 
 ## 6.34. Configuring the Drawer
