@@ -5,7 +5,7 @@ import {createMaterialBottomTabNavigator} from "react-navigation-material-bottom
 import CategoriesScreen from '../screens/CategoriesScreen';
 import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailScreen from "../screens/MealDetailScreen";
-import {Platform} from "react-native";
+import {Platform, Text} from "react-native";
 import Color from "../constants/Color";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import FavoritesScreen from "../screens/FavoritesScreen";
@@ -13,9 +13,16 @@ import { Ionicons } from "@expo/vector-icons";
 import Meal from "../models/meal";
 import {createDrawerNavigator} from "react-navigation-drawer";
 import FiltersScreen from "../screens/FiltersScreen";
+import {StackNavigationOptions} from "react-navigation-stack/lib/typescript/src/vendor/types";
 
-const defaultStackNavOptions = {
+const defaultStackNavOptions: StackNavigationOptions = {
   headerStyle: { backgroundColor: Platform.OS === 'android' ? Color.primary : '' },
+  headerTitleStyle: {
+    fontFamily: 'open-sans-bold'
+  },
+  headerBackTitleStyle : {
+    fontFamily: 'open-sans'
+  },
   headerTintColor: Platform.OS === 'android' ? 'white' : Color.primary,
 }
 
@@ -60,7 +67,8 @@ const tabScreenConfig = {
           />
         );
       },
-      tabBarColor: Color.primary // Works only on Android
+      tabBarColor: Color.primary, // Works only on Android
+      tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontFamily: 'open-sans-bold' }}>Meals</Text> : 'Meals'
     }
   },
   Favorites: {
@@ -76,7 +84,9 @@ const tabScreenConfig = {
           />
         );
       },
-      tabBarColor: Color.accent
+      tabBarColor: Color.accent,
+      tabBarLabel: Platform.OS === 'android' ?
+        <Text style={{ fontFamily: 'open-sans-bold' }}>Favorites</Text> : 'Favorites'
     }
   }
 }
@@ -85,6 +95,9 @@ let MealsFavTabNavigator = createBottomTabNavigator(
   tabScreenConfig,
   {
     tabBarOptions: {
+      labelStyle: {
+        fontFamily: 'open-sans-bold'
+      },
       activeTintColor: Color.accent
     }
   }
