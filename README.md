@@ -1440,9 +1440,12 @@ ___
 WARNING: For Drawer Navigation from `react-navigation v4` you should install the package: `react-navigation-drawer`
   
 TEST: Now we have the Drawer navigation on our app screens
+
+[//]: # (FIXME ON Android Device - Drower not closing when tapping outside of it!)
 ___
 
 ## 6.34. Configuring the Drawer
+___
 
 ## 6.35. More Navigation Config & Styling
 

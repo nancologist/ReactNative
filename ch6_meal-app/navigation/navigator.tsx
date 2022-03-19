@@ -100,11 +100,28 @@ if (Platform.OS === 'android') {
 // To have Filter in the Header:
 const FiltersNavigator = createStackNavigator({
   Filters: FiltersScreen
+}, {
+  // navigationOptions: {
+  //   drawerLabel: 'Filters!!!'
+  // },
+  defaultNavigationOptions: defaultStackNavOptions
 })
 
 const MainNavigator = createDrawerNavigator({
-  MealsFavs: MealsFavTabNavigator,
+  MealsFavs: {
+    screen: MealsFavTabNavigator,
+    navigationOptions: {
+      drawerLabel: 'Meals'
+    }
+  },
   Filters: FiltersNavigator
-})
+}, {
+  contentOptions: {
+    activeTintColor: Color.accent,
+    labelStyle: {
+      fontFamily: 'open-sans-bold'
+    }
+  }
+});
 
 export default createAppContainer(MainNavigator);
