@@ -1437,6 +1437,10 @@ That means when we switch between these two tabs the page we were on it in each 
 ___
 
 ## 6.33. Adding a Menu Button & Drawer Navigation
+WARNING: For Drawer Navigation from `react-navigation v4` you should install the package: `react-navigation-drawer`
+  
+TEST: Now we have the Drawer navigation on our app screens
+___
 
 ## 6.34. Configuring the Drawer
 

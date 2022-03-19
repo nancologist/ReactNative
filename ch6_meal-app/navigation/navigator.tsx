@@ -11,6 +11,8 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import { Ionicons } from "@expo/vector-icons";
 import Meal from "../models/meal";
+import {createDrawerNavigator} from "react-navigation-drawer";
+import FiltersScreen from "../screens/FiltersScreen";
 
 const defaultStackNavOptions = {
   headerStyle: { backgroundColor: Platform.OS === 'android' ? Color.primary : '' },
@@ -95,4 +97,14 @@ if (Platform.OS === 'android') {
   });
 }
 
-export default createAppContainer(MealsFavTabNavigator);
+// To have Filter in the Header:
+const FiltersNavigator = createStackNavigator({
+  Filters: FiltersScreen
+})
+
+const MainNavigator = createDrawerNavigator({
+  MealsFavs: MealsFavTabNavigator,
+  Filters: FiltersNavigator
+})
+
+export default createAppContainer(MainNavigator);
