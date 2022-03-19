@@ -1,5 +1,6 @@
 import {View, Text, StyleSheet, TouchableOpacity, ImageBackground} from "react-native";
 import Meal from "../models/meal";
+import DefaultText from "./DefaultText";
 
 type Props = {
   meal: Meal;
@@ -34,9 +35,9 @@ const MealItem = ({ meal, onSelectMeal }: Props) => {
               ...styles.mealDetail
             }}
           >
-            <Text>{meal.durationInMin}m</Text>
-            <Text>{meal.complexity.toUpperCase()}</Text>
-            <Text>{meal.affordability.toUpperCase()}</Text>
+            <DefaultText>{meal.durationInMin}m</DefaultText>
+            <DefaultText>{meal.complexity.toUpperCase()}</DefaultText>
+            <DefaultText>{meal.affordability.toUpperCase()}</DefaultText>
           </View>
 
         </View>

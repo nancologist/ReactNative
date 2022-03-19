@@ -1451,6 +1451,7 @@ ___
 ___
 
 ## 6.36. Adding a DefaultText Component
+___
 
 ## 6.37. Adding the MealDetail Screen Content
 
