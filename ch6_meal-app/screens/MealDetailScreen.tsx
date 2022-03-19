@@ -1,21 +1,40 @@
-import {Text, View, StyleSheet, Button} from 'react-native';
+import {Text, View, StyleSheet, Button, ScrollView, Image} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {MEALS} from "../data/dummy-data";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
+import DefaultText from "../components/DefaultText";
+
+const ListItem = (props: any) => {
+  return <View style={styles.listItem}>
+    <DefaultText>{props.children}</DefaultText>
+  </View>
+}
 
 const MealScreen: NSSC = (props) => {
   const mealId = props.navigation.getParam('mealId');
   const selectedMeal = MEALS.find(meal => meal.id === mealId)!
 
   return (
-    <View style={styles.screen}>
-      <Text>{selectedMeal.title}</Text>
-      <Button
-        title={'Go back to Category!'}
-        onPress={() => { props.navigation.popToTop() }}
+    <ScrollView>
+      <Image
+        source={{ uri: selectedMeal.imageUrl }}
+        style={styles.image}
       />
-    </View>
+
+      <View style={styles.details}>
+        <DefaultText>{selectedMeal.durationInMin}m</DefaultText>
+        <DefaultText>{selectedMeal.complexity.toUpperCase()}</DefaultText>
+        <DefaultText>{selectedMeal.affordability.toUpperCase()}</DefaultText>
+      </View>
+
+      <Text style={styles.title}>Ingredients</Text>
+      {selectedMeal.ingredients.map(ing => <ListItem key={ing}>{ing}</ListItem>)}
+
+      <Text style={styles.title}>Steps</Text>
+      {selectedMeal.steps.map(step => <ListItem key={step}>{step}</ListItem>)}
+
+    </ScrollView>
   );
 };
 
@@ -45,10 +64,26 @@ MealScreen.navigationOptions = (navData) => {
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center'
+  image: {
+    width: '100%',
+    height: 200
+  },
+  details: {
+    flexDirection: 'row',
+    padding: 15,
+    justifyContent: 'space-around'
+  },
+  title: {
+    fontFamily: 'open-sans-bold',
+    fontSize: 22,
+    textAlign: 'center'
+  },
+  listItem: {
+    marginVertical: 10,
+    marginHorizontal: 20,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    padding: 10
   }
 });
 

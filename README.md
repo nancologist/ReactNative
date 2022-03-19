@@ -1454,6 +1454,7 @@ ___
 ___
 
 ## 6.37. Adding the MealDetail Screen Content
+___
 
 ## 6.38. Time for the "Filters" Screen Content!
 
