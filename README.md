@@ -1470,9 +1470,12 @@ TO AVoid that our `useEffect` gets triggered on every change in the cmp props, w
 So IF the Cmp gets rerendered or updates, the functino `saveFilters` will NOT GET RECREATED. Until one of its 4 dependencies change
 
 setParams() causes the cmp to rebuild because it is a props-change!
+
+In our `useEffect()` we have `saveFilters()` as a dependency. So we use `useCallBack()` because we don't want that `saveFilters()` gets recreated every time the cmp gets recreated.
 ___
 
 ## 6.39. Passing Data Between Component & Navigation Options (Header)
+___
 
 ## 6.40. [React Refresher] useEffect() & useCallback()
 
