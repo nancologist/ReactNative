@@ -1565,8 +1565,15 @@ By wrapping it around a function declaration and defining the dependencies of th
 ___
 
 ## 6.41. Wrap Up
+___
 
 ## 6.42. Useful Resources & Links
+Attached, you find the code snapshots for this module (you also find those attached to multiple lectures in the module).
+
+These resources might also be helpful:
+
+* React Navigation Docs: https://reactnavigation.org/docs/en/getting-started.html
+___
 
 ___
 ___
