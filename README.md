@@ -1457,6 +1457,19 @@ ___
 ___
 
 ## 6.38. Time for the "Filters" Screen Content!
+Here we have challenge , because we want to pass data from `useState` in the cmp to the `headerRight` in the Header of the Filter Screen
+
+SOLUTION: We can use `navigation.setParams()` to pass data from cmp to the header navigation. __This function merge the new params you pass as arguments into the already existing navigation params in your cmp!__
+
+TAGS: setParams , navigation , passing data
+
+TO AVoid that our `useEffect` gets triggered on every change in the cmp props, we should DESTRUCTURE the `props`
+
+`useCallback` works something like `computed` in VueJS , so it will cache the value/function and only updates it __only when the dependencies__ of that value/function change!
+
+So IF the Cmp gets rerendered or updates, the functino `saveFilters` will NOT GET RECREATED. Until one of its 4 dependencies change
+
+setParams() causes the cmp to rebuild because it is a props-change!
 ___
 
 ## 6.39. Passing Data Between Component & Navigation Options (Header)

@@ -1,8 +1,11 @@
 import {Text, View, StyleSheet, Switch, Platform} from 'react-native';
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
-import {useState} from "react";
+import {useState, useEffect, useCallback} from "react";
 import Color from "../constants/Color";
+import {StackNavigationProp} from "react-navigation-stack/lib/typescript/src/vendor/types";
+import {NavigationStackProp} from "react-navigation-stack";
+import {NavigationStackScreenProps} from "react-navigation-stack/lib/typescript/src/types";
 
 const FilterSwitch = (props: {
   label: string;
@@ -24,11 +27,23 @@ const FilterSwitch = (props: {
   )
 }
 
-const FiltersScreen = (props: {}) => {
+const FiltersScreen = (props: NavigationStackScreenProps) => {
+  const {navigation} = props;
+
   const [isGlutenFree, setIsGlutenFree] = useState(false)
   const [isLactoseFree, setIsLactoseFree] = useState(false)
   const [isVegetarian, setIsVegetarian] = useState(false)
   const [isVegan, setIsVegan] = useState(false)
+
+  const saveFilters = useCallback(() => {
+    const appliedFilters = {isGlutenFree, isLactoseFree, isVegetarian, isVegan}
+    console.log(appliedFilters)
+  }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian])
+
+  useEffect(() => {
+    navigation.setParams({ saveThem: saveFilters })
+  }, [saveFilters])
+
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Available Filters / Restrictions</Text>
@@ -71,6 +86,23 @@ FiltersScreen.navigationOptions = (navData: any) => {
             title={'Menu'}
             iconName={'ios-menu'}
             onPress={openDrawer}
+          />
+        </HeaderButtons>
+      )
+    },
+
+    headerRight: () => {
+      const onSave = () => {
+        const saveFiltersFn = navData.navigation.getParam('saveThem');
+        saveFiltersFn()
+      };
+
+      return (
+        <HeaderButtons HeaderButtonComponent={AppHeaderButton}>
+          <Item
+            title={'Save'}
+            iconName={'ios-save'}
+            onPress={onSave}
           />
         </HeaderButtons>
       )
