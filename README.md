@@ -1457,6 +1457,7 @@ ___
 ___
 
 ## 6.38. Time for the "Filters" Screen Content!
+___
 
 ## 6.39. Passing Data Between Component & Navigation Options (Header)
 
