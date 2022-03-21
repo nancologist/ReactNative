@@ -1578,3 +1578,197 @@ ___
 ___
 ___
 ___
+
+# 7. State Management & Redux
+
+## 7.1. Module Introduction
+
+## 7.2. What is State & What is Redux?
+
+## 7.3. Redux & Store Setup
+
+## 7.4. Selecting State Slices
+
+## 7.5. Redux Data & Navigation Options
+
+## 7.6. Dispatching Actions & Reducer Logic
+
+## 7.7. Switching the Favorites Icon
+
+## 7.8. Rendering a Fallback Text
+
+## 7.9. Adding Filtering Logic
+
+## 7.10. Dispatching Filter Actions
+
+## 7.11. Debugging Redux in React Native Apps
+
+## 7.12. Wrap Up
+
+## 7.13. Useful Resources & Links
+
+___
+___
+___
+
+# 8. SHOP app
+
+## 8.1. Module Introduction
+
+## 8.2. Planning the App
+
+## 8.3. Creating the Basic Project Setup
+
+## 8.4. The Products Overview Screen
+
+## 8.5. Setting Up a Navigator
+
+## 8.6. Styling the Product Items
+
+## 8.7. Adding Touchable Components
+
+## 8.8. Working on the Product Details Screen
+
+## 8.9. Using Custom Fonts
+
+## 8.10. Adding Items to the Cart
+
+## 8.11. Implementing Header Buttons
+
+## 8.12. Outputting Cart Items
+
+## 8.13. Adding Logic to Delete Items
+
+## 8.14. Adding Redux Logic for Orders
+
+## 8.15. SideDrawer & The Orders Screen
+
+## 8.16. Clearing the Cart
+
+## 8.17. Styling Order Items
+
+## 8.18. Making the "Show Details" Button Work
+
+## 8.19. Building the "User Products" Screen
+
+## 8.20. Reorganizing the ProductItem Component
+
+## 8.21. Deleting Items
+
+## 8.22. Adding Basic Editing & Navigation Logic
+
+## 8.23. Handling User Input
+
+## 8.24. Using Params to Submit User Input
+
+## 8.25. Dispatching Actions for Creating & Updating
+
+## 8.26. Time to Improve the App!
+
+## 8.27. Wrap Up
+
+## 8.28. Useful Resources & Links
+
+___
+___
+___
+
+# 9. Handling User Input
+
+## 9.1. Module Introduction
+
+## 9.2. Configuring TextInputs
+
+## 9.3. Adding Basic Validation
+
+## 9.4. Getting Started with useReducer()
+
+## 9.5. Finishing the Merged Form & Input Management
+
+## 9.6. Moving Input Logic Into A Separate Component
+
+## 9.7. Connecting Input Component & Form
+
+## 9.8. Tweaking Styles & Handling the Soft Keyboard
+
+## 9.9. Alternatives & Wrap Up
+
+## 9.10. Useful Resources & Links
+
+___
+___
+___
+
+# 10. Http Request & Adding a Web Server + Database
+
+## 10.1. Module Introduction
+
+## 10.2. Setup & How To Send Requests
+
+## 10.3. Installing Redux Thunk
+
+## 10.4. Storing Products on a Server
+
+## 10.5. Fetching Products from the Server
+
+## 10.6. Displaying a Loading Spinner & Handling Errors
+
+## 10.7. Setting Up a Navigation Listener
+
+## 10.8. Updating & Deleting Products
+
+## 10.9. Handling Additional Errors
+
+## 10.10. Storing Orders
+
+## 10.11. Displaying an ActivityIndicator
+
+## 10.12. Fetching Stored Orders
+
+## 10.13. Adding "Pull to Refresh"
+
+## 10.14. Wrap Up
+
+## 10.15. Useful Resources & Links
+
+___
+___
+___
+
+# 11. User Authentication
+
+## 11.1. Module Introduction
+
+## 11.2. How Authentication Works
+
+## 11.3. Implementing a Basic Login Screen
+
+## 11.4. Adding User Signup
+
+## 11.5. Logging Users In
+
+## 11.6. Managing the Loading State & Errors
+
+## 11.7. Using the Token
+
+## 11.8. Mapping Orders to Users
+
+## 11.9. Improved Mapping (Scoping)
+
+## 11.10. Using AsyncStorage
+
+## 11.11. Implementing "Auto Login"
+
+## 11.12. Adding Logout
+
+## 11.13. Implementing "Auto Logout"
+
+## 11.14. Auto-Logout & Android (Warning)
+
+## 11.15. Wrap Up
+
+## 11.16. Useful Resources & Links
+
+___
+___
+___
