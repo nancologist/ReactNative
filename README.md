@@ -1582,10 +1582,27 @@ ___
 # 7. State Management & Redux
 
 ## 7.1. Module Introduction
+___
 
 ## 7.2. What is State & What is Redux?
+___
 
 ## 7.3. Redux & Store Setup
+Goal: We want to use redux to:
+
+1. Add foods to the favorite
+2. And also we want to store the filters setting
+
+Installations:  
+``npm install --save redux react-redux``
+
+Mori: I will use Redux Toolkit, so:
+
+``npm install @reduxjs/toolkit``
+
+
+ATTENTION: In Expo Project you don't have any `index.ts` or `index.js`, so you should add the `<Provider store={}>` around the elements in your `App.tsx` or `App.js`
+___
 
 ## 7.4. Selecting State Slices
 
@@ -1669,9 +1686,6 @@ ___
 
 ## 8.28. Useful Resources & Links
 
-___
-___
-___
 
 # 9. Handling User Input
 
@@ -1695,9 +1709,6 @@ ___
 
 ## 9.10. Useful Resources & Links
 
-___
-___
-___
 
 # 10. Http Request & Adding a Web Server + Database
 
@@ -1731,9 +1742,6 @@ ___
 
 ## 10.15. Useful Resources & Links
 
-___
-___
-___
 
 # 11. User Authentication
 

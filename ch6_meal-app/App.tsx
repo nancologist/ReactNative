@@ -4,8 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import { enableScreens } from 'react-native-screens'
+import { Provider } from "react-redux";
 
 import MealNavigator from "./navigation/navigator";
+import {store} from "./store/store";
 
 enableScreens(); // deprecated function: useScreens()
 
@@ -37,6 +39,8 @@ export default function App() {
   }
 
   return (
-    <MealNavigator />
+    <Provider store={store}>
+      <MealNavigator />
+    </Provider>
   );
 }
