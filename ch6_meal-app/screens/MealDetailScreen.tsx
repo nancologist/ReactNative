@@ -1,9 +1,9 @@
 import {Text, View, StyleSheet, Button, ScrollView, Image} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
-import {MEALS} from "../data/dummy-data";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
 import DefaultText from "../components/DefaultText";
+import {useSelector} from "../store/store";
 
 const ListItem = (props: any) => {
   return <View style={styles.listItem}>
@@ -12,8 +12,9 @@ const ListItem = (props: any) => {
 }
 
 const MealScreen: NSSC = (props) => {
+  const availableMeals = useSelector(state => state.mealsReducer.meals)
   const mealId = props.navigation.getParam('mealId');
-  const selectedMeal = MEALS.find(meal => meal.id === mealId)!
+  const selectedMeal = availableMeals.find(meal => meal.id === mealId)!
 
   return (
     <ScrollView>
@@ -40,7 +41,7 @@ const MealScreen: NSSC = (props) => {
 
 MealScreen.navigationOptions = (navData) => {
   const mealId = navData.navigation.getParam('mealId')
-  const selectedMeal = MEALS.find(meal => meal.id === mealId)!
+  const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
   return {
     headerTitle: selectedMeal.title,
