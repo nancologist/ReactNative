@@ -1605,6 +1605,7 @@ ATTENTION: In Expo Project you don't have any `index.ts` or `index.js`, so you s
 ___
 
 ## 7.4. Selecting State Slices
+___
 
 ## 7.5. Redux Data & Navigation Options
 
