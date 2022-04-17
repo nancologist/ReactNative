@@ -47,7 +47,7 @@ const MealDetailScreen: NSSC = (props) => {
 
 MealDetailScreen.navigationOptions = (navData) => {
   const mealId = navData.navigation.getParam('mealId')
-  const mealTitle = navData.navigation.getParam('mealTitle')
+  // const mealTitle = navData.navigation.getParam('mealTitle')
   // const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
   return {
