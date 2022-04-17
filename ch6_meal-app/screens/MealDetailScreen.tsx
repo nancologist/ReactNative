@@ -11,7 +11,7 @@ const ListItem = (props: any) => {
   </View>
 }
 
-const MealScreen: NSSC = (props) => {
+const MealDetailScreen: NSSC = (props) => {
   const availableMeals = useSelector(state => state.mealsReducer.meals)
   const mealId = props.navigation.getParam('mealId');
   const selectedMeal = availableMeals.find(meal => meal.id === mealId)!
@@ -39,7 +39,7 @@ const MealScreen: NSSC = (props) => {
   );
 };
 
-MealScreen.navigationOptions = (navData) => {
+MealDetailScreen.navigationOptions = (navData) => {
   const mealId = navData.navigation.getParam('mealId')
   const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MealScreen;
+export default MealDetailScreen;
