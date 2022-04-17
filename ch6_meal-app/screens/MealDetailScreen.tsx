@@ -4,7 +4,8 @@ import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
 import DefaultText from "../components/DefaultText";
-import {useSelector} from "../store/store";
+import {useSelector, useDispatch} from "../store/store";
+import * as mealActions from '../store/actions'
 
 const ListItem = (props: any) => {
   return <View style={styles.listItem}>
@@ -16,6 +17,11 @@ const MealDetailScreen: NSSC = (props) => {
   const availableMeals = useSelector(state => state.mealsReducer.meals)
   const mealId = props.navigation.getParam('mealId');
   const selectedMeal = availableMeals.find(meal => meal.id === mealId)!
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    props.navigation.setParams({ dispatch: dispatch })
+  }, [])
 
   // Alt 2
   // useEffect(() => {
@@ -50,19 +56,21 @@ MealDetailScreen.navigationOptions = (navData) => {
   const mealTitle = navData.navigation.getParam('mealTitle')
   // const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
+  const dispatch = navData.navigation.getParam('dispatch')
+
   return {
     headerTitle: mealTitle,
 
     headerRight: () => {
-      const handlePress = () => {
-        console.log('Mark as favorite!')
+      const onAddFavorite = () => {
+        dispatch(mealActions.addToFavorite(mealId))
       };
 
       return (
         <HeaderButtons HeaderButtonComponent={AppHeaderButton}>
           <Item
             iconName={'ios-star'}
-            onPress={handlePress}
+            onPress={onAddFavorite}
             title={'Favorite'}
           />
         </HeaderButtons>

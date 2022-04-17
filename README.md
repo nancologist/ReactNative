@@ -1612,6 +1612,7 @@ We will use `useEffect` so that the `MealDetailScreen` does not rerender infinit
 ___
 
 ## 7.6. Dispatching Actions & Reducer Logic
+___
 
 ## 7.7. Switching the Favorites Icon
 
