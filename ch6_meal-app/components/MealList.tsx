@@ -9,7 +9,7 @@ import {StackNavigationProp} from "react-navigation-stack/lib/typescript/src/ven
 interface Props {
   listData: Meal[];
   navigation: StackNavigationProp;
-};
+}
 
 const MealList = (props: Props) => {
 
@@ -19,7 +19,8 @@ const MealList = (props: Props) => {
         meal={itemData.item}
         onSelectMeal={() => {
           props.navigation.navigate({ routeName: 'MealDetail', params: {
-              mealId: itemData.item.id
+              mealId: itemData.item.id,
+              mealTitle: itemData.item.title
             }});
         }}
       />

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {Text, View, StyleSheet, Button, ScrollView, Image} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
@@ -15,6 +16,11 @@ const MealDetailScreen: NSSC = (props) => {
   const availableMeals = useSelector(state => state.mealsReducer.meals)
   const mealId = props.navigation.getParam('mealId');
   const selectedMeal = availableMeals.find(meal => meal.id === mealId)!
+
+  // Alt 2
+  // useEffect(() => {
+  //   props.navigation.setParams({ mealTitle: selectedMeal.title })
+  // }, [selectedMeal])
 
   return (
     <ScrollView>
@@ -41,10 +47,11 @@ const MealDetailScreen: NSSC = (props) => {
 
 MealDetailScreen.navigationOptions = (navData) => {
   const mealId = navData.navigation.getParam('mealId')
-  const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
+  const mealTitle = navData.navigation.getParam('mealTitle')
+  // const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
   return {
-    headerTitle: selectedMeal.title,
+    headerTitle: mealTitle,
 
     headerRight: () => {
       const handlePress = () => {

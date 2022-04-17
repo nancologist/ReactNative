@@ -1608,6 +1608,8 @@ ___
 ___
 
 ## 7.5. Redux Data & Navigation Options
+We will use `useEffect` so that the `MealDetailScreen` does not rerender infinitely because of updating the cmp recursively.
+___
 
 ## 7.6. Dispatching Actions & Reducer Logic
 
