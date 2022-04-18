@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import {useCallback, useEffect} from 'react'
 import {Text, View, StyleSheet, Button, ScrollView, Image} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
@@ -19,11 +19,15 @@ const MealDetailScreen: NSSC = (props) => {
   const selectedMeal = availableMeals.find(meal => meal.id === mealId)!
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    props.navigation.setParams({ dispatch: dispatch })
-  }, [])
+  const onToggleFavorite = useCallback(() => {
+    dispatch(mealActions.toggleFavorite(mealId))
+  }, [dispatch, mealId])
 
-  // Alt 2
+  useEffect(() => {
+    props.navigation.setParams({ onToggleFavorite })
+  }, [onToggleFavorite])
+
+  // Alt 2 - Showing Meal Title on Header
   // useEffect(() => {
   //   props.navigation.setParams({ mealTitle: selectedMeal.title })
   // }, [selectedMeal])
@@ -52,25 +56,22 @@ const MealDetailScreen: NSSC = (props) => {
 };
 
 MealDetailScreen.navigationOptions = (navData) => {
-  const mealId = navData.navigation.getParam('mealId')
+  // const mealId = navData.navigation.getParam('mealId')
   const mealTitle = navData.navigation.getParam('mealTitle')
   // const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
 
-  const dispatch = navData.navigation.getParam('dispatch')
+  const handlePress = navData.navigation.getParam('onToggleFavorite')
 
   return {
     headerTitle: mealTitle,
 
     headerRight: () => {
-      const onAddFavorite = () => {
-        dispatch(mealActions.toggleFavorite(mealId))
-      };
 
       return (
         <HeaderButtons HeaderButtonComponent={AppHeaderButton}>
           <Item
             iconName={'ios-star'}
-            onPress={onAddFavorite}
+            onPress={handlePress}
             title={'Favorite'}
           />
         </HeaderButtons>
