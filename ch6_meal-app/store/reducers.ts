@@ -24,7 +24,7 @@ export const mealsReducer = createReducer(initialState, (builder) => {
     })
     .addCase(setFilters, (state, action) => {
       const appliedFilters = action.payload
-      state.filteredMeals = state.filteredMeals.filter(meal => {
+      state.filteredMeals = state.meals.filter(meal => {
         if (appliedFilters.isGlutenFree && !meal.isGlutenFree) {
           return false
         }
