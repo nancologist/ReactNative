@@ -5,3 +5,10 @@ export interface State {
   filteredMeals: Meal[];
   favoriteMeals: Meal[];
 }
+
+export type Filter = {
+  isGlutenFree: Boolean;
+  isLactoseFree: Boolean;
+  isVegetarian: Boolean;
+  isVegan: Boolean;
+}

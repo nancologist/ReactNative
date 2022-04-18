@@ -1,5 +1,5 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {toggleFavorite} from "./actions";
+import {toggleFavorite, setFilters} from "./actions";
 import {MEALS} from "../data/dummy-data";
 import {State} from "../types";
 
@@ -21,5 +21,23 @@ export const mealsReducer = createReducer(initialState, (builder) => {
         const meal = state.meals.find(meal => meal.id === mealId)
         state.favoriteMeals = [...state.favoriteMeals, meal]
       }
+    })
+    .addCase(setFilters, (state, action) => {
+      const appliedFilters = action.payload
+      state.filteredMeals = state.filteredMeals.filter(meal => {
+        if (appliedFilters.isGlutenFree && !meal.isGlutenFree) {
+          return false
+        }
+        if (appliedFilters.isLactoseFree && !meal.isLactoseFree) {
+          return false
+        }
+        if (appliedFilters.isVegetarian && !meal.isVegetarian) {
+          return false
+        }
+        if (appliedFilters.isVegan && !meal.isVegan) {
+          return false
+        }
+        return true
+      })
     })
 })

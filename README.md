@@ -1627,8 +1627,10 @@ ___
 ___
 
 ## 7.9. Adding Filtering Logic
+___
 
 ## 7.10. Dispatching Filter Actions
+__
 
 ## 7.11. Debugging Redux in React Native Apps
 

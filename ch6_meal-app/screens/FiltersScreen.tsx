@@ -3,9 +3,9 @@ import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
 import {useState, useEffect, useCallback} from "react";
 import Color from "../constants/Color";
-import {StackNavigationProp} from "react-navigation-stack/lib/typescript/src/vendor/types";
-import {NavigationStackProp} from "react-navigation-stack";
+import { useDispatch } from '../store/store'
 import {NavigationStackScreenProps} from "react-navigation-stack/lib/typescript/src/types";
+import * as mealActions from '../store/actions'
 
 const FilterSwitch = (props: {
   label: string;
@@ -35,9 +35,11 @@ const FiltersScreen = (props: NavigationStackScreenProps) => {
   const [isVegetarian, setIsVegetarian] = useState(false)
   const [isVegan, setIsVegan] = useState(false)
 
+  const dispatch = useDispatch()
+
   const saveFilters = useCallback(() => {
     const appliedFilters = {isGlutenFree, isLactoseFree, isVegetarian, isVegan}
-    console.log(appliedFilters)
+    dispatch(mealActions.setFilters(appliedFilters))
   }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian])
 
   useEffect(() => {
