@@ -1656,8 +1656,19 @@ You'll see this approach in action in the Shop App course module ("Adding Items 
 ___
 
 ## 7.12. Wrap Up
+___
 
 ## 7.13. Useful Resources & Links
+Attached, you find the code snapshots for this module (you also find those attached to multiple lectures in the module).
+
+These resources might also be helpful:
+
+Official Redux Docs: https://redux.js.org/introduction/getting-started
+
+React Redux Docs: https://react-redux.js.org/
+
+Redux vs Context API: https://academind.com/learn/react/redux-vs-context-api
+___
 
 ___
 ___
