@@ -1,5 +1,5 @@
 import {useCallback, useEffect} from 'react'
-import {Text, View, StyleSheet, Button, ScrollView, Image} from 'react-native';
+import {Text, View, StyleSheet, ScrollView, Image} from 'react-native';
 import {NavigationStackScreenComponent as NSSC} from "react-navigation-stack";
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import AppHeaderButton from "../components/AppHeaderButton";
@@ -27,11 +27,6 @@ const MealDetailScreen: NSSC = (props) => {
     props.navigation.setParams({ onToggleFavorite })
   }, [onToggleFavorite])
 
-  // Alt 2 - Showing Meal Title on Header
-  // useEffect(() => {
-  //   props.navigation.setParams({ mealTitle: selectedMeal.title })
-  // }, [selectedMeal])
-
   return (
     <ScrollView>
       <Image
@@ -56,10 +51,7 @@ const MealDetailScreen: NSSC = (props) => {
 };
 
 MealDetailScreen.navigationOptions = (navData) => {
-  // const mealId = navData.navigation.getParam('mealId')
   const mealTitle = navData.navigation.getParam('mealTitle')
-  // const selectedMeal = MEALS.find(meal => meal.id === mealId)! // PROBLEM , NEXT LECTURE WILL BE SOLVED
-
   const handlePress = navData.navigation.getParam('onToggleFavorite')
 
   return {

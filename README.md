@@ -1612,6 +1612,12 @@ We will use `useEffect` so that the `MealDetailScreen` does not rerender infinit
 ___
 
 ## 7.6. Dispatching Actions & Reducer Logic
+`myFunc = useCallback(funcBody)` : One of the uses of `useCallback` is when the `myFunc` is a dependency in a `useEffect` . Because on every rerendering of the component the function!
+
+So what happens if you don't use `useCallback` here? i.e. you write `myFunc = funcBody` instead of `myFunc = useCallback(funcBody)`  
+The problem is if `myFunc` is a dependency in a useEffect, for example: `useEffect((a,b) => {...}, [myFunc])` then on every rerender the `myFunc` is going to be a new object and it causes a new rerendering and so a infinite loop of rerenderings!
+
+https://dmitripavlutin.com/dont-overuse-react-usecallback/
 ___
 
 ## 7.7. Switching the Favorites Icon
