@@ -1633,6 +1633,27 @@ ___
 __
 
 ## 7.11. Debugging Redux in React Native Apps
+You can debug Redux in React Native apps with help of the React Native Debugger tool: https://github.com/jhen0409/react-native-debugger/blob/master/docs/redux-devtools-integration.md
+
+1) Make sure you got the React Native Debugger installed (https://github.com/jhen0409/react-native-debugger)
+
+3) Enable JS Debugging in the running app (open development overlay via `CTRL + M` / `CMD + M` on Android devices, `CMD + D` on iOS devices)
+
+4) Install the `redux-devtools-extension` package via `npm install --save-dev redux-devtools-extension` (https://www.npmjs.com/package/redux-devtools-extension)
+
+5) Enable Redux debugging in your code:
+
+```js
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store = createStore(reducer, composeWithDevTools());  
+```
+
+Important: Make sure you remove this code when building your app for production!
+
+You'll see this approach in action in the Shop App course module ("Adding Items to the Cart" lecture)!
+___
 
 ## 7.12. Wrap Up
 
