@@ -1621,8 +1621,10 @@ https://dmitripavlutin.com/dont-overuse-react-usecallback/
 ___
 
 ## 7.7. Switching the Favorites Icon
+___
 
 ## 7.8. Rendering a Fallback Text
+___
 
 ## 7.9. Adding Filtering Logic
 

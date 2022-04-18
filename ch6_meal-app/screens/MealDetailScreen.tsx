@@ -27,6 +27,13 @@ const MealDetailScreen: NSSC = (props) => {
     props.navigation.setParams({ onToggleFavorite })
   }, [onToggleFavorite])
 
+  const isFavMeal = useSelector(
+    state => state.mealsReducer.favoriteMeals.findIndex(meal => meal.id === mealId) > -1
+  )
+  useEffect(() => {
+    props.navigation.setParams({ isFavMeal })
+  }, [isFavMeal])
+
   return (
     <ScrollView>
       <Image
@@ -53,6 +60,7 @@ const MealDetailScreen: NSSC = (props) => {
 MealDetailScreen.navigationOptions = (navData) => {
   const mealTitle = navData.navigation.getParam('mealTitle')
   const handlePress = navData.navigation.getParam('onToggleFavorite')
+  const isFavMeal = navData.navigation.getParam('isFavMeal')
 
   return {
     headerTitle: mealTitle,
@@ -62,7 +70,7 @@ MealDetailScreen.navigationOptions = (navData) => {
       return (
         <HeaderButtons HeaderButtonComponent={AppHeaderButton}>
           <Item
-            iconName={'ios-star'}
+            iconName={isFavMeal ? 'ios-star' : 'ios-star-outline'}
             onPress={handlePress}
             title={'Favorite'}
           />

@@ -9,10 +9,14 @@ const FavoritesScreen: NavigationStackScreenComponent = (props) => {
   const favMeals = useSelector(state => state.mealsReducer.favoriteMeals)
 
   return (
-    <MealList
-      listData={favMeals}
-      navigation={props.navigation}
-    />
+    <>
+      {favMeals.length > 0 ?
+        <MealList
+          listData={favMeals}
+          navigation={props.navigation}
+        /> : <Text>No favorite meal is stored.</Text>
+      }
+    </>
   )
 };
 
