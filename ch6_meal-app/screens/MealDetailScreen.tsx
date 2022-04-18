@@ -63,7 +63,7 @@ MealDetailScreen.navigationOptions = (navData) => {
 
     headerRight: () => {
       const onAddFavorite = () => {
-        dispatch(mealActions.addToFavorite(mealId))
+        dispatch(mealActions.toggleFavorite(mealId))
       };
 
       return (
