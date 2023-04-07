@@ -1710,8 +1710,11 @@ ___
 ___
 
 ## 8.7. Adding Dummy Expense Data
+___
 
 ## 8.8. Outputting a List of Expenses
+
+___
 
 ## 8.9. Improving App Layout & Styling
 
