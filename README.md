@@ -1707,6 +1707,7 @@ ___
 ___
 
 ## 8.6. Continuing Work on the Expense-related Components
+___
 
 ## 8.7. Adding Dummy Expense Data
 
