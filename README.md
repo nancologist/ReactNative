@@ -1674,4 +1674,52 @@ ___
 ___
 ___
 
-# 8. 
+# 8. The Expense Tracker App
+
+## 8.1. Module Introduction & What We'll Build
+
+## 8.2. The Starting Setup
+
+## 8.3. Adding Navigation (with React Navigation) & Configuring Navigation
+
+## 8.4. Adding Global Colors & Editing Navigation Configuration
+
+## 8.5. Creating Key App Components to Display Expenses
+
+## 8.6. Continuing Work on the Expense-related Components
+
+## 8.7. Adding Dummy Expense Data
+
+## 8.8. Outputting a List of Expenses
+
+## 8.9. Improving App Layout & Styling
+
+## 8.10. Working on Expense List Items
+
+## 8.11. Formatting Dates
+
+## 8.12. Adding a Header Button & Making Expense Items Tappable
+
+## 8.13. Navigating Programmatically Between Screens
+
+## 8.14. Styling The Expense Management Screen
+
+## 8.15. Supporting Different Editing Modes & Using Route Parameters
+
+## 8.16. Adding a "Delete" Button
+
+## 8.17. Adding Custom Buttons
+
+## 8.18. Closing A Modal Programmatically
+
+## 8.19. Managing App-wide State With Context
+
+## 8.20. Using Context From Inside Components
+
+## 8.21. Deleting & Updating Expenses
+
+## 8.22. Finishing Touches
+
+___
+___
+___
