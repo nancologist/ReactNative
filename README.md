@@ -1691,6 +1691,8 @@ What we will do in this lecture:
 ___
 
 ## 8.3. Adding Navigation (with React Navigation) & Configuring Navigation
+- On the `ManageExpens` screen we don't want see the Bottom Tabs!
+___
 
 ## 8.4. Adding Global Colors & Editing Navigation Configuration
 
