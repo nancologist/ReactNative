@@ -1695,6 +1695,7 @@ ___
 ___
 
 ## 8.4. Adding Global Colors & Editing Navigation Configuration
+___
 
 ## 8.5. Creating Key App Components to Display Expenses
 
