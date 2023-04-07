@@ -1691,13 +1691,20 @@ What we will do in this lecture:
 ___
 
 ## 8.3. Adding Navigation (with React Navigation) & Configuring Navigation
+
 - On the `ManageExpens` screen we don't want see the Bottom Tabs!
+
 ___
 
 ## 8.4. Adding Global Colors & Editing Navigation Configuration
+
 ___
 
 ## 8.5. Creating Key App Components to Display Expenses
+
+* Remember: `FlatList` is optimized and load a long list on demand when the user scrolls.
+
+___
 
 ## 8.6. Continuing Work on the Expense-related Components
 
