@@ -1,22 +1,31 @@
+import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { StatusBar } from 'expo-status-bar';
+import IconButton from './components/UI/IconButton';
 import { GlobalStyles } from './constants/styles';
 import AllExpenses from './screens/AllExpenses'
 import ManageExpense from './screens/ManageExpense'
 import RecentExpenses from './screens/RecentExpenses'
-import { Ionicons } from '@expo/vector-icons'
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
-function ExpensesOverview() {
+function ExpensesOverview({ navigation }) {
   return <BottomTabs.Navigator screenOptions={{
     headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
     headerTintColor: 'white',
     tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
-    tabBarActiveTintColor: GlobalStyles.colors.accent500
+    tabBarActiveTintColor: GlobalStyles.colors.accent500,
+    headerRight: ({ tintColor }) => <IconButton
+      iconName={'add'}
+      size={24}
+      color={tintColor} // tintColor is the value of the headerTintColor which react provides for us!
+      onPress={() => {
+        navigation.navigate('ManageExpense')
+      }}
+    />
   }}>
     <BottomTabs.Screen
       name={'RecentExpenses'}

@@ -1725,6 +1725,7 @@ ___
 ___
 
 ## 8.12. Adding a Header Button & Making Expense Items Tappable
+___
 
 ## 8.13. Navigating Programmatically Between Screens
 
