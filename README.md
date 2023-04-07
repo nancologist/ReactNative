@@ -1722,6 +1722,7 @@ ___
 ___
 
 ## 8.11. Formatting Dates
+___
 
 ## 8.12. Adding a Header Button & Making Expense Items Tappable
 
