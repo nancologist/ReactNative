@@ -1679,6 +1679,16 @@ ___
 ## 8.1. Module Introduction & What We'll Build
 
 ## 8.2. The Starting Setup
+What we will do in this lecture:  
+- Adding screens of the app
+- Adding navigation logic
+  - For that we should install ReactNavigation (reactnavigation.org):
+  - `npm install @react-navigation/native`
+  - Dependencies we need: `npx expo install react-native-screens react-native-safe-area-context`
+- In this app we are going to use `Stack Navigator` and `Bottom Tabs Navigator`:
+  - `npm install @react-navigation/native-stack` (https://reactnavigation.org/docs/native-stack-navigator)
+  - `npm install @react-navigation/bottom-tabs`
+___
 
 ## 8.3. Adding Navigation (with React Navigation) & Configuring Navigation
 
