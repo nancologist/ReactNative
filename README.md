@@ -1713,10 +1713,10 @@ ___
 ___
 
 ## 8.8. Outputting a List of Expenses
-
 ___
 
 ## 8.9. Improving App Layout & Styling
+___
 
 ## 8.10. Working on Expense List Items
 
