@@ -33,6 +33,24 @@ const dummyExpenses = [
     desc: 'A book',
     amount: 18.59,
     date: new Date('2022-02-18')
+  },
+  {
+    id: 'e6',
+    desc: 'some bananas',
+    amount: 5.99,
+    date: new Date('2021-12-01')
+  },
+  {
+    id: 'e7',
+    desc: 'A book',
+    amount: 14.99,
+    date: new Date('2022-02-19')
+  },
+  {
+    id: 'e8',
+    desc: 'A book',
+    amount: 18.59,
+    date: new Date('2022-02-18')
   }
 ]
 
@@ -48,7 +66,9 @@ function ExpensesOutput({ expenses, period }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1, // To cover the whole screen
-    padding: 24,
+    paddingHorizontal: 24,
+    paddingTop: 24,
+    paddingBottom: 0,
     backgroundColor: GlobalStyles.colors.primary700
   }
 });

@@ -1719,6 +1719,7 @@ ___
 ___
 
 ## 8.10. Working on Expense List Items
+___
 
 ## 8.11. Formatting Dates
 
