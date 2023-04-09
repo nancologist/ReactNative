@@ -7,7 +7,7 @@ const ExpenseItem = ({ expense }) => {
   const navigation = useNavigation()
 
   const onPress = () => {
-    navigation.navigate('ManageExpense')
+    navigation.navigate('ManageExpense', { expenseId: expense.id })
   };
 
   return (
