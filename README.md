@@ -1742,6 +1742,7 @@ ___
 ___
 
 ## 8.16. Adding a "Delete" Button
+___
 
 ## 8.17. Adding Custom Buttons
 
