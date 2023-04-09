@@ -1745,6 +1745,7 @@ ___
 ___
 
 ## 8.17. Adding Custom Buttons
+___
 
 ## 8.18. Closing A Modal Programmatically
 
