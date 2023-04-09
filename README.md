@@ -1722,15 +1722,21 @@ ___
 ___
 
 ## 8.11. Formatting Dates
+
 ___
 
 ## 8.12. Adding a Header Button & Making Expense Items Tappable
+
 ___
 
 ## 8.13. Navigating Programmatically Between Screens
+
 ___
 
 ## 8.14. Styling The Expense Management Screen
+
+`presentation = 'modal'` to open the page as a modal.
+___
 
 ## 8.15. Supporting Different Editing Modes & Using Route Parameters
 
