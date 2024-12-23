@@ -4,7 +4,7 @@ import { GlobalStyles } from '../../constants/styles';
 function AppButton({ children, onPress, mode, style }) {
   return (
     <View style={style}>
-      <Pressable>
+      <Pressable onPress={onPress}>
         <View style={[
           styles.button,
           mode === 'flat' && styles.flat

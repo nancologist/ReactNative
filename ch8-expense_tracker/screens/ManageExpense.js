@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import AppButton from '../components/UI/AppButton';
 import IconButton from '../components/UI/IconButton';
 import { GlobalStyles } from '../constants/styles';
@@ -15,25 +15,28 @@ function ManageExpense({ route, navigation }) {
   }, [ navigation, isEditing ])
 
   const onDelete = () => {
-    navigation.navigate('RecentExpenses', { deletedExpenseId: expenseId })
+    // navigation.navigate('RecentExpenses', { deletedExpenseId: expenseId })
+    navigation.goBack();
   }
 
   const onCancel = () => {
+    navigation.goBack();
   }
 
-  const onAdd = () => {
+  const onConfirm = () => {
+    navigation.goBack();
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.buttons}>
         <AppButton mode={'flat'} onPress={onCancel} style={styles.button}>Cancel</AppButton>
-        <AppButton onPress={onAdd} style={styles.button}>{isEditing ? 'Update' : 'Add'}</AppButton>
+        <AppButton onPress={onConfirm} style={styles.button}>{isEditing ? 'Update' : 'Add'}</AppButton>
       </View>
       {isEditing &&
         <View style={styles.deleteContainer}>
           <IconButton
-            onPress={onDelete}
+            pressHandler={onDelete}
             iconName={'trash'}
             color={GlobalStyles.colors.error500}
             size={36}

@@ -1748,6 +1748,7 @@ ___
 ___
 
 ## 8.18. Closing A Modal Programmatically
+___
 
 ## 8.19. Managing App-wide State With Context
 
