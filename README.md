@@ -1751,6 +1751,8 @@ ___
 ___
 
 ## 8.19. Managing App-wide State With Context
+React Context will be used where you need app-wide available data. It is similar to the Redux, but it's react built-in centralized data system.
+___
 
 ## 8.20. Using Context From Inside Components
 
