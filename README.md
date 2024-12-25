@@ -1755,10 +1755,11 @@ React Context will be used where you need app-wide available data. It is similar
 ___
 
 ## 8.20. Using Context From Inside Components
-
 ___
 
 ## 8.21. Deleting & Updating Expenses
+
+___
 
 ## 8.22. Finishing Touches
 
