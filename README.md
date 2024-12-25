@@ -1756,6 +1756,8 @@ ___
 
 ## 8.20. Using Context From Inside Components
 
+___
+
 ## 8.21. Deleting & Updating Expenses
 
 ## 8.22. Finishing Touches
