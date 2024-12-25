@@ -53,7 +53,10 @@ function ExpensesOverview() {
 
 export default function App() {
     return (<>
-        <StatusBar style="auto"/>
+
+        {/* This is the status bar you see above your cellphone, e.g. the notification, battery and wifi symbols! */}
+        <StatusBar style="light"/>
+
         <ExpensesContextProvider>
             <NavigationContainer>
                 <Stack.Navigator screenOptions={{

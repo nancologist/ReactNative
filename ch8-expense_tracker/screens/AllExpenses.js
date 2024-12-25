@@ -10,6 +10,7 @@ function AllExpenses() {
     <ExpensesOutput
       period={'Total'}
       expenses={expensesCtx.expenses}
+      fallbackText={'No expenses yet!'}
     />
 
 
