@@ -1772,10 +1772,11 @@ ___
 # 9. Handling User Input
 
 ## 9.1 Module Introduction
-
 ___
 
 ## 9.2 Building a Custom Input Component
+
+___
 
 ## 9.3 Creating an Overall Form
 
