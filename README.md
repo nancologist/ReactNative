@@ -1784,6 +1784,10 @@ ___
 
 ## 9.4 Configuring the Form Input Elements
 
+the `autoCorrect` for `TextInput` element is what you would turn off for example for the email input fields, instead you would add two input fields for the email to make sure it's
+correct.
+___
+
 ## 9.5 Adding Styling
 
 ## 9.6 Setting the Form Layout

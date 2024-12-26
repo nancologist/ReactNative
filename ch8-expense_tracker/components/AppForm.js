@@ -22,7 +22,11 @@ export const AppForm = () => {
                       }}
             />
             <AppInput label={'Description'}
-                      textInputConfig={{}}
+                      textInputConfig={{
+                          multiline: true,
+                          autoCorrect: true, // default value
+                          autoCapitalize: 'sentences' // default value
+                      }}
             />
         </View>
     )
