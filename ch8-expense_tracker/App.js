@@ -54,7 +54,7 @@ function ExpensesOverview() {
 export default function App() {
     return (<>
 
-        {/* This is the status bar you see above your cellphone, e.g. the notification, battery and wifi symbols! */}
+        {/* This is the status bar you see above your cellphone, e.g. the notification, battery and Wi-Fi symbols! */}
         <StatusBar style="light"/>
 
         <ExpensesContextProvider>
