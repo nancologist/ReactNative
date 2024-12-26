@@ -1768,3 +1768,33 @@ ___
 ___
 ___
 ___
+
+# 9. Handling User Input
+
+## 9.1 Module Introduction
+
+## 9.2 Building a Custom Input Component
+
+## 9.3 Creating an Overall Form
+
+## 9.4 Configuring the Form Input Elements
+
+## 9.5 Adding Styling
+
+## 9.6 Setting the Form Layout
+
+## 9.7 Handling User Input in a Generic Way
+
+## 9.8 Managing Form State & Submission
+
+## 9.9 Working with Entered Data
+
+## 9.10 Setting & Using Default Values
+
+## 9.11 Adding Validation
+
+## 9.12 Providing Visual Validation Feedback
+
+## 9.13 Adding Error Styling
+
+## 9.14 Module Summary
