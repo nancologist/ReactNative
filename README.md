@@ -1789,10 +1789,11 @@ correct.
 ___
 
 ## 9.5 Adding Styling
-
 ___
 
 ## 9.6 Setting the Form Layout
+
+___
 
 ## 9.7 Handling User Input in a Generic Way
 
