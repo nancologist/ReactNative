@@ -17,6 +17,15 @@ export const AppForm = ({onSubmit, onCancel, isUpdating}) => {
         )
     }
 
+    const submitHandler = () => {
+        const data = {
+            amount: +formValues.amount,
+            date: new Date(formValues.date),
+            description: formValues.description
+        }
+        onSubmit(data);
+    }
+
     return (
         <View style={styles.form}>
             <Text style={styles.title}>Your Expense</Text>
@@ -52,7 +61,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating}) => {
             <View style={styles.buttons}>
                 <TextInput/>
                 <AppButton mode={'flat'} onPress={onCancel} style={styles.button}>Cancel</AppButton>
-                <AppButton onPress={onSubmit} style={styles.button}>{isUpdating ? 'Update' : 'Add'}</AppButton>
+                <AppButton onPress={submitHandler} style={styles.button}>{isUpdating ? 'Update' : 'Add'}</AppButton>
             </View>
         </View>
     )

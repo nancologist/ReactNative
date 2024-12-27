@@ -25,19 +25,19 @@ function ManageExpense({route, navigation}) {
         navigation.goBack();
     }
 
-    const formSubmitted = () => {
+    const formSubmitted = ({description, amount, date}) => {
         // Dummy data for test, next chapter inputs will be implemented:
         if (isUpdating) {
             expensesCtx.updateExpense(expenseId, {
-                description: 'Test2',
-                amount: 50,
-                date: new Date('2023-06-19')
+                description,
+                amount: Number.parseFloat(amount),
+                date,
             })
         } else {
             expensesCtx.addExpense({
-                description: 'Test',
-                amount: 30,
-                date: new Date('2022-05-19')
+                description,
+                amount,
+                date,
             })
         }
         navigation.goBack();
