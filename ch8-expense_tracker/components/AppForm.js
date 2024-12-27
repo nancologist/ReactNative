@@ -1,9 +1,10 @@
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, TextInput, View} from "react-native";
 import {AppInput} from "./AppInput";
 import {useState} from "react";
+import AppButton from "./UI/AppButton";
 
 
-export const AppForm = () => {
+export const AppForm = ({onSubmit, onCancel, isUpdating}) => {
     const [formValues, setFormValues] = useState({
         amount: '',
         description: '',
@@ -47,6 +48,12 @@ export const AppForm = () => {
                           value: formValues.description
                       }}
             />
+
+            <View style={styles.buttons}>
+                <TextInput/>
+                <AppButton mode={'flat'} onPress={onCancel} style={styles.button}>Cancel</AppButton>
+                <AppButton onPress={onSubmit} style={styles.button}>{isUpdating ? 'Update' : 'Add'}</AppButton>
+            </View>
         </View>
     )
 }
@@ -65,5 +72,14 @@ const styles = StyleSheet.create({
     inputsRow: {
         flexDirection: 'row',
         justifyContent: 'space-between'
+    },
+    buttons: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    button: {
+        minWidth: 120,
+        marginHorizontal: 8
     }
 })
