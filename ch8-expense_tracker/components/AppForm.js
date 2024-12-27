@@ -1,9 +1,21 @@
 import {StyleSheet, Text, View} from "react-native";
 import {AppInput} from "./AppInput";
+import {useState} from "react";
+
 
 export const AppForm = () => {
-    const onAmountChanged = () => {
+    const [formValues, setFormValues] = useState({
+        amount: '',
+        description: '',
+        date: ''
+    })
+
+    const onInputsChange = (inputId, value) => {
+        setFormValues(
+            (currValue) => ({...currValue, [inputId]: value})
+        )
     }
+
     return (
         <View style={styles.form}>
             <Text style={styles.title}>Your Expense</Text>
@@ -12,7 +24,8 @@ export const AppForm = () => {
                           style={{flex: 1}}
                           textInputConfig={{
                               keyboardType: 'decimal-pad',
-                              onChangeText: onAmountChanged,
+                              onChangeText: (value) => onInputsChange('amount', value),
+                              value: formValues.amount
                           }}
                 />
                 <AppInput label={'Date'}
@@ -20,8 +33,8 @@ export const AppForm = () => {
                           textInputConfig={{
                               placeholder: 'YYYY-MM-DD',
                               maxLength: 10,
-                              onChangeText: () => {
-                              }
+                              onChangeText: (value) => onInputsChange('date', value),
+                              value: formValues.date
                           }}
                 />
             </View>
@@ -29,7 +42,9 @@ export const AppForm = () => {
                       textInputConfig={{
                           multiline: true,
                           autoCorrect: true, // default value
-                          autoCapitalize: 'sentences' // default value
+                          autoCapitalize: 'sentences', // default value
+                          onChangeText: (value) => onInputsChange('description', value),
+                          value: formValues.description
                       }}
             />
         </View>

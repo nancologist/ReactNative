@@ -1797,6 +1797,16 @@ ___
 
 ## 9.7 Handling User Input in a Generic Way
 
+**Remember React:**  
+If you have an object in the `useState` , like:
+
+```js
+const [objValue, setObjValue] = useState(objInitialState);
+```
+
+and you want to update only part of it, it's better to use `setObjValue(() => {})` instead of `setObject(obj)`
+___
+
 ## 9.8 Managing Form State & Submission
 
 ## 9.9 Working with Entered Data
