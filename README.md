@@ -1826,6 +1826,8 @@ ___
 
 ## 9.12 Providing Visual Validation Feedback
 
+___
+
 ## 9.13 Adding Error Styling
 
 ## 9.14 Module Summary

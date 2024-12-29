@@ -1,4 +1,4 @@
-import {Alert, StyleSheet, Text, TextInput, View} from "react-native";
+import {StyleSheet, Text, TextInput, View} from "react-native";
 import {AppInput} from "./AppInput";
 import {useState} from "react";
 import AppButton from "./UI/AppButton";
@@ -6,35 +6,61 @@ import {getFormattedDate} from "../util/date";
 
 
 export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
-    const [formValues, setFormValues] = useState({
-        amount: defaultValues ? defaultValues.amount.toString() : '',
-        description: defaultValues ? defaultValues.description : '',
-        date: defaultValues ? getFormattedDate(defaultValues.date) : ''
+    const [inputs, setInputs] = useState({
+        amount: {
+            value: defaultValues ? defaultValues.amount.toString() : '',
+            valid: true,
+        },
+        description: {
+            value: defaultValues ? defaultValues.description : '',
+            valid: true,
+        },
+        date: {
+            value: defaultValues ? getFormattedDate(defaultValues.date) : '',
+            valid: true,
+        },
     })
 
     const onInputsChange = (inputId, value) => {
-        setFormValues(
-            (currValue) => ({...currValue, [inputId]: value})
+        setInputs(
+            (currValue) => ({...currValue, [inputId]: {value, valid: true}})
         )
     }
 
     const submitHandler = () => {
         const data = {
-            amount: +formValues.amount,
-            date: new Date(formValues.date),
-            description: formValues.description
+            amount: +inputs.amount.value,
+            date: new Date(inputs.date.value),
+            description: inputs.description.value
         }
 
         const amountValid = !isNaN(data.amount) && data.amount > 0;
         const dateValid = !isNaN(data.date.getTime());
         const descriptionValid = data.description.trim().length > 0;
         if (!amountValid || !dateValid || !descriptionValid) {
-            Alert.alert('Invalid input, please check!')
+            setInputs((curInputs) => {
+                return {
+                    amount: {
+                        value: curInputs.amount.value,
+                        valid: amountValid
+                    },
+                    date: {
+                        value: curInputs.date.value,
+                        valid: dateValid
+                    },
+                    description: {
+                        value: curInputs.description.value,
+                        valid: descriptionValid
+                    }
+                }
+            })
             return;
         }
 
         onSubmit(data);
     }
+
+    const formInvalid = !inputs.amount.valid || !inputs.date.valid || !inputs.description.valid;
 
     return (
         <View style={styles.form}>
@@ -45,7 +71,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                           textInputConfig={{
                               keyboardType: 'decimal-pad',
                               onChangeText: (value) => onInputsChange('amount', value),
-                              value: formValues.amount
+                              value: inputs.amount.value
                           }}
                 />
                 <AppInput label={'Date'}
@@ -54,7 +80,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                               placeholder: 'YYYY-MM-DD',
                               maxLength: 10,
                               onChangeText: (value) => onInputsChange('date', value),
-                              value: formValues.date
+                              value: inputs.date.value
                           }}
                 />
             </View>
@@ -64,10 +90,10 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                           autoCorrect: true, // default value
                           autoCapitalize: 'sentences', // default value
                           onChangeText: (value) => onInputsChange('description', value),
-                          value: formValues.description
+                          value: inputs.description.value
                       }}
             />
-
+            {formInvalid && <Text>Invalid input - please check the fields!</Text>}
             <View style={styles.buttons}>
                 <TextInput/>
                 <AppButton mode={'flat'} onPress={onCancel} style={styles.button}>Cancel</AppButton>
