@@ -1833,3 +1833,31 @@ ___
 ___
 
 ## 9.14 Module Summary
+
+___
+___
+___
+
+# 10 Sending Http Requests
+
+## 10.1 Module Introduction
+
+## 10.2 Backend Setup (Firebase)
+
+## 10.3 Installing Axios
+
+## 10.4 Sending POST Http Requests
+
+## 10.5 Fetching Backend Data (GET Requests)
+
+## 10.6 Transforming & Using Fetched Data
+
+## 10.7 Using Response Data from POST Requests
+
+## 10.8 Updating & Deleting Backend Data (UPDATE & DELETE Requests)
+
+## 10.9 Managing the Loading State
+
+## 10.10 Handling Request Errors
+
+## 10.11 Module Summary
