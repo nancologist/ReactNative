@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextInput, View} from "react-native";
+import {Alert, StyleSheet, Text, TextInput, View} from "react-native";
 import {AppInput} from "./AppInput";
 import {useState} from "react";
 import AppButton from "./UI/AppButton";
@@ -24,6 +24,15 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
             date: new Date(formValues.date),
             description: formValues.description
         }
+
+        const amountValid = !isNaN(data.amount) && data.amount > 0;
+        const dateValid = !isNaN(data.date.getTime());
+        const descriptionValid = data.description.trim().length > 0;
+        if (!amountValid || !dateValid || !descriptionValid) {
+            Alert.alert('Invalid input, please check!')
+            return;
+        }
+
         onSubmit(data);
     }
 

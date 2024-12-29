@@ -1821,6 +1821,9 @@ ___
 
 ## 9.11 Adding Validation
 
+We want to validate the input fields of the form on the submission.
+___
+
 ## 9.12 Providing Visual Validation Feedback
 
 ## 9.13 Adding Error Styling
