@@ -3,6 +3,7 @@ import {AppInput} from "./AppInput";
 import {useState} from "react";
 import AppButton from "./UI/AppButton";
 import {getFormattedDate} from "../util/date";
+import {GlobalStyles} from "../constants/styles";
 
 
 export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
@@ -68,6 +69,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
             <View style={styles.inputsRow}>
                 <AppInput label={'Amount'}
                           style={{flex: 1}}
+                          invalid={!inputs.amount.valid}
                           textInputConfig={{
                               keyboardType: 'decimal-pad',
                               onChangeText: (value) => onInputsChange('amount', value),
@@ -76,6 +78,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                 />
                 <AppInput label={'Date'}
                           style={{flex: 1}}
+                          invalid={!inputs.date.valid}
                           textInputConfig={{
                               placeholder: 'YYYY-MM-DD',
                               maxLength: 10,
@@ -85,6 +88,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                 />
             </View>
             <AppInput label={'Description'}
+                      invalid={!inputs.description.valid}
                       textInputConfig={{
                           multiline: true,
                           autoCorrect: true, // default value
@@ -93,7 +97,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
                           value: inputs.description.value
                       }}
             />
-            {formInvalid && <Text>Invalid input - please check the fields!</Text>}
+            {formInvalid && <Text style={styles.errorText}>Invalid input - please check the fields!</Text>}
             <View style={styles.buttons}>
                 <TextInput/>
                 <AppButton mode={'flat'} onPress={onCancel} style={styles.button}>Cancel</AppButton>
@@ -126,5 +130,10 @@ const styles = StyleSheet.create({
     button: {
         minWidth: 120,
         marginHorizontal: 8
+    },
+    errorText: {
+        textAlign: 'center',
+        color: GlobalStyles.colors.error500,
+        margin: 8
     }
 })
