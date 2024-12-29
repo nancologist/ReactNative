@@ -1842,7 +1842,12 @@ ___
 
 ## 10.1 Module Introduction
 
+___
+
 ## 10.2 Backend Setup (Firebase)
+
+I will use Spring to create the backend for the project: https://github.com/nancologist/rn_backend/
+___
 
 ## 10.3 Installing Axios
 
