@@ -1,5 +1,6 @@
 import {createContext, useReducer} from 'react';
 
+// todomj: You don't need this anymore! you have enough data in the expenses table now!
 const DUMMY_EXPENSES = [
     {
         id: 'e1',

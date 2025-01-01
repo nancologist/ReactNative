@@ -30,13 +30,13 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
 
     const submitHandler = () => {
         const data = {
-            amount: +inputs.amount.value,
-            date: new Date(inputs.date.value),
+            amount: Number.parseFloat(inputs.amount.value),
+            date: inputs.date.value,
             description: inputs.description.value
         }
 
         const amountValid = !isNaN(data.amount) && data.amount > 0;
-        const dateValid = !isNaN(data.date.getTime());
+        const dateValid = !isNaN(new Date(data.date).getTime());
         const descriptionValid = data.description.trim().length > 0;
         if (!amountValid || !dateValid || !descriptionValid) {
             setInputs((curInputs) => {

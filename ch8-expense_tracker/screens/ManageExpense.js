@@ -36,11 +36,13 @@ function ManageExpense({route, navigation}) {
                 date,
             })
         } else {
-            expensesCtx.addExpense({
-                description,
-                amount,
-                date,
-            })
+            const res = await AppApi.postExpense({description, amount, date})
+            console.log(JSON.stringify(res))
+            //     expensesCtx.addExpense({
+            //         description,
+            //         amount,r
+            //         date,
+            //     })
         }
         navigation.goBack();
     }
