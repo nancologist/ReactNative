@@ -38,7 +38,7 @@ function ManageExpense({route, navigation}) {
             })
         } else {
             const resBody = await AppApi.postExpense({description, amount, date})
-            // Todomj: you need to do something with the new Expense (resBody)
+            expenseContext.addExpense({...resBody, date: new Date(resBody.date)});
         }
         navigation.goBack();
     }
