@@ -4,6 +4,7 @@ import IconButton from '../components/UI/IconButton';
 import {GlobalStyles} from '../constants/styles';
 import {ExpensesContext} from "../store/expenses-context";
 import {AppForm} from "../components/AppForm";
+import {AppApi} from "../api";
 
 function ManageExpense({route, navigation}) {
     const expenseId = route.params?.expenseId;
@@ -27,7 +28,7 @@ function ManageExpense({route, navigation}) {
         navigation.goBack();
     }
 
-    const formSubmitted = ({description, amount, date}) => {
+    const formSubmitted = async ({description, amount, date}) => {
         // Dummy data for test, next chapter inputs will be implemented:
         if (isUpdating) {
             expensesCtx.updateExpense(expenseId, {
@@ -36,8 +37,8 @@ function ManageExpense({route, navigation}) {
                 date,
             })
         } else {
-            const res = await AppApi.postExpense({description, amount, date})
-            console.log(JSON.stringify(res))
+            const resBody = await AppApi.postExpense({description, amount, date})
+            console.log(resBody);
             //     expensesCtx.addExpense({
             //         description,
             //         amount,r

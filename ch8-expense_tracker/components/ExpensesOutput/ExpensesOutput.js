@@ -6,13 +6,15 @@ import ExpensesSummary from '../ExpensesSummary/ExpensesSummary';
 function ExpensesOutput({expenses, period, fallbackText}) {
     let content = <Text style={styles.infoText}>{fallbackText}</Text>
 
-    if (expenses.length > 0) {
-        content = <ExpensesList expenses={expenses}/>;
+    if (!!expenses && expenses.length > 0) {
+        content = <>
+            <ExpensesSummary period={period} expenses={expenses}/>
+            <ExpensesList expenses={expenses}/>
+        </>
     }
 
     return (
         <View style={styles.container}>
-            <ExpensesSummary period={period} expenses={expenses}/>
             {content}
         </View>
     );
