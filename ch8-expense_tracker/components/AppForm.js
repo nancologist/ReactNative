@@ -3,6 +3,7 @@ import {AppInput} from "./AppInput";
 import {useState} from "react";
 import AppButton from "./UI/AppButton";
 import {GlobalStyles} from "../constants/styles";
+import {getFormattedDate} from "../util/date";
 
 
 export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
@@ -16,7 +17,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
             valid: true,
         },
         date: {
-            value: defaultValues ? defaultValues.date : '',
+            value: defaultValues ? getFormattedDate(defaultValues.date) : '',
             valid: true,
         },
     })

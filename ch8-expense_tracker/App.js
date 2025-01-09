@@ -8,12 +8,24 @@ import {GlobalStyles} from './constants/styles';
 import AllExpenses from './screens/AllExpenses'
 import ManageExpense from './screens/ManageExpense'
 import RecentExpenses from './screens/RecentExpenses'
-import {ExpensesContextProvider} from "./store/expenses-context";
+import {ExpensesContext, ExpensesContextProvider} from "./store/expenses-context";
+import {useContext, useEffect} from "react";
+import {AppApi} from "./api";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
 function ExpensesOverview() {
+    const expensesCtx = useContext(ExpensesContext)
+
+    useEffect(() => {
+        const fetchAllExpenses = async () => {
+            const data = await AppApi.getExpenses();
+            expensesCtx.onAllExpensesFetched(data);
+        }
+        fetchAllExpenses();
+    }, []);
+
     return (
         <BottomTabs.Navigator screenOptions={({navigation}) => ({
             headerStyle: {backgroundColor: GlobalStyles.colors.primary500},

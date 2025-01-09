@@ -16,10 +16,17 @@ export class AppApi {
     static async getExpenses() {
         try {
             const res = await axios.get(this.BACKEND_URL + '/expenses');
-            return res.data;
+            return res.data.map(expense => this.convertFetchedExpense(expense));
         } catch (e) {
             console.log({...e})
             throw e;
+        }
+    }
+
+    static convertFetchedExpense(obj) {
+        return {
+            ...obj,
+            date: new Date(obj.date)
         }
     }
 }

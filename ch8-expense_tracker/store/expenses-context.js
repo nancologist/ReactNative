@@ -17,8 +17,7 @@ function expensesReducer(state, action) {
         case 'FETCH_ALL':
             return [...action.payload];
         case 'ADD':
-            const id = new Date().toString() + Math.random().toString();
-            return [...state, {id, ...action.payload}]
+            return [...state, {...action.payload}]
         case 'UPDATE':
             const index = state.findIndex(exp => exp.id === action.payload.id);
             const previousExpense = state[index]
@@ -48,7 +47,7 @@ export function ExpensesContextProvider({children}) {
     }
 
     const updateExpense = (expenseId, expenseDto) => {
-        dispatch({type: 'UPDATE', payload: { id: expenseId, data: expenseDto}})
+        dispatch({type: 'UPDATE', payload: {id: expenseId, data: expenseDto}})
     }
 
     const onAllExpensesFetched = (expenses) => {

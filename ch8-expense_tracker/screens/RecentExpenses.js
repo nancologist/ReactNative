@@ -7,6 +7,7 @@ function RecentExpenses() {
   const expensesCtx = useContext(ExpensesContext)
   const date7DaysAgo = getDateMinusDays(new Date(), 7)
   const recentExpenses = expensesCtx.expenses.filter((exp) => exp.date > date7DaysAgo);
+
   return <ExpensesOutput period={'Last 7 days'} expenses={recentExpenses} fallbackText={'No expenses in the last 7 days'}/>
 }
 
