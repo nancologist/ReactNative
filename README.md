@@ -1859,7 +1859,11 @@ ___
 
 ## 10.5 Fetching Backend Data (GET Requests)
 
+___
+
 ## 10.6 Transforming & Using Fetched Data
+
+___
 
 ## 10.7 Using Response Data from POST Requests
 

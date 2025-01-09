@@ -37,8 +37,8 @@ function ManageExpense({route, navigation}) {
                 date,
             })
         } else {
-            const resBody = await AppApi.postExpense({description, amount, date})
-            expenseContext.addExpense({...resBody, date: new Date(resBody.date)});
+            const persistedExpense = await AppApi.postExpense({description, amount, date})
+            expenseContext.addExpense({...persistedExpense, date: new Date(persistedExpense.date)});
         }
         navigation.goBack();
     }
