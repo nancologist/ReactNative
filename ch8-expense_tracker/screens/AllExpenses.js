@@ -1,10 +1,11 @@
 import ExpensesOutput from '../components/ExpensesOutput/ExpensesOutput';
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {AppApi} from "../api";
+import {ExpensesContext} from "../store/expenses-context";
 
 function AllExpenses() {
     // NEW WAY of consuming Context:
-    // const expensesCtx = useContext(ExpensesContext);
+    const expensesCtx = useContext(ExpensesContext);
 
     const [expenses, setExpenses] = useState(null);
 
@@ -12,6 +13,7 @@ function AllExpenses() {
         const fetchAllExpenses = async () => {
             const data = await AppApi.getExpenses();
             setExpenses(data);
+            expensesCtx.onAllExpensesFetched(data);
         }
         fetchAllExpenses();
     }, []);

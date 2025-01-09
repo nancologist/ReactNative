@@ -2,7 +2,6 @@ import {StyleSheet, Text, TextInput, View} from "react-native";
 import {AppInput} from "./AppInput";
 import {useState} from "react";
 import AppButton from "./UI/AppButton";
-import {getFormattedDate} from "../util/date";
 import {GlobalStyles} from "../constants/styles";
 
 
@@ -17,7 +16,7 @@ export const AppForm = ({onSubmit, onCancel, isUpdating, defaultValues}) => {
             valid: true,
         },
         date: {
-            value: defaultValues ? getFormattedDate(defaultValues.date) : '',
+            value: defaultValues ? defaultValues.date : '',
             valid: true,
         },
     })

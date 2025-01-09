@@ -1,57 +1,5 @@
 import {createContext, useReducer} from 'react';
 
-// todomj: You don't need this anymore! you have enough data in the expenses table now!
-const DUMMY_EXPENSES = [
-    {
-        id: 'e1',
-        description: 'A pair of shoes',
-        amount: 59.99,
-        date: new Date('2021-12-19')
-    },
-    {
-        id: 'e2',
-        description: 'A pair of trousers',
-        amount: 89.29,
-        date: new Date('2022-01-05')
-    },
-    {
-        id: 'e3',
-        description: 'some bananas',
-        amount: 5.99,
-        date: new Date('2021-12-01')
-    },
-    {
-        id: 'e4',
-        description: 'A book',
-        amount: 14.99,
-        date: new Date('2022-02-19')
-    },
-    {
-        id: 'e5',
-        description: 'A book',
-        amount: 18.59,
-        date: new Date('2022-02-18')
-    },
-    {
-        id: 'e6',
-        description: 'some bananas',
-        amount: 5.99,
-        date: new Date('2021-12-01')
-    },
-    {
-        id: 'e7',
-        description: 'A book',
-        amount: 14.99,
-        date: new Date('2022-02-19')
-    },
-    {
-        id: 'e8',
-        description: 'A book',
-        amount: 18.59,
-        date: new Date('2022-02-18')
-    }
-]
-
 export const ExpensesContext = createContext({
     expenses: [],
     addExpense: ({description, amount, date}) => {
@@ -59,11 +7,15 @@ export const ExpensesContext = createContext({
     deleteExpense: (expenseId) => {
     },
     updateExpense: (expenseId, {description, amount, date}) => {
+    },
+    onAllExpensesFetched: (expenses) => {
     }
 })
 
 function expensesReducer(state, action) {
     switch (action.type) {
+        case 'FETCH_ALL':
+            return [...action.payload];
         case 'ADD':
             const id = new Date().toString() + Math.random().toString();
             return [...state, {id, ...action.payload}]
@@ -85,7 +37,7 @@ function expensesReducer(state, action) {
 }
 
 export function ExpensesContextProvider({children}) {
-    const [expensesState, dispatch] = useReducer(expensesReducer, DUMMY_EXPENSES);
+    const [expensesState, dispatch] = useReducer(expensesReducer, []);
 
     const addExpense = (expenseDto) => {
         dispatch({type: 'ADD', payload: expenseDto})
@@ -99,10 +51,15 @@ export function ExpensesContextProvider({children}) {
         dispatch({type: 'UPDATE', payload: { id: expenseId, data: expenseDto}})
     }
 
+    const onAllExpensesFetched = (expenses) => {
+        dispatch({type: 'FETCH_ALL', payload: expenses});
+    }
+
     return <ExpensesContext.Provider value={{
         expenses: expensesState,
         addExpense,
         deleteExpense,
-        updateExpense
+        updateExpense,
+        onAllExpensesFetched
     }}>{children}</ExpensesContext.Provider>
 }
