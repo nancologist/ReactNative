@@ -19,7 +19,8 @@ function ManageExpense({route, navigation}) {
         })
     }, [navigation, isUpdating])
 
-    const onDelete = () => {
+    const onDelete = async () => {
+        await AppApi.deleteExpense(expenseId);
         expensesCtx.deleteExpense(expenseId);
         navigation.goBack();
     }
@@ -31,10 +32,11 @@ function ManageExpense({route, navigation}) {
     const formSubmitted = async ({description, amount, date}) => {
         // Dummy data for test, next chapter inputs will be implemented:
         if (isUpdating) {
+            await AppApi.updateExpense({id: expenseId, description, amount, date})
             expensesCtx.updateExpense(expenseId, {
                 description,
                 amount: Number.parseFloat(amount),
-                date,
+                date: new Date(date),
             })
         } else {
             const persistedExpense = await AppApi.postExpense({description, amount, date})

@@ -23,6 +23,25 @@ export class AppApi {
         }
     }
 
+    static async updateExpense(data) {
+        try {
+            const res = await axios.put(this.BACKEND_URL + '/expenses', data);
+            return res.data;
+        } catch (e) {
+            console.log({...e})
+            throw e;
+        }
+    }
+
+    static async deleteExpense(id) {
+        try {
+            await axios.delete(this.BACKEND_URL + '/expenses/' + id);
+        } catch (e) {
+            console.log({...e})
+            throw e;
+        }
+    }
+
     static convertFetchedExpense(obj) {
         return {
             ...obj,
