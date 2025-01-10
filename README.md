@@ -1873,6 +1873,9 @@ ___
 
 ## 10.9 Managing the Loading State
 
+`ActivityIndicator` is a build-in React Native component to show a spinner/loading bar.
+___
+
 ## 10.10 Handling Request Errors
 
 ## 10.11 Module Summary

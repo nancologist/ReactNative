@@ -9,22 +9,30 @@ import AllExpenses from './screens/AllExpenses'
 import ManageExpense from './screens/ManageExpense'
 import RecentExpenses from './screens/RecentExpenses'
 import {ExpensesContext, ExpensesContextProvider} from "./store/expenses-context";
-import {useContext, useEffect} from "react";
+import {useContext, useEffect, useState} from "react";
 import {AppApi} from "./api";
+import {LoadingOverlay} from "./components/UI/LoadingOverlay";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
 function ExpensesOverview() {
     const expensesCtx = useContext(ExpensesContext)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const fetchAllExpenses = async () => {
+            setIsLoading(true);
             const data = await AppApi.getExpenses();
+            setIsLoading(false);
             expensesCtx.onAllExpensesFetched(data);
         }
         fetchAllExpenses();
     }, []);
+
+    if (isLoading) {
+        return <LoadingOverlay/>;
+    }
 
     return (
         <BottomTabs.Navigator screenOptions={({navigation}) => ({
