@@ -14,13 +14,8 @@ export class AppApi {
     }
 
     static async getExpenses() {
-        try {
-            const res = await axios.get(this.BACKEND_URL + '/expenses');
-            return res.data.map(expense => this.convertFetchedExpense(expense));
-        } catch (e) {
-            console.log({...e})
-            throw e;
-        }
+        const res = await axios.get(this.BACKEND_URL + '/expenses');
+        return res.data.map(expense => this.convertFetchedExpense(expense));
     }
 
     static async updateExpense(data) {

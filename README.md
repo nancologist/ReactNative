@@ -1878,4 +1878,7 @@ ___
 
 ## 10.10 Handling Request Errors
 
+same as "RecentExpenses" you could add this for ManageExpense , but I'm lazy for that...
+___
+
 ## 10.11 Module Summary

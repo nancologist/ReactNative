@@ -12,6 +12,7 @@ import {ExpensesContext, ExpensesContextProvider} from "./store/expenses-context
 import {useContext, useEffect, useState} from "react";
 import {AppApi} from "./api";
 import {LoadingOverlay} from "./components/UI/LoadingOverlay";
+import {ErrorOverlay} from "./components/UI/ErrorOverlay";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -19,16 +20,30 @@ const BottomTabs = createBottomTabNavigator();
 function ExpensesOverview() {
     const expensesCtx = useContext(ExpensesContext)
     const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState();
 
     useEffect(() => {
-        const fetchAllExpenses = async () => {
-            setIsLoading(true);
-            const data = await AppApi.getExpenses();
-            setIsLoading(false);
-            expensesCtx.onAllExpensesFetched(data);
-        }
         fetchAllExpenses();
     }, []);
+
+    const fetchAllExpenses = async () => {
+        setIsLoading(true);
+        try {
+            const data = await AppApi.getExpenses();
+            expensesCtx.onAllExpensesFetched(data);
+        } catch (err) {
+            setError('Could not fetch expenses!')
+        }
+        setIsLoading(false);
+    }
+
+    const closeError = () => {
+        setError(null)
+    };
+
+    if (error && !isLoading) {
+        return <ErrorOverlay message={error} onConfirm={closeError}/>
+    }
 
     if (isLoading) {
         return <LoadingOverlay/>;
