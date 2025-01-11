@@ -1882,3 +1882,110 @@ same as "RecentExpenses" you could add this for ManageExpense , but I'm lazy for
 ___
 
 ## 10.11 Module Summary
+
+___
+___
+___
+
+# 11. User Authentication
+
+In this chapter I have only watched the videos and made some notes here in some episodes. So the code is not there.
+
+## ...
+
+## 11.10. Storing & Managing the User Authentication State (with Context)
+
+Ich war neugierig, was hier zum Persistieren von dem Usertoken genutzt wird, weil ich nicht sicher bin ob `LocalStorage` in ReactNative vorhanden ist. Aber er nutzt zum Speichern vom
+UserToken `React Context` etwas wie `Redux`. D.h. wenn die App geschlossen wird und wieder geöffnet, muss der User erneut sich anmelden!
+
+Es muss aber etwas wie `LocalStorage` oder eine lokale DB auf dem Android oder iOS existieren um solche Daten laenger als App session auf der Client-Side persistiert zu halten …
+___
+
+## ...
+
+## 11.15 Storing Auth Tokens on the Device (Episode No. 186)
+
+This section is what I was talking about in the 11.10 .
+
+To store the token on the device, so the user does not need to log in everytime he closes and opens the app again there's the ReactNative
+`AsyncStorage` https://reactnative.dev/docs/asyncstorage
+This library is depricated and you should use something like this:
+
+https://github.com/react-native-async-storage/async-storage/tree/main/packages/default-storage  
+This library has methods just like browser's LocalStorage. E.g. `AsyncStorage.setItem(key, value)` , `AsyncStorage.getItem(key): Promise<value>` and `AsyncStorage.removeItem(key)`
+
+___
+___
+___
+
+# 12. Using Native Device Features (Camera, Location and more)
+
+## 12.1 Module Introduction
+
+## 12.2 Adding a "Favorite Places" List
+
+## 12.3 Editing the Favorite Place Items
+
+## 12.4 Adding an "Add Place" Screen + Navigation
+
+## 12.5 Adding a Header Button
+
+## 12.6 Global Colors & Styling
+
+## 12.7 Getting Started with a Custom Form
+
+## 12.8 Adding & Configuring the Camera Package (for Native Camera Access)
+
+## 12.9 Taking Photos on Android
+
+## 12.10 Taking Photos on iOS + Managing Permissions
+
+## 12.11 Showing an Image Preview
+
+## 12.12 Creating a Custom Button
+
+## 12.13 Getting Started with the Location Picker
+
+## 12.14 Locating Users
+
+## 12.15 Adding a Location Preview Map
+
+## 12.16 Adding an Interactive Map (Google Maps & Apple Maps)
+
+## 12.17 Allowing Map Interaction & Adding Markers
+
+## 12.18 Confirming Picked Locations
+
+## 12.19 Previewing Picked Locations
+
+## 12.20 Adding a Form Submit Button
+
+## 12.21 Managing Location & Image State in the Form
+
+## 12.22 Converting Picked Locations to Human-Readable Addresses
+
+## 12.23 Passing Entered Data to the "AllPlaces" Screen
+
+## 12.24 Outputting a List Of Places
+
+## 12.25 Styling Place Items
+
+## 12.26 SQLite: Getting Started & Initialization
+
+## 12.27 Preparing Code to Insert Data into the SQLite Database
+
+## 12.28 Inserting Places into the Database
+
+## 12.29 Fetching Places from the Database
+
+## 12.30 Adding the Place Details Screen
+
+## 12.31 Fetching Place Detail Data from the Database
+
+## 12.32 Showing a Readonly Map
+
+## 12.33 Module Summary
+
+___
+___
+___
