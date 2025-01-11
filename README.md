@@ -1932,6 +1932,8 @@ ___
 
 ## 12.2 Adding a "Favorite Places" List
 
+___
+
 ## 12.3 Editing the Favorite Place Items
 
 ## 12.4 Adding an "Add Place" Screen + Navigation
