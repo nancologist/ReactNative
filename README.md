@@ -1922,6 +1922,14 @@ ___
 
 ## 12.1 Module Introduction
 
+In this chapter we learn:
+
+* Using device camera
+* Usr location and maps
+* Storing data on device (on device's database)
+
+___
+
 ## 12.2 Adding a "Favorite Places" List
 
 ## 12.3 Editing the Favorite Place Items
