@@ -1937,6 +1937,8 @@ ___
 
 ## 12.3 Editing the Favorite Place Items
 
+___
+
 ## 12.4 Adding an "Add Place" Screen + Navigation
 
 ## 12.5 Adding a Header Button
