@@ -1932,6 +1932,7 @@ ___
 
 ## 12.2 Adding a "Favorite Places" List
 
+Remember: `<FlatList />` is used where you have a very long list so it gives you only what you see and render the rest later if needed and it's scrollable.
 ___
 
 ## 12.3 Editing the Favorite Place Items
