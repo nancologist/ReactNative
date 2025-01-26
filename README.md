@@ -29,7 +29,7 @@ To __create__ and __manage__ our React-Native app we have two approaches: Expo C
 ### Expo CLI
 * 3rd party service
 * free to use
-* "Managed App Development" : it takes lot of complexities away for you!
+* "Managed Index Development" : it takes lot of complexities away for you!
 * lots of convenience and utlitiy features
 * Downside: You're __limited__ to the Expo ecosystem
 * It also gives a wrapper mobile app for your application to simulate and test during development.
@@ -48,13 +48,13 @@ ___
 ## 1.6. Node.js Download
 ___
 
-## 1.7. Creating Our First React Native App
+## 1.7. Creating Our First React Native Index
 1. Go to ``expo.io``
 2. Click on "Get Started"
 3. Install Node.js
 4. Install Expo: ``sudo npm install expo-cli --global``
 
-### Create EXPO App:
+### Create EXPO Index:
 1. ``cd to/folder/you/want``
 2. ``expo init APP_NAME``
 3. Choose "blank"
@@ -63,10 +63,11 @@ ___
 6. Go to your Android/iOS device and in the app store search for "Expo"
 7. Install it on your mobile device.
 8. Open the application
-9. then scan the QR-code which appeared on your computer after ``npm start`` - You have now the app on your mobile device (On iOS you should go to Camera App but on Android you can scan QR code directly from the Expo app)
+9. then scan the QR-code which appeared on your computer after ``npm start`` - You have now the app on your mobile device (On iOS you should go to Camera Index but on Android you can
+   scan QR code directly from the Expo app)
 ___
 
-## 1.8. Working on Our First App
+## 1.8. Working on Our First Index
 Directories:
 * .expo/ : some configs, you dont need to touch this.
 * assets/ : hold media like images of your application
@@ -95,7 +96,7 @@ ___
 ## 1.12. Course Requirement Refreshers
 ___
 
-## 1.13. Running the App on an Android Emulator
+## 1.13. Running the Index on an Android Emulator
 We don't need to test the app on the real smartphone, we can use the simulartor.
 
 ### For iOS simulater you need: Xcode
@@ -139,7 +140,7 @@ https://docs.expo.dev/workflow/android-studio-emulator/
 17. Instead of the above step you can press `a` in terminal (where the Expo is running) and then it launches the `rn-first-app` on the android-studio device.
 ___
 
-## 1.14. Running the App on an iOS Simulator
+## 1.14. Running the Index on an iOS Simulator
 !ONLY POSSIBLE ON MACOS!
 
 1. Install Xcode
@@ -179,7 +180,7 @@ ___
 4. press "i" to run on iOS simulator and "a" to run on Android Vritual Device (or use expo devtool)
 ___
 
-## 2.4. Planning the App
+## 2.4. Planning the Index
 We are going to create a "Goal app" where you can store the goals in a list and then by clicking on each item to delete the goal.
 
 This app is to help to learn the core features of React Native.
@@ -275,7 +276,7 @@ The solution is ``FlatList`` cmp it has two important attributes:
 * FlatList cmp ONLY renders what's REQUIRED.
 ___
 
-## 2.15. Splitting the App Into Components (Own Components)
+## 2.15. Splitting the Index Into Components (Own Components)
 ___
 
 ## 2.16. Passing Data Between Components
@@ -361,7 +362,8 @@ ___
 ## 3.2. What To Debug & How To Debug?
 
 What to debug?
-* __Error Messages / App Crashes__, like:
+
+* __Error Messages / Index Crashes__, like:
     * Syntax errors.
     * bugs (e.g. ``undefined``, usw)
     * "Unavoidable" errors: (network errors, request and resp errors)
@@ -382,11 +384,11 @@ How to debug?
 * Mori: Webstorm Debugger 
 ___
 
-## 3.3. Running the App on a Real Device & Debugging
+## 3.3. Running the Index on a Real Device & Debugging
 
 Don't forget, with Expo, you can easily run your app on real devices, too!
 
-Simply download the Expo app from the App Stores and scan the barcode the Expo DevTools (that browser tab which opened when you ran ``npm start``) show.
+Simply download the Expo app from the Index Stores and scan the barcode the Expo DevTools (that browser tab which opened when you ran ``npm start``) show.
 
 On iOS devices, you don't scan the barcode with the Expo app but instead with your normal device camera (simply point it at the barcode and you should be prompted whether you want to open that app in the Expo app).
 
@@ -446,7 +448,7 @@ Debugging with Expo:
 * on Android device + Mac/Windows: ``CMD/CTRL+M``
 
 * Other Features:
-    * Reloading App, you can also do that using:
+    * Reloading Index, you can also do that using:
         * Android, also with hotkey ``RR``
         * iOS:, also with hotkey ``CMD+R / CTRL+R``
     
@@ -460,7 +462,7 @@ ___
 
 ## 3.8. Debugging the UI & Using React Native Debugger
 
-* __Inspector:__ In Menu of Expo App on Mobile Device (`Show Element Inspector`)
+* __Inspector:__ In Menu of Expo Index on Mobile Device (`Show Element Inspector`)
 * You can check the components
 
 There is a better tool: __React-Native Debugger__
@@ -478,7 +480,7 @@ You see all the components structure. This is MUCH NICER than other Debugger whi
 
 You can also change the Styling with this Debugger, just like on normal chrome dev tool!!!
 
-You can use ``Profiler`` you can optimize RERENDERINGs in you app, for example to detect the UNNECESSARY RERENDERINGS in your App, just like in normal React Debugger
+You can use ``Profiler`` you can optimize RERENDERINGs in you app, for example to detect the UNNECESSARY RERENDERINGS in your Index, just like in normal React Debugger
 
 ___
 
@@ -502,7 +504,7 @@ ___
 ## 4.1. Module Introduction
 ___
 
-## 4.2. Setup & App Planning
+## 4.2. Setup & Index Planning
 
 * You set the number which computer should guess.
 * after computered guessed a number:
@@ -765,11 +767,12 @@ ___
 # 5. Responsive & Adaptive User Interfaces and Apps [LEGACY]
 
 ## 5.1. Module Introduction
-Your App should looks like good on both iOS and Android and also on different size of devices.
 
-You also should make your App responsive when the device rotates! Responsivness for both landscape and protrait modes.
+Your Index should looks like good on both iOS and Android and also on different size of devices.
 
-We will work on the App from the previous chapter.
+You also should make your Index responsive when the device rotates! Responsivness for both landscape and protrait modes.
+
+We will work on the Index from the previous chapter.
 ___
 
 ## 5.2. Finding Improvement Opportunities
@@ -846,7 +849,7 @@ ___
 ## 5.9. Listening to Orientation Changes
 Now if we go back to Portrait mode we see that style is defect!
 
-The Problem is that in `StratGameScreen.js` where we seet the `styles.button` , we use `Dimension.get('window')`. And createStyles only gets calculated when the App starts!
+The Problem is that in `StratGameScreen.js` where we seet the `styles.button` , we use `Dimension.get('window')`. And createStyles only gets calculated when the Index starts!
 
 `Dimensions.addEventListener('change')` this gets triggered when user rotates the device.
 ___
@@ -1080,7 +1083,7 @@ For example on the `GameOver` Screen you can see that the Task-Manager Bar cover
 
 For these cases ReactNative has a solution, the `SafeAreaView` component.
 
-`SafeAreaView` should be used on the top most view! And it's the App.js
+`SafeAreaView` should be used on the top most view! And it's the Index.js
 
 Now we have Spacings around the notch and the task-manager-bar.
 ___
@@ -1108,7 +1111,7 @@ ___
 We want to build an app where we can navigate through pages.
 ___
 
-## 6.2. Planning the App
+## 6.2. Planning the Index
 Our build have following features:
 * it can read recepies
 * it can favorite recepies
@@ -1160,8 +1163,9 @@ ___
 In case you want to dive into the official docs as well (we'll go through the installation in the next lectures, together), you can find the official docs here: https://reactnavigation.org/docs/4.x/getting-started
 ___
 
-## 6.7. Installing React Navigation & Adding Navigation to the App
-Mobile App Navigation compared to Web app navigations. What are the differences?  
+## 6.7. Installing React Navigation & Adding Navigation to the Index
+
+Mobile Index Navigation compared to Web app navigations. What are the differences?  
 In a web app the URL is the reference for the navigation so when you go to another page, the URL changes. For example in a ReactJS SPA, if you change the URL, there you have __React Router__ which then react to this change and renders different pages.  
 
 But in the mobile app we don't have any URL! Instead you tap buttons and tabs.  
@@ -1600,8 +1604,7 @@ Mori: I will use Redux Toolkit, so:
 
 ``npm install @reduxjs/toolkit``
 
-
-ATTENTION: In Expo Project you don't have any `index.ts` or `index.js`, so you should add the `<Provider store={}>` around the elements in your `App.tsx` or `App.js`
+ATTENTION: In Expo Project you don't have any `index.ts` or `index.js`, so you should add the `<Provider store={}>` around the elements in your `Index.tsx` or `Index.js`
 ___
 
 ## 7.4. Selecting State Slices
@@ -1652,7 +1655,7 @@ const store = createStore(reducer, composeWithDevTools());
 
 Important: Make sure you remove this code when building your app for production!
 
-You'll see this approach in action in the Shop App course module ("Adding Items to the Cart" lecture)!
+You'll see this approach in action in the Shop Index course module ("Adding Items to the Cart" lecture)!
 ___
 
 ## 7.12. Wrap Up
@@ -1674,7 +1677,7 @@ ___
 ___
 ___
 
-# 8. The Expense Tracker App
+# 8. The Expense Tracker Index
 
 ## 8.1. Module Introduction & What We'll Build
 
@@ -1700,7 +1703,7 @@ ___
 
 ___
 
-## 8.5. Creating Key App Components to Display Expenses
+## 8.5. Creating Key Index Components to Display Expenses
 
 * Remember: `FlatList` is optimized and load a long list on demand when the user scrolls.
 
@@ -1715,7 +1718,7 @@ ___
 ## 8.8. Outputting a List of Expenses
 ___
 
-## 8.9. Improving App Layout & Styling
+## 8.9. Improving Index Layout & Styling
 ___
 
 ## 8.10. Working on Expense List Items
@@ -1750,7 +1753,7 @@ ___
 ## 8.18. Closing A Modal Programmatically
 ___
 
-## 8.19. Managing App-wide State With Context
+## 8.19. Managing Index-wide State With Context
 React Context will be used where you need app-wide available data. It is similar to the Redux, but it's react built-in centralized data system.
 ___
 
@@ -1896,9 +1899,9 @@ In this chapter I have only watched the videos and made some notes here in some 
 ## 11.10. Storing & Managing the User Authentication State (with Context)
 
 Ich war neugierig, was hier zum Persistieren von dem Usertoken genutzt wird, weil ich nicht sicher bin ob `LocalStorage` in ReactNative vorhanden ist. Aber er nutzt zum Speichern vom
-UserToken `React Context` etwas wie `Redux`. D.h. wenn die App geschlossen wird und wieder geöffnet, muss der User erneut sich anmelden!
+UserToken `React Context` etwas wie `Redux`. D.h. wenn die Index geschlossen wird und wieder geöffnet, muss der User erneut sich anmelden!
 
-Es muss aber etwas wie `LocalStorage` oder eine lokale DB auf dem Android oder iOS existieren um solche Daten laenger als App session auf der Client-Side persistiert zu halten …
+Es muss aber etwas wie `LocalStorage` oder eine lokale DB auf dem Android oder iOS existieren um solche Daten laenger als Index session auf der Client-Side persistiert zu halten …
 ___
 
 ## ...
@@ -1940,6 +1943,10 @@ ___
 ___
 
 ## 12.4 Adding an "Add Place" Screen + Navigation
+
+To be able to navigate in the app we need two packages:
+`npm install @react-naviagtion/native @react-navigation/native-stack`
+___
 
 ## 12.5 Adding a Header Button
 

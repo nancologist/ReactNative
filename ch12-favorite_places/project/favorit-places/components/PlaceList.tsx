@@ -10,7 +10,7 @@ export default function PlaceList({places}: Props) {
         );
     }
 
-    return <FlatList data={places} renderItem={} keyExtractor={item => item.id}/>;
+    return <FlatList data={places} renderItem={() => <Text>Item!</Text>} keyExtractor={item => item.id}/>;
 }
 
 type Props = {
