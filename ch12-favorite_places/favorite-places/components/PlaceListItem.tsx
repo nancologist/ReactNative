@@ -1,4 +1,4 @@
-import {Place} from "@/models/place";
+import {Place} from "../models/place";
 import {GestureResponderEvent, Image, Pressable, Text, View} from 'react-native';
 
 export function PlaceListItem({place, onPress}: Props) {
