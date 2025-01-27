@@ -1950,6 +1950,9 @@ ___
 
 ## 12.5 Adding a Header Button
 
+Anmerkung: We have changed the `Stack.Screen.options` from an `object` to a function to have access to `navigation` property
+___
+
 ## 12.6 Global Colors & Styling
 
 ## 12.7 Getting Started with a Custom Form
