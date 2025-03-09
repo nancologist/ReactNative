@@ -1975,6 +1975,34 @@ ___
 
 ## 12.9 Taking Photos on Android
 
+After taking photo you get such an object as result, `ImagePickerResult`:
+
+```json
+{
+  "assets": [
+    {
+      "assetId": null,
+      "base64": null,
+      "duration": null,
+      "exif": null,
+      "fileName": "2dc9d70e-5700-4ab8-b225-a75ccd755a2a.jpeg",
+      "fileSize": 234322,
+      "height": 1702,
+      "mimeType": "image/jpeg",
+      "rotation": null,
+      "type": "image",
+      "uri": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Ffavorite-places-67f9854c-d809-4173-9cf6-69171c980c3f/ImagePicker/2dc9d70e-5700-4ab8-b225-a75ccd755a2a.jpeg",
+      "width": 3024
+    }
+  ],
+  "canceled": false
+}
+
+```
+
+On iOS you should give permission to the app to use camera from the settings.
+___
+
 ## 12.10 Taking Photos on iOS + Managing Permissions
 
 ## 12.11 Showing an Image Preview

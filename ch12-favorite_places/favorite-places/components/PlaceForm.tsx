@@ -1,6 +1,7 @@
 import {ScrollView, StyleSheet, Text, TextInput, View} from "react-native";
 import {useState} from "react";
 import {COLOR} from "../colors";
+import {CameraCapture} from "./CameraCapture";
 
 export default function PlaceForm() {
     const [title, setTitle] = useState('');
@@ -14,6 +15,7 @@ export default function PlaceForm() {
                 <Text style={styles.label}>Title</Text>
                 <TextInput style={styles.input} onChangeText={onTitleChanged} value={title}/>
             </View>
+            <CameraCapture/>
         </ScrollView>
     );
 }
