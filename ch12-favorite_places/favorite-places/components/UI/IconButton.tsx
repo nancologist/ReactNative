@@ -10,8 +10,12 @@ type Props = {
 }
 
 export default function IconButton({icon, onPress, size, color}: Props) {
+    /**
+     * Using onPressIn instead of onPress here is just a workaround until the issue https://github.com/software-mansion/react-native-screens/issues/2219 is fixed.
+     * Another workaround suggested in the above thread is to set headerTransparent: false
+     */
     return (
-        <Pressable style={({pressed}) => [styles.button, pressed && styles.pressed]} onPress={onPress}>
+        <Pressable style={({pressed}) => [styles.button, pressed && styles.pressed]} onPressIn={onPress}>
             <Ionicons name={icon} size={size} color={color}/>
         </Pressable>
     );
