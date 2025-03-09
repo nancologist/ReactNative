@@ -24,7 +24,6 @@ export default function IconButton({icon, onPress, size, color}: Props) {
 const styles = StyleSheet.create({
     button: {
         padding: 8,
-        margin: 4,
         justifyContent: 'center',
         alignItems: 'center',
     },

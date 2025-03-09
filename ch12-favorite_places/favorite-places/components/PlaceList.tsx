@@ -1,5 +1,6 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
 import {Place} from "../models/place";
+import {COLOR} from "../colors";
 
 export default function PlaceList({places}: Props) {
     if (!places || places.length === 0) {
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     fallbackText: {
-        fontSize: 16
+        fontSize: 16,
+        color: COLOR.primary200
     }
 })

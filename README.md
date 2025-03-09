@@ -1955,6 +1955,8 @@ ___
 
 ## 12.6 Global Colors & Styling
 
+___
+
 ## 12.7 Getting Started with a Custom Form
 
 ## 12.8 Adding & Configuring the Camera Package (for Native Camera Access)
