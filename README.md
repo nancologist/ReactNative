@@ -1959,6 +1959,9 @@ ___
 
 ## 12.7 Getting Started with a Custom Form
 
+Now in the form we want to have a field "title" for the place and also we want to allow the user to take a photo and we want to show a preview of that photo to the user.
+___
+
 ## 12.8 Adding & Configuring the Camera Package (for Native Camera Access)
 
 ## 12.9 Taking Photos on Android
