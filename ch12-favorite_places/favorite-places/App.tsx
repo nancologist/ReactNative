@@ -13,32 +13,41 @@ const renderHeaderRight: (
     navigation: NativeStackNavigationProp<ParamListBase, string, undefined>
 ) => JSX.Element = (tintColor, navigation) => {
 
+    // Fixme: the button does not get pressed!
+
     return (
         <IconButton
             icon={'add'}
             size={24}
             color={tintColor}
-            onPress={() => navigation.navigate('AddPlace')}
+            onPress={() => {
+                console.log('I got the press!')
+                navigation.navigate('AddPlace')
+            }}
         />
     );
 }
 
 export default function App() {
+
     return (
         <>
             <StatusBar style={'dark'}/>
             <NavigationContainer>
                 <Stack.Navigator>
                     <Stack.Screen
-                        name={'AllPlaces'}
+                        name={'all-places'}
                         component={AllPlaces}
-                        options={({navigation}) => {
-                            return {
-                                headerRight: (props: NativeStackHeaderRightProps) => renderHeaderRight(props.tintColor, navigation)
+                        options={
+                            ({navigation}) => {
+                                return {
+                                    title: 'Your Favorit Places',
+                                    headerRight: (props: NativeStackHeaderRightProps) => renderHeaderRight(props.tintColor, navigation)
+                                }
                             }
-                        }}
+                        }
                     />
-                    <Stack.Screen name={'AddPlace'} component={AddPlace}/>
+                    <Stack.Screen name={'AddPlace'} component={AddPlace} options={{title: 'Add a new place'}}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </>
