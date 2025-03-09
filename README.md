@@ -1964,6 +1964,15 @@ ___
 
 ## 12.8 Adding & Configuring the Camera Package (for Native Camera Access)
 
+You can read more about Expo Camera here: https://docs.expo.dev/versions/latest/sdk/camera/
+
+Ther are alos "Expo Location" and "Expo Storage" respectively to access the GPS of the mobile device and the File system on the smartphone.
+
+For our purpose in this project the "Expo Camera" would be an overkill, instead we would use **ImagePicker** and we will install it using:
+
+`$ npm install expo-image-picker`
+___
+
 ## 12.9 Taking Photos on Android
 
 ## 12.10 Taking Photos on iOS + Managing Permissions

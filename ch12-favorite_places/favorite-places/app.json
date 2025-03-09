@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-image-picker",
+      {
+        "cameraPermission": "Möchtest du den Zugriff auf die Kamera zulassen?"
+      }
+    ]
   }
 }
