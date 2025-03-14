@@ -2021,6 +2021,28 @@ ___
 
 ## 12.14 Locating Users
 
+`$ npx expo install expo-location`
+
+`LocationObject` would look like this:
+
+```json
+{
+  "coords": {
+    "accuracy": 100,
+    "altitude": 75.80000305175781,
+    "altitudeAccuracy": 61.08225631713867,
+    "heading": 0,
+    "latitude": 52.4355247,
+    "longitude": 13.5248458,
+    "speed": 0
+  },
+  "mocked": false,
+  "timestamp": 1741989136877
+}
+```
+
+___
+
 ## 12.15 Adding a Location Preview Map
 
 ## 12.16 Adding an Interactive Map (Google Maps & Apple Maps)
