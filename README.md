@@ -2013,6 +2013,8 @@ ___
 
 ## 12.12 Creating a Custom Button
 
+___
+
 ## 12.13 Getting Started with the Location Picker
 
 ## 12.14 Locating Users
