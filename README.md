@@ -2005,6 +2005,8 @@ ___
 
 ## 12.10 Taking Photos on iOS + Managing Permissions
 
+___
+
 ## 12.11 Showing an Image Preview
 
 ## 12.12 Creating a Custom Button
