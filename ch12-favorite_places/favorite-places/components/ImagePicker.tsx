@@ -4,7 +4,7 @@ import {useState} from "react";
 import {COLOR} from "../colors";
 import {OutlinedButton} from "./UI/OutlinedButton";
 
-export const CameraCapture = () => {
+export const ImagePicker = () => {
 
     const [capturedImage, setCapturedImage] = useState<string>();
 

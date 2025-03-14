@@ -2017,6 +2017,8 @@ ___
 
 ## 12.13 Getting Started with the Location Picker
 
+___
+
 ## 12.14 Locating Users
 
 ## 12.15 Adding a Location Preview Map
