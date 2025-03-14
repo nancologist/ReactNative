@@ -2045,6 +2045,15 @@ ___
 
 ## 12.15 Adding a Location Preview Map
 
+We are going to use the "Maps Static API" from Google to show a location preview on the map.
+
+1. Go to https://developers.google.com/maps/documentation/maps-static/overview?hl=de (you have to be signed in)
+2. Click on "Jetzt starten"
+3. Das neue Projekt erstellen (in this case "react-native-course")
+4. get the API key!
+
+___
+
 ## 12.16 Adding an Interactive Map (Google Maps & Apple Maps)
 
 ## 12.17 Allowing Map Interaction & Adding Markers
