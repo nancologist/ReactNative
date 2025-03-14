@@ -2009,6 +2009,8 @@ ___
 
 ## 12.11 Showing an Image Preview
 
+___
+
 ## 12.12 Creating a Custom Button
 
 ## 12.13 Getting Started with the Location Picker

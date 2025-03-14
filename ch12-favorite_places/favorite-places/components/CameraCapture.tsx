@@ -1,7 +1,11 @@
-import {Alert, Button, View} from "react-native";
+import {Alert, Button, Image, StyleSheet, Text, View} from "react-native";
 import {launchCameraAsync, PermissionStatus, useCameraPermissions} from "expo-image-picker";
+import {useState} from "react";
+import {COLOR} from "../colors";
 
 export const CameraCapture = () => {
+
+    const [capturedImage, setCapturedImage] = useState<string>();
 
     // For iOS:
     const [permissionResponse, requestPermission] = useCameraPermissions();
@@ -29,13 +33,34 @@ export const CameraCapture = () => {
             aspect: [16, 9],
             quality: 0.5,
         })
-        console.log(image)
+        setCapturedImage(image.assets?.[0].uri || '')
+    }
+
+    let imagePreview = <Text>Image Preview</Text>
+    if (capturedImage) {
+        imagePreview = <Image style={styles.image} source={{uri: capturedImage}}/>
     }
 
     return (
         <View>
-            <View></View>
+            <View style={styles.imagePreview}>{imagePreview}</View>
             <Button title={'Kamera'} onPress={takeImageHandler}/>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    imagePreview: {
+        width: '100%',
+        height: 200,
+        marginVertical: 0,
+        justifyContent: "center",
+        alignItems: 'center',
+        backgroundColor: COLOR.primary100,
+        borderRadius: 4
+    },
+    image: {
+        width: '100%',
+        height: '100%'
+    }
+})
