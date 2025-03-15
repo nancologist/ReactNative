@@ -4,8 +4,13 @@ import {COLOR} from "../colors";
 import {getCurrentPositionAsync, PermissionStatus, useForegroundPermissions} from "expo-location";
 import {useState} from "react";
 import {createMapPreviewUrl} from "../location";
+import {ParamListBase, useNavigation} from "@react-navigation/native";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 
 export function LocationPicker() {
+
+    // Anmerkungen in README:
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
     const [pickedLocation, setPickedLocation] = useState<{ lat: number, lng: number }>();
     const [permissionResponse, requestPermission] = useForegroundPermissions();
@@ -35,6 +40,7 @@ export function LocationPicker() {
     };
 
     const pickOnMapHandler = () => {
+        navigation.navigate('map');
     };
 
     let locationPreview = <Text>Location Preview</Text>

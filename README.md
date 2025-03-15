@@ -2056,6 +2056,14 @@ ___
 
 ## 12.16 Adding an Interactive Map (Google Maps & Apple Maps)
 
+`$ npx expo install react-native-maps`
+
+Anmerkung: To get the `navigation` in the `LocationPicker` component, we don't receive the `navigation` as the component prop here, because the `LocationPicker` **is NOT a Screen
+component**. Instead we should use the `useNavigation()` hook.
+
+Anmerkung2: Adding this type `<NativeStackNavigationProp<ParamListBase>>`  to the `useNavigate()` is to solve an error when using the `navigation.navigate(str)`
+___
+
 ## 12.17 Allowing Map Interaction & Adding Markers
 
 ## 12.18 Confirming Picked Locations
