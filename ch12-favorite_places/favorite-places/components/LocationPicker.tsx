@@ -7,12 +7,13 @@ import {createMapPreviewUrl} from "../location";
 import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 import {RootParamList} from "../App";
+import {Location} from "../screens/Map";
 
-interface X extends ParamListBase {
-    lat: { lat: number }
+type Props = {
+    onLocationSelected: (location: Location) => void;
 }
 
-export function LocationPicker() {
+export function LocationPicker({onLocationSelected}: Props) {
 
     const isFocused = useIsFocused();
 
@@ -44,7 +45,11 @@ export function LocationPicker() {
             }
         },
         [route, isFocused]
-    )
+    );
+
+    useEffect(() => {
+        if (pickedLocation) onLocationSelected(pickedLocation);
+    }, [pickedLocation, onLocationSelected]);
 
     const verifyPermission = async () => {
         if (permissionResponse?.status === PermissionStatus.UNDETERMINED) {

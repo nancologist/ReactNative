@@ -4,7 +4,11 @@ import {useState} from "react";
 import {COLOR} from "../colors";
 import {OutlinedButton} from "./UI/OutlinedButton";
 
-export const ImagePicker = () => {
+type Props = {
+    onImageCaptured: (imageUri: string) => void;
+}
+
+export const ImagePicker = ({onImageCaptured}: Props) => {
 
     const [capturedImage, setCapturedImage] = useState<string>();
 
@@ -34,7 +38,13 @@ export const ImagePicker = () => {
             aspect: [16, 9],
             quality: 0.5,
         })
-        setCapturedImage(image.assets?.[0].uri || '')
+        const imageUri = image.assets?.[0].uri;
+        if (imageUri) {
+            setCapturedImage(imageUri)
+            onImageCaptured(imageUri)
+        } else {
+            throw new Error('imageUri undefined!')
+        }
     }
 
     let imagePreview = <Text>Image Preview</Text>

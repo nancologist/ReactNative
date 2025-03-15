@@ -2090,6 +2090,8 @@ ___
 
 ## 12.21 Managing Location & Image State in the Form
 
+___
+
 ## 12.22 Converting Picked Locations to Human-Readable Addresses
 
 ## 12.23 Passing Entered Data to the "AllPlaces" Screen

@@ -6,9 +6,11 @@ import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import IconButton from "../components/UI/IconButton";
 import {PressEventHandler} from "../types";
 
+export type Location = { latitude: number, longitude: number }
+
 export const Map: FC<NativeStackScreenProps<ParamListBase, 'map'>> = ({navigation}) => {
 
-    const [selectedLocation, setSelectedLocation] = useState<{ latitude: number, longitude: number }>();
+    const [selectedLocation, setSelectedLocation] = useState<Location>();
 
     const region: Region = {
         // Set the center of the map when opening it:
