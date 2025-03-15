@@ -2066,6 +2066,8 @@ ___
 
 ## 12.17 Allowing Map Interaction & Adding Markers
 
+___
+
 ## 12.18 Confirming Picked Locations
 
 ## 12.19 Previewing Picked Locations

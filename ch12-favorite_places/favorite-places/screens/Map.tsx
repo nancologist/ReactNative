@@ -1,7 +1,10 @@
-import MapView, {Region} from "react-native-maps";
+import MapView, {MapPressEvent, Marker, Region} from "react-native-maps";
 import {StyleSheet} from "react-native";
+import {useState} from "react";
 
 export function Map() {
+
+    const [selectedLocation, setSelectedLocation] = useState<{ latitude: number, longitude: number }>();
 
     const region: Region = {
         // Set the center of the map when opening it:
@@ -12,8 +15,15 @@ export function Map() {
         longitudeDelta: 0.0421,
     }
 
+    const onMapPressed = (event: MapPressEvent) => {
+        const {latitude, longitude} = event.nativeEvent.coordinate;
+        setSelectedLocation({latitude, longitude});
+    };
+
     return (
-        <MapView style={styles.map} initialRegion={region}></MapView>
+        <MapView style={styles.map} initialRegion={region} onPress={onMapPressed}>
+            {selectedLocation && <Marker coordinate={selectedLocation}/>}
+        </MapView>
     );
 };
 
