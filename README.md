@@ -2082,6 +2082,8 @@ ___
 
 ## 12.19 Previewing Picked Locations
 
+___
+
 ## 12.20 Adding a Form Submit Button
 
 ## 12.21 Managing Location & Image State in the Form
