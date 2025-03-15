@@ -2070,6 +2070,16 @@ ___
 
 ## 12.18 Confirming Picked Locations
 
+`useLayoutEffect()` helps us to run some code when the component is rendered for the first time. We should add the dependencies as the 2nd argument to this function.
+
+So now that the `onSaveBtnPressed` is a dependency in the above function, **to avoid infinite rendering loop** we should wrap the `onSaveBtnPressed` in the `useCallback()` so to prevent
+occurance of infinite loop.
+
+The 2nd argument of useCallback() is the array of dependencies: each time one of these dependencies change, the callback function (1st argument of useCallback) will be recreated.
+
+The `useCallback` also helps improving performance via avoiding unnecessary renderings beside preventing infinite loops.
+___
+
 ## 12.19 Previewing Picked Locations
 
 ## 12.20 Adding a Form Submit Button
