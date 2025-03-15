@@ -3,11 +3,15 @@ import {useState} from "react";
 import {COLOR} from "../colors";
 import {ImagePicker} from "./ImagePicker";
 import {LocationPicker} from "./LocationPicker";
+import {BaseButton} from "./UI/BaseButton";
 
 export default function PlaceForm() {
     const [title, setTitle] = useState('');
     const onTitleChanged = (inputValue: string) => {
         setTitle(inputValue)
+    }
+
+    const onSubmit = () => {
     }
 
     return (
@@ -18,6 +22,7 @@ export default function PlaceForm() {
             </View>
             <ImagePicker/>
             <LocationPicker/>
+            <BaseButton onPress={onSubmit}>Add Place</BaseButton>
         </ScrollView>
     );
 }

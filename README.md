@@ -2086,6 +2086,8 @@ ___
 
 ## 12.20 Adding a Form Submit Button
 
+___
+
 ## 12.21 Managing Location & Image State in the Form
 
 ## 12.22 Converting Picked Locations to Human-Readable Addresses
