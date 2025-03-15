@@ -2094,6 +2094,9 @@ ___
 
 ## 12.22 Converting Picked Locations to Human-Readable Addresses
 
+You can use Geocoding API from Google to make a location (lang & lat) human readable!
+___
+
 ## 12.23 Passing Entered Data to the "AllPlaces" Screen
 
 ## 12.24 Outputting a List Of Places

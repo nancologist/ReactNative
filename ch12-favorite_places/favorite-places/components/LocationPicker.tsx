@@ -3,14 +3,14 @@ import {OutlinedButton} from "./UI/OutlinedButton";
 import {COLOR} from "../colors";
 import {getCurrentPositionAsync, PermissionStatus, useForegroundPermissions} from "expo-location";
 import {useEffect, useState} from "react";
-import {createMapPreviewUrl} from "../location";
+import {convertLocationToAddress, createMapPreviewUrl} from "../location";
 import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 import {RootParamList} from "../App";
 import {Location} from "../screens/Map";
 
 type Props = {
-    onLocationSelected: (location: Location) => void;
+    onLocationSelected: (location: Location & { address: string }) => void;
 }
 
 export function LocationPicker({onLocationSelected}: Props) {
@@ -48,7 +48,12 @@ export function LocationPicker({onLocationSelected}: Props) {
     );
 
     useEffect(() => {
-        if (pickedLocation) onLocationSelected(pickedLocation);
+        (async () => {
+            if (pickedLocation) {
+                const address = await convertLocationToAddress(pickedLocation)
+                onLocationSelected({...pickedLocation, address});
+            }
+        })()
     }, [pickedLocation, onLocationSelected]);
 
     const verifyPermission = async () => {
