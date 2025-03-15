@@ -57,3 +57,7 @@ export default function App() {
         </>
     );
 }
+
+export interface RootParamList extends ParamListBase {
+    'add-place': undefined | { latitude: number, longitude: number }
+}

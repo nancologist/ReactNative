@@ -2,17 +2,25 @@ import {Alert, Image, StyleSheet, Text, View} from "react-native";
 import {OutlinedButton} from "./UI/OutlinedButton";
 import {COLOR} from "../colors";
 import {getCurrentPositionAsync, PermissionStatus, useForegroundPermissions} from "expo-location";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {createMapPreviewUrl} from "../location";
-import {ParamListBase, useNavigation} from "@react-navigation/native";
+import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
+import {RootParamList} from "../App";
+
+interface X extends ParamListBase {
+    lat: { lat: number }
+}
 
 export function LocationPicker() {
 
+    const isFocused = useIsFocused();
+
     // Anmerkungen in README:
     const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+    const route = useRoute<RouteProp<RootParamList, 'add-place'>>();
 
-    const [pickedLocation, setPickedLocation] = useState<{ lat: number, lng: number }>();
+    const [pickedLocation, setPickedLocation] = useState<{ latitude: number, longitude: number }>();
     const [permissionResponse, requestPermission] = useForegroundPermissions();
 
     const getLocationHandler = async () => {
@@ -22,10 +30,21 @@ export function LocationPicker() {
         }
         const location = await getCurrentPositionAsync()
         setPickedLocation({
-            lat: location.coords.latitude,
-            lng: location.coords.longitude
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude
         })
     };
+
+    useEffect(
+        // This function will rerun everytime mapPickedLocation (the dependency) changes:
+        () => {
+            if (isFocused && route.params) {
+                const mapPickedLocation = {latitude: route.params.latitude, longitude: route.params.longitude};
+                setPickedLocation(mapPickedLocation)
+            }
+        },
+        [route, isFocused]
+    )
 
     const verifyPermission = async () => {
         if (permissionResponse?.status === PermissionStatus.UNDETERMINED) {
@@ -45,7 +64,7 @@ export function LocationPicker() {
 
     let locationPreview = <Text>Location Preview</Text>
     if (pickedLocation) {
-        locationPreview = <Image style={styles.image} source={{uri: createMapPreviewUrl(pickedLocation.lat, pickedLocation.lng)}}/>;
+        locationPreview = <Image style={styles.image} source={{uri: createMapPreviewUrl(pickedLocation.latitude, pickedLocation.longitude)}}/>;
     }
 
     return (
