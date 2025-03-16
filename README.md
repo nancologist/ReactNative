@@ -2132,6 +2132,8 @@ ___
 
 ## 12.28 Inserting Places into the Database
 
+___
+
 ## 12.29 Fetching Places from the Database
 
 ## 12.30 Adding the Place Details Screen

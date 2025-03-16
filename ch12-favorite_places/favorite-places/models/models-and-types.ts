@@ -1,14 +1,12 @@
-import Uuid from "expo-modules-core/src/uuid";
-
 export class Place {
-    private _id: string;
+    private readonly _id: number;
     private _title: string;
     private _imageUri: string;
     private _address: string;
     private _location: Location;
 
-    constructor(title: string, imageUri: string, {address, latitude, longitude}: LocationWithAddress) {
-        this._id = Uuid.v4();
+    constructor(id: number, title: string, imageUri: string, {address, latitude, longitude}: LocationWithAddress) {
+        this._id = id;
         this._title = title;
         this._imageUri = imageUri;
         this._address = address;
@@ -16,14 +14,9 @@ export class Place {
     }
 
 
-    get id(): string {
+    get id(): number {
         return this._id;
     }
-
-    // this._id does not need a setter in frontend but in backend for PUT requests
-    // set id(value: string) {
-    //     this._id = value;
-    // }
 
     get title(): string {
         return this._title;
@@ -56,6 +49,28 @@ export class Place {
     set location(value: Location) {
         this._location = value;
     }
+
+    public static convertFromDAO(dao: PlaceDAO): Place {
+        return new Place(
+            dao.id,
+            dao.title,
+            dao.image_uri,
+            {
+                latitude: dao.latitude,
+                longitude: dao.longitude,
+                address: dao.address
+            }
+        );
+    }
+}
+
+export interface PlaceDAO {
+    id: number;
+    title: string;
+    image_uri: string;
+    latitude: number;
+    longitude: number
+    address: string;
 }
 
 export type LocationWithAddress = Location & { address: string }

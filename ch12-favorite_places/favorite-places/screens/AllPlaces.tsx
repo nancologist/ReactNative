@@ -1,22 +1,19 @@
 import PlaceList from "../components/PlaceList";
 import {FC, useEffect, useState} from "react";
-import {useIsFocused} from "@react-navigation/native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
-import {Place} from "../models/models-and-types";
+import {Place, PlaceDAO} from "../models/models-and-types";
 import {AppParamList} from "../App";
+import {useSQLiteContext} from "expo-sqlite";
 
 export const AllPlaces: FC<NativeStackScreenProps<AppParamList, 'all-places'>> = ({route}) => {
 
+    const db = useSQLiteContext();
     const [places, setPlaces] = useState<Place[]>([])
 
-    const isFocused = useIsFocused();
-
     useEffect(() => {
-        if (isFocused && route.params) {
-            const newPlace = route.params.place;
-            setPlaces((prevState) => [...prevState, newPlace]);
-        }
-    }, [isFocused, route]);
+        const allPlaces = db.getAllSync<PlaceDAO>('SELECT *, image_uri as imageUri FROM places').map(Place.convertFromDAO)
+        setPlaces(allPlaces);
+    }, []);
 
     return <PlaceList places={places}/>;
 }

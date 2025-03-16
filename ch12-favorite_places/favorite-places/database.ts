@@ -26,12 +26,10 @@ export const initDb = async () => {
 
 export const insertPlace = async (place: Place) => {
     try {
-        await database.withExclusiveTransactionAsync(async (transaction) => {
-            transaction.execSync(`
-                INSERT INTO places (title, image_uri, latitude, longitude, address)
-                VALUES (${place.title}, ${place.imageUri}, ${place.location.latitude}, ${place.location.longitude}, ${place.address});
-            `);
-        });
+        await database.runAsync(`
+            INSERT INTO places (title, image_uri, latitude, longitude, address)
+            VALUES (?, ?, ?, ?, ?);
+        `, place.title, place.imageUri, place.location.latitude, place.location.longitude, place.address);
     } catch (err) {
         throw err;
     }

@@ -6,11 +6,11 @@ import IconButton from "./components/UI/IconButton";
 import {JSX, useCallback, useEffect, useState} from "react";
 import {COLOR} from "./colors";
 import {Map} from "./screens/Map";
-import {Place} from "./models/models-and-types";
 import {AllPlaces} from "./screens/AllPlaces";
 import {initDb} from "./database";
 import * as SplashScreen from 'expo-splash-screen';
 import {View} from "react-native";
+import {SQLiteProvider} from "expo-sqlite";
 
 const Stack = createNativeStackNavigator<AppParamList>();
 
@@ -56,7 +56,7 @@ export default function App() {
     }
 
     return (
-        <>
+        <SQLiteProvider databaseName={'favorite-places.db'}>
             <StatusBar style={'dark'}/>
             <NavigationContainer>
                 <Stack.Navigator
@@ -82,12 +82,12 @@ export default function App() {
                     <Stack.Screen name={'map'} component={Map}/>
                 </Stack.Navigator>
             </NavigationContainer>
-        </>
+        </SQLiteProvider>
     );
 }
 
 export type AppParamList = {
     'map': undefined
     'add-place': { latitude: number, longitude: number } | undefined;
-    'all-places': { place: Place } | undefined;
+    'all-places': undefined;
 }
