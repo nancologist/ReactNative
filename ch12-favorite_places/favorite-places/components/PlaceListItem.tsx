@@ -1,13 +1,14 @@
 import {Place} from "../models/models-and-types";
-import {GestureResponderEvent, Image, Pressable, Text, View} from 'react-native';
+import {GestureResponderEvent, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {COLOR} from "../colors";
 
 export function PlaceListItem({place, onPress}: Props) {
     return (
-        <Pressable onPress={onPress}>
-            <Image source={{uri: place.imageUri}}/>
-            <View>
-                <Text>{place.title}</Text>
-                <Text>{place.address}</Text>
+        <Pressable style={({pressed}) => [styles.item, pressed && styles.pressed]} onPress={onPress}>
+            <Image style={styles.image} source={{uri: place.imageUri}}/>
+            <View style={styles.info}>
+                <Text style={styles.title}>{place.title}</Text>
+                <Text style={styles.address}>{place.address}</Text>
             </View>
         </Pressable>
     );
@@ -17,4 +18,41 @@ type Props = {
     place: Place;
     onPress: (event: GestureResponderEvent) => void;
 }
+
+const styles = StyleSheet.create({
+    item: {
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        borderRadius: 6,
+        marginVertical: 12,
+        backgroundColor: COLOR.primary500,
+        elevation: 2,
+        shadowColor: 'black', // for iOS
+        shadowOpacity: 0.15,
+        shadowOffset: {width: 1, height: 1},
+        shadowRadius: 2,
+    },
+    pressed: {
+        opacity: 0.9
+    },
+    image: {
+        flex: 1,
+        borderBottomLeftRadius: 4,
+        borderTopLeftRadius: 4,
+        height: 100
+    },
+    info: {
+        flex: 2,
+        padding: 12,
+    },
+    title: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: COLOR.gray700
+    },
+    address: {
+        fontSize: 12,
+        color: COLOR.gray700
+    }
+});
 

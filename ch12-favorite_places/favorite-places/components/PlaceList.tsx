@@ -1,6 +1,7 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
 import {Place} from "../models/models-and-types";
 import {COLOR} from "../colors";
+import {PlaceListItem} from "./PlaceListItem";
 
 export default function PlaceList({places}: Props) {
     if (places.length === 0) {
@@ -11,7 +12,17 @@ export default function PlaceList({places}: Props) {
         );
     }
 
-    return <FlatList data={places} renderItem={() => <Text>Item!</Text>} keyExtractor={item => item.id}/>;
+    const onItemPressed = () => {
+    };
+
+    return (
+        <FlatList
+            style={styles.list}
+            data={places}
+            keyExtractor={item => item.id}
+            renderItem={({item}) => <PlaceListItem place={item} onPress={onItemPressed}/>}
+        />
+    );
 }
 
 type Props = {
@@ -19,6 +30,9 @@ type Props = {
 };
 
 const styles = StyleSheet.create({
+    list: {
+        margin: 24
+    },
     fallBackContainer: {
         flex: 1,
         justifyContent: 'center',

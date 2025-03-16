@@ -2109,6 +2109,8 @@ ___
 
 ## 12.25 Styling Place Items
 
+___
+
 ## 12.26 SQLite: Getting Started & Initialization
 
 ## 12.27 Preparing Code to Insert Data into the SQLite Database
