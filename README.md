@@ -2128,6 +2128,8 @@ ___
 
 ## 12.27 Preparing Code to Insert Data into the SQLite Database
 
+___
+
 ## 12.28 Inserting Places into the Database
 
 ## 12.29 Fetching Places from the Database

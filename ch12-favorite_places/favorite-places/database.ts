@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import {Place} from "./models/models-and-types";
 
 const database = SQLite.openDatabaseSync('favorite-places.db');
 
@@ -18,7 +19,20 @@ export const initDb = async () => {
 
             `);
         });
-    } catch (e) {
+    } catch (err) {
+        throw err
+    }
+}
 
+export const insertPlace = async (place: Place) => {
+    try {
+        await database.withExclusiveTransactionAsync(async (transaction) => {
+            transaction.execSync(`
+                INSERT INTO places (title, image_uri, latitude, longitude, address)
+                VALUES (${place.title}, ${place.imageUri}, ${place.location.latitude}, ${place.location.longitude}, ${place.address});
+            `);
+        });
+    } catch (err) {
+        throw err;
     }
 }
