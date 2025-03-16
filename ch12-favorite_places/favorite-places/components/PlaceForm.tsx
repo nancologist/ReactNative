@@ -21,10 +21,9 @@ export default function PlaceForm({onPlaceAdded}: { onPlaceAdded: (place: Place)
 
     const onLocationSelected = useCallback((location: LocationWithAddress) => {
         setLocationWithAddress(location);
-    }, [])
+    }, [setLocationWithAddress])
 
     const onSubmit = () => {
-        // fixme: first submit does not contain title and imageUri! 2nd one schon!
         console.log(title, imageUri, locationWithAddress);
         if (title && imageUri && locationWithAddress) {
             onPlaceAdded(new Place(title, imageUri, locationWithAddress));

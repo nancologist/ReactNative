@@ -31,7 +31,7 @@ export const Map: FC<NativeStackScreenProps<AppParamList, 'map'>> = ({navigation
                 Alert.alert('You have to pick a location first!');
                 return;
             }
-            navigation.navigate('add-place', selectedLocation);
+            navigation.popTo('add-place', selectedLocation);
         },
         [navigation, selectedLocation]
     );

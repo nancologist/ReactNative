@@ -4,7 +4,7 @@ import {COLOR} from "../colors";
 import {getCurrentPositionAsync, PermissionStatus, useForegroundPermissions} from "expo-location";
 import {useEffect, useState} from "react";
 import {convertLocationToAddress, createMapPreviewUrl} from "../location";
-import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
+import {RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 import {AppParamList} from "../App";
 import {LocationWithAddress} from "../models/models-and-types";
@@ -18,7 +18,7 @@ export function LocationPicker({onLocationSelected}: Props) {
     const isFocused = useIsFocused();
 
     // Anmerkungen in README:
-    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+    const navigation = useNavigation<NativeStackNavigationProp<AppParamList>>();
     const route = useRoute<RouteProp<AppParamList, 'add-place'>>();
 
     const [pickedLocation, setPickedLocation] = useState<{ latitude: number, longitude: number }>();
