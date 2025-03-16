@@ -2,11 +2,12 @@ import {StatusBar} from 'expo-status-bar';
 import {NavigationContainer, ParamListBase} from "@react-navigation/native";
 import {createNativeStackNavigator, NativeStackHeaderRightProps, NativeStackNavigationProp} from "@react-navigation/native-stack";
 import AllPlaces from "./screens/AllPlaces";
-import AddPlace from "./screens/AddPlace";
+import {AddPlace} from "./screens/AddPlace";
 import IconButton from "./components/UI/IconButton";
 import {JSX} from "react";
 import {COLOR} from "./colors";
 import {Map} from "./screens/Map";
+import {Place} from "./models/models-and-types";
 
 const Stack = createNativeStackNavigator();
 
@@ -59,5 +60,6 @@ export default function App() {
 }
 
 export interface RootParamList extends ParamListBase {
-    'add-place': undefined | { latitude: number, longitude: number }
+    'add-place'?: { latitude: number, longitude: number };
+    'all-places'?: { place: Place }
 }

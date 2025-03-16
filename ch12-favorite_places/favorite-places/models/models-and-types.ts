@@ -7,12 +7,12 @@ export class Place {
     private _address: string;
     private _location: Location;
 
-    constructor(title: string, imageUri: string, address: string, location: Location) {
+    constructor(title: string, imageUri: string, {address, latitude, longitude}: LocationWithAddress) {
         this._id = Uuid.v4();
         this._title = title;
         this._imageUri = imageUri;
         this._address = address;
-        this._location = location;
+        this._location = {latitude, longitude};
     }
 
 
@@ -58,4 +58,6 @@ export class Place {
     }
 }
 
-type Location = { lat: number, lang: number };
+export type LocationWithAddress = Location & { address: string }
+
+export type Location = { latitude: number, longitude: number }

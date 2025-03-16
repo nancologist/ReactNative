@@ -5,8 +5,7 @@ import {ParamListBase} from "@react-navigation/native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import IconButton from "../components/UI/IconButton";
 import {PressEventHandler} from "../types";
-
-export type Location = { latitude: number, longitude: number }
+import {Location} from "../models/models-and-types";
 
 export const Map: FC<NativeStackScreenProps<ParamListBase, 'map'>> = ({navigation}) => {
 

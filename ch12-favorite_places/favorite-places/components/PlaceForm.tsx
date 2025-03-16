@@ -4,12 +4,12 @@ import {COLOR} from "../colors";
 import {ImagePicker} from "./ImagePicker";
 import {LocationPicker} from "./LocationPicker";
 import {BaseButton} from "./UI/BaseButton";
-import {Location} from "../screens/Map";
+import {LocationWithAddress, Place} from "../models/models-and-types";
 
-export default function PlaceForm() {
+export default function PlaceForm({onPlaceAdded}: { onPlaceAdded: (place: Place) => void }) {
     const [title, setTitle] = useState<string>();
     const [imageUri, setImageUri] = useState<string>();
-    const [selectedLocation, setSelectedLocation] = useState<Location>();
+    const [locationWithAddress, setLocationWithAddress] = useState<LocationWithAddress>();
 
     const onTitleChanged = (inputValue: string) => {
         setTitle(inputValue)
@@ -19,14 +19,14 @@ export default function PlaceForm() {
         setImageUri(imageUri);
     }
 
-    const onLocationSelected = useCallback((location: Location) => {
-        setSelectedLocation(location);
+    const onLocationSelected = useCallback((location: LocationWithAddress) => {
+        setLocationWithAddress(location);
     }, [])
 
     const onSubmit = () => {
-        console.log(title);
-        console.log(imageUri);
-        console.log(selectedLocation);
+        if (title && imageUri && locationWithAddress) {
+            onPlaceAdded(new Place(title, imageUri, locationWithAddress));
+        }
     }
 
     return (

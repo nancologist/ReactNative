@@ -7,10 +7,10 @@ import {convertLocationToAddress, createMapPreviewUrl} from "../location";
 import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 import {RootParamList} from "../App";
-import {Location} from "../screens/Map";
+import {LocationWithAddress} from "../models/models-and-types";
 
 type Props = {
-    onLocationSelected: (location: Location & { address: string }) => void;
+    onLocationSelected: (location: LocationWithAddress) => void;
 }
 
 export function LocationPicker({onLocationSelected}: Props) {

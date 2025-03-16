@@ -1,5 +1,5 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
-import {Place} from "../models/place";
+import {Place} from "../models/models-and-types";
 import {COLOR} from "../colors";
 
 export default function PlaceList({places}: Props) {

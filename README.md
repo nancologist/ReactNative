@@ -2099,6 +2099,8 @@ ___
 
 ## 12.23 Passing Entered Data to the "AllPlaces" Screen
 
+___
+
 ## 12.24 Outputting a List Of Places
 
 ## 12.25 Styling Place Items
