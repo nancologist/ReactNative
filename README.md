@@ -2113,6 +2113,19 @@ ___
 
 ## 12.26 SQLite: Getting Started & Initialization
 
+Having a DBMS on the mobile device!
+
+`$ npx expo install expo-sqlite`
+
+To prolong the startup screen:
+
+`$ npx expo install expo-app-loading` Deprecated, used this instead:
+
+`$ npx expo install expo-splash-screen`
+
+
+___
+
 ## 12.27 Preparing Code to Insert Data into the SQLite Database
 
 ## 12.28 Inserting Places into the Database

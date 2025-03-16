@@ -3,11 +3,14 @@ import {NavigationContainer, ParamListBase} from "@react-navigation/native";
 import {createNativeStackNavigator, NativeStackHeaderRightProps, NativeStackNavigationProp} from "@react-navigation/native-stack";
 import {AddPlace} from "./screens/AddPlace";
 import IconButton from "./components/UI/IconButton";
-import {JSX} from "react";
+import {JSX, useCallback, useEffect, useState} from "react";
 import {COLOR} from "./colors";
 import {Map} from "./screens/Map";
 import {Place} from "./models/models-and-types";
 import {AllPlaces} from "./screens/AllPlaces";
+import {initDb} from "./database";
+import * as SplashScreen from 'expo-splash-screen';
+import {View} from "react-native";
 
 const Stack = createNativeStackNavigator<AppParamList>();
 
@@ -27,6 +30,30 @@ const renderHeaderRight: (
 }
 
 export default function App() {
+
+    const [dbReady, setDbReady] = useState(false);
+
+    useEffect(() => {
+        (async () => {
+            await initDb();
+            setDbReady(true);
+        })();
+    }, [] /* EMPTY ARRAY for Dependencies = Execute this code only the first time the component is rendered. */);
+
+    const onLayoutRootView = useCallback(() => {
+        if (dbReady) {
+            // This tells the splash screen to hide immediately! If we call this after
+            // `setAppIsReady`, then we may see a blank screen while the app is
+            // loading its initial state and rendering its first pixels. So instead,
+            // we hide the splash screen once we know the root view has already
+            // performed layout.
+            SplashScreen.hide();
+        }
+    }, [dbReady]);
+
+    if (!dbReady) {
+        return <View onLayout={onLayoutRootView}></View>;
+    }
 
     return (
         <>

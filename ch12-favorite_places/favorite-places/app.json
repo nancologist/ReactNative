@@ -28,9 +28,10 @@
       [
         "expo-image-picker",
         {
-          "cameraPermission": "Möchtest du den Zugriff auf die Kamera zulassen?"
+          "cameraPermission": "Mï¿½chtest du den Zugriff auf die Kamera zulassen?"
         }
-      ]
+      ],
+      "expo-sqlite"
     ]
   }
 }
