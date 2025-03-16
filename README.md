@@ -2136,6 +2136,8 @@ ___
 
 ## 12.29 Fetching Places from the Database
 
+___
+
 ## 12.30 Adding the Place Details Screen
 
 ## 12.31 Fetching Place Detail Data from the Database

@@ -5,8 +5,8 @@ export class Place {
     private _address: string;
     private _location: Location;
 
-    constructor(id: number, title: string, imageUri: string, {address, latitude, longitude}: LocationWithAddress) {
-        this._id = id;
+    constructor(title: string, imageUri: string, {address, latitude, longitude}: LocationWithAddress, id?: number) {
+        this._id = id || -1;
         this._title = title;
         this._imageUri = imageUri;
         this._address = address;
@@ -52,14 +52,14 @@ export class Place {
 
     public static convertFromDAO(dao: PlaceDAO): Place {
         return new Place(
-            dao.id,
             dao.title,
             dao.image_uri,
             {
                 latitude: dao.latitude,
                 longitude: dao.longitude,
                 address: dao.address
-            }
+            },
+            dao.id
         );
     }
 }
