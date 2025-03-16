@@ -7,14 +7,14 @@ import {AppParamList} from "../App";
 
 export const AllPlaces: FC<NativeStackScreenProps<AppParamList, 'all-places'>> = ({route}) => {
 
-    const [places, setPlaces] = useState<Place[]>()
+    const [places, setPlaces] = useState<Place[]>([])
 
     const isFocused = useIsFocused();
 
     useEffect(() => {
         if (isFocused && route.params) {
             const newPlace = route.params.place;
-            setPlaces((prevState) => prevState && [...prevState, newPlace]);
+            setPlaces((prevState) => [...prevState, newPlace]);
         }
     }, [isFocused, route]);
 

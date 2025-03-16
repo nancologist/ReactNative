@@ -3,7 +3,7 @@ import {Place} from "../models/models-and-types";
 import {COLOR} from "../colors";
 
 export default function PlaceList({places}: Props) {
-    if (!places || places.length === 0) {
+    if (places.length === 0) {
         return (
             <View style={styles.fallBackContainer}>
                 <Text style={styles.fallbackText}>No places added yet.</Text>
@@ -15,7 +15,7 @@ export default function PlaceList({places}: Props) {
 }
 
 type Props = {
-    places: Place[] | undefined
+    places: Place[]
 };
 
 const styles = StyleSheet.create({

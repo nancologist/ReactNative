@@ -24,7 +24,6 @@ export default function PlaceForm({onPlaceAdded}: { onPlaceAdded: (place: Place)
     }, [setLocationWithAddress])
 
     const onSubmit = () => {
-        console.log(title, imageUri, locationWithAddress);
         if (title && imageUri && locationWithAddress) {
             onPlaceAdded(new Place(title, imageUri, locationWithAddress));
         }
