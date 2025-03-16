@@ -1,13 +1,13 @@
 import MapView, {MapPressEvent, Marker, Region} from "react-native-maps";
 import {Alert, StyleSheet} from "react-native";
 import {FC, useCallback, useLayoutEffect, useState} from "react";
-import {ParamListBase} from "@react-navigation/native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import IconButton from "../components/UI/IconButton";
 import {PressEventHandler} from "../types";
 import {Location} from "../models/models-and-types";
+import {AppParamList} from "../App";
 
-export const Map: FC<NativeStackScreenProps<ParamListBase, 'map'>> = ({navigation}) => {
+export const Map: FC<NativeStackScreenProps<AppParamList, 'map'>> = ({navigation}) => {
 
     const [selectedLocation, setSelectedLocation] = useState<Location>();
 

@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {convertLocationToAddress, createMapPreviewUrl} from "../location";
 import {ParamListBase, RouteProp, useIsFocused, useNavigation, useRoute} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {RootParamList} from "../App";
+import {AppParamList} from "../App";
 import {LocationWithAddress} from "../models/models-and-types";
 
 type Props = {
@@ -19,12 +19,13 @@ export function LocationPicker({onLocationSelected}: Props) {
 
     // Anmerkungen in README:
     const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
-    const route = useRoute<RouteProp<RootParamList, 'add-place'>>();
+    const route = useRoute<RouteProp<AppParamList, 'add-place'>>();
 
     const [pickedLocation, setPickedLocation] = useState<{ latitude: number, longitude: number }>();
     const [permissionResponse, requestPermission] = useForegroundPermissions();
 
     const getLocationHandler = async () => {
+        locationPreview = <Text>Loading...</Text>
         const hasPermission = await verifyPermission();
         if (!hasPermission) {
             return;
@@ -34,6 +35,7 @@ export function LocationPicker({onLocationSelected}: Props) {
             latitude: location.coords.latitude,
             longitude: location.coords.longitude
         })
+        /// loading ends.
     };
 
     useEffect(

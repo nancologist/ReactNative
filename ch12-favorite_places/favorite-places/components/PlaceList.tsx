@@ -15,7 +15,7 @@ export default function PlaceList({places}: Props) {
 }
 
 type Props = {
-    places: Place[]
+    places: Place[] | undefined
 };
 
 const styles = StyleSheet.create({

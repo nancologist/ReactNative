@@ -2103,6 +2103,10 @@ ___
 
 ## 12.24 Outputting a List Of Places
 
+For the first time when the `AllPlaces` component gets rendered, the route of it has no `place` delivered to it through the `navigation.navigate()` which we implemented in the last
+episode. So we should use `useEffect()` for such scenario.
+___
+
 ## 12.25 Styling Place Items
 
 ## 12.26 SQLite: Getting Started & Initialization
