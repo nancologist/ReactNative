@@ -5,7 +5,7 @@ import {Place, PlaceDAO} from "../models/models-and-types";
 import {AppParamList} from "../App";
 import {useSQLiteContext} from "expo-sqlite";
 
-export const AllPlaces: FC<NativeStackScreenProps<AppParamList, 'all-places'>> = ({route}) => {
+export const AllPlaces: FC<NativeStackScreenProps<AppParamList, 'all-places'>> = () => {
 
     const db = useSQLiteContext();
     const [places, setPlaces] = useState<Place[]>([])
