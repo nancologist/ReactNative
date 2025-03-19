@@ -11,6 +11,7 @@ import {initDb} from "./database";
 import * as SplashScreen from 'expo-splash-screen';
 import {View} from "react-native";
 import {SQLiteProvider} from "expo-sqlite";
+import {PlaceDetails} from "./screens/PlaceDetails";
 
 const Stack = createNativeStackNavigator<AppParamList>();
 
@@ -80,6 +81,7 @@ export default function App() {
                     />
                     <Stack.Screen name={'add-place'} component={AddPlace} options={{title: 'Add a new place'}}/>
                     <Stack.Screen name={'map'} component={Map}/>
+                    <Stack.Screen name={'place-details'} component={PlaceDetails}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </SQLiteProvider>
@@ -90,4 +92,5 @@ export type AppParamList = {
     'map': undefined
     'add-place': { latitude: number, longitude: number } | undefined;
     'all-places': undefined;
+    'place-details': { placeId: number } | undefined;
 }

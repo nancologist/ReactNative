@@ -2140,6 +2140,8 @@ ___
 
 ## 12.30 Adding the Place Details Screen
 
+___
+
 ## 12.31 Fetching Place Detail Data from the Database
 
 ## 12.32 Showing a Readonly Map

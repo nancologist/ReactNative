@@ -1,10 +1,10 @@
 import {Place} from "../models/models-and-types";
-import {GestureResponderEvent, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import {COLOR} from "../colors";
 
 export function PlaceListItem({place, onPress}: Props) {
     return (
-        <Pressable style={({pressed}) => [styles.item, pressed && styles.pressed]} onPress={onPress}>
+        <Pressable style={({pressed}) => [styles.item, pressed && styles.pressed]} onPress={() => onPress(place.id)}>
             <Image style={styles.image} source={{uri: place.imageUri}}/>
             <View style={styles.info}>
                 <Text style={styles.title}>{place.title}</Text>
@@ -16,7 +16,7 @@ export function PlaceListItem({place, onPress}: Props) {
 
 type Props = {
     place: Place;
-    onPress: (event: GestureResponderEvent) => void;
+    onPress: (placeId: number) => void;
 }
 
 const styles = StyleSheet.create({
