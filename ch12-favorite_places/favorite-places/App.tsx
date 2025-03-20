@@ -81,7 +81,7 @@ export default function App() {
                     />
                     <Stack.Screen name={'add-place'} component={AddPlace} options={{title: 'Add a new place'}}/>
                     <Stack.Screen name={'map'} component={Map}/>
-                    <Stack.Screen name={'place-details'} component={PlaceDetails}/>
+                    <Stack.Screen name={'place-details'} component={PlaceDetails} options={{title: 'Loading...'}}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </SQLiteProvider>

@@ -2144,6 +2144,8 @@ ___
 
 ## 12.31 Fetching Place Detail Data from the Database
 
+___
+
 ## 12.32 Showing a Readonly Map
 
 ## 12.33 Module Summary
