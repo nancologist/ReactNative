@@ -12,6 +12,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import {View} from "react-native";
 import {SQLiteProvider} from "expo-sqlite";
 import {PlaceDetails} from "./screens/PlaceDetails";
+import {Location} from "./models/models-and-types";
 
 const Stack = createNativeStackNavigator<AppParamList>();
 
@@ -89,7 +90,7 @@ export default function App() {
 }
 
 export type AppParamList = {
-    'map': undefined
+    'map': { location?: Location } | undefined;
     'add-place': { latitude: number, longitude: number } | undefined;
     'all-places': undefined;
     'place-details': { placeId: number } | undefined;

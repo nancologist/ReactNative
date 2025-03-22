@@ -6,7 +6,7 @@ import {FC, useEffect, useState} from "react";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {AppParamList} from "../App";
 import {useSQLiteContext} from "expo-sqlite";
-import {Place} from "../models/models-and-types";
+import {Place, PlaceDAO} from "../models/models-and-types";
 
 export const PlaceDetails: FC<NativeStackScreenProps<AppParamList, 'place-details'>> = ({route, navigation}) => {
 
@@ -18,7 +18,11 @@ export const PlaceDetails: FC<NativeStackScreenProps<AppParamList, 'place-detail
         if (!placeId) {
             throw new Error('placeId undefined!')
         }
-        const place = db.getFirstSync<Place>('SELECT *, image_uri as imageUri FROM places WHERE id = ?', placeId)
+        const dao = db.getFirstSync<PlaceDAO>('SELECT * FROM places WHERE id = ?', placeId);
+        if (dao == null) {
+            throw new Error('NullPointerException! dao is null.')
+        }
+        const place = Place.convertFromDAO(dao);
         if (place == null) {
             throw new Error('NullPointerException! place is null.')
         }
@@ -27,6 +31,7 @@ export const PlaceDetails: FC<NativeStackScreenProps<AppParamList, 'place-detail
     }, [placeId]);
 
     const onMapBtnPressed: PressEventHandler = () => {
+        navigation.navigate('map', {location: place?.location});
     };
 
     if (place == undefined) {
