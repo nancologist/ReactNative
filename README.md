@@ -2155,3 +2155,53 @@ ___
 ___
 ___
 ___
+
+# 13. Building React Native Apps Without Expo
+
+## 13.1. Module Introduction
+
+___
+
+## 13.2. How Exactly Does Expo Work?
+
+___
+
+## 13.3. Expo Alternatives
+
+* Expo "Managed Workflow"
+    * Easy to setup and work with
+    * Quick and frictionless development
+    * No or very little configuration required
+    * You can build (cross-platfrom) standalons apps
+
+* Expo "Bare Workflow"
+    * Relatively easy to set up and work with
+    * Convenient development
+    * More configuration required
+    * You can build (cross-platfrom) standalons apps
+
+* React Native CLI
+    * More complet to setup
+    * Convenient development
+    * Can require more configuration effort
+    * Standalone apps are build locally
+
+___
+
+## 13.4. Setting Up Our System
+
+## 13.5. Using Expo's Bare Workflow
+
+## 13.6. Using Native Device Features with the Bare Workflow
+
+## 13.7. Ejecting To The Bare Workflow
+
+## 13.8. Creating Projects with the React Native CLI (no Expo)
+
+## 13.9. Non-Expo Apps & Native Device Features
+
+## 13.10. Module Summary
+
+___
+___
+___
