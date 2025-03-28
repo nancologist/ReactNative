@@ -2181,7 +2181,7 @@ ___
     * You can build (cross-platfrom) standalons apps
 
 * React Native CLI
-    * More complet to setup
+    * More complex to set up
     * Convenient development
     * Can require more configuration effort
     * Standalone apps are build locally
@@ -2189,6 +2189,17 @@ ___
 ___
 
 ## 13.4. Setting Up Our System
+
+### Epo Bare Workflow
+
+With the Expo Managed Workflow we have used the Expo Go App during the development to check our app. You could use Expo Go app also with the Expo Bare Workflow but it has some
+limitations.
+
+### React Native CLI
+
+Set up your environment: https://reactnative.dev/docs/set-up-your-environment?platform=android&os=windows
+
+___
 
 ## 13.5. Using Expo's Bare Workflow
 
