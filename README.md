@@ -2249,10 +2249,28 @@ ___
 
 ## 13.8. Creating Projects with the React Native CLI (no Expo)
 
+https://reactnative.dev/docs/getting-started-without-a-framework
+___
+
 ## 13.9. Non-Expo Apps & Native Device Features
+
+You can't use any more expo device feature packages. Instead you should use the community packages for the react native. e.g. for the camera or location.
 
 ## 13.10. Module Summary
 
 ___
 ___
 ___
+
+# 14. Publishing React Native Apps (From Development to Production)
+
+## 14.1. Module Introduction
+
+___
+
+## 14.2. Publishing Apps: An Overview
+
+By publishing we mean, putting the app into the google play store or apple app store.
+![img.png](img.png)
+___
+
