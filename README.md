@@ -2203,6 +2203,31 @@ ___
 
 ## 13.5. Using Expo's Bare Workflow
 
+Set Expo Bare Project up:
+
+1. `npx create-expo-app --template`
+2. Choose "Blank (Bare)"
+
+   Now there are two extra folders comparing to the Expo Managed Workflow:
+    * `android`: Android native code e.g. Java/Kotlin code.
+    * `ios`: iOS native code e.g. Objective-C/Swift code.
+
+3. Once the setup is completed, building and testing the app is easy, you have to run the following command:  
+   `npm run android` or `npm run ios` (for iOS you need a Mac)
+
+   (ACHTUNG: JAVA_HOME soll richtig gesetzt sein, sonst gibt es Probleme mit dem Build. JRE ist nicht akzeptiert, nur JDK!)
+
+   Falls notwendig die env var JAVA_HOME setzen:
+    1. `choco install -y nodejs-lts microsoft-openjdk17`
+    2. `$env:JAVA_HOME = "C:\Program` Files\Microsoft\jdk-17.0.14.7-hotspot"`
+
+   Now it should work!
+
+4. This builds the app locally and would work on emulator. (You can also run it on a real device, but you need to set up the environment for that)
+
+It has also hot reload just like Managed Worfklow. So you can change the code and it will be reloaded automatically and shown on the device emulator.
+___
+
 ## 13.6. Using Native Device Features with the Bare Workflow
 
 ## 13.7. Ejecting To The Bare Workflow
