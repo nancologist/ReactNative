@@ -2240,6 +2240,13 @@ ___
 
 ## 13.7. Ejecting To The Bare Workflow
 
+Sometimes you need to eject from the Managed Workflow to the Bare Workflow. For example if you want to use a package that is not supported by Expo Managed Workflow, or for example if
+you want to use a package that requires native code changes.
+
+To eject from the Managed Workflow to the Bare Workflow, you can use the command:
+`npx expo eject`
+___
+
 ## 13.8. Creating Projects with the React Native CLI (no Expo)
 
 ## 13.9. Non-Expo Apps & Native Device Features
