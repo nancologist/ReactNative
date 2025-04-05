@@ -2230,6 +2230,14 @@ ___
 
 ## 13.6. Using Native Device Features with the Bare Workflow
 
+Let's see how now we can use device's Location this time with the Bare Workflow, where we need to configure more than the Managed Workflow:
+
+1. `npx expo install expo-location`
+2. https://github.com/expo/expo/tree/main/packages/expo-location#installation-in-bare-react-native-projects  
+   ![setup-expo-location-for-bare-workflow.png](setup-expo-location-for-bare-workflow.png)
+
+___
+
 ## 13.7. Ejecting To The Bare Workflow
 
 ## 13.8. Creating Projects with the React Native CLI (no Expo)
