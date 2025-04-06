@@ -2399,12 +2399,50 @@ ___
 
 ## 15.3. Adding the Expo Notifications Package
 
+https://docs.expo.dev/versions/latest/sdk/notifications/
+
 To install an empty Typescript (TS) project, you can use the following command:
 
 ```bash
 npx create-expo-app <app-name> --template blank-typescript
 ```
 
+and then you need to install the package:
+`$ npx expo install expo-notifications`
+
+Attention: Push notifications (remote notifications) functionality provided by expo-notifications will be unavailable in Expo Go from SDK 53. A development build will be required to use
+push notifications. Local notifications (in-app notifications) will remain available in Expo Go.
+
+Using `expo-notifications` in the app.json you could configure how the icon looks like, which, the color and the sound when the notification is received!
+
+```json
+{
+  "expo": {
+    ...,
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/notification_icon.png",
+          "color": "#ffffff",
+          "defaultChannel": "default",
+          "sounds": [
+            "./local/assets/notification_sound.wav",
+            "./local/assets/notification_sound_other.wav"
+          ],
+          "enableBackgroundRemoteNotifications": false
+        }
+      ]
+    ]
+  }
+}
+```
+
+anyway here we will only use the icon.
+
+Android
+Firebase Cloud Messaging credentials are required for all Android apps to receive push notifications in your app (except when testing in Expo Go). For more information, see how to
+get [FCM credentials](https://docs.expo.dev/push-notifications/push-notifications-setup#android) for your app.
 ___
 
 
