@@ -2295,6 +2295,17 @@ To configure app.json: https://docs.expo.dev/versions/latest/config/app/
 
 ___
 
+## 14.5. A quick note about the environment variables
+
+https://docs.expo.dev/eas/environment-variables/
+
+___
+
+## 14.6. Adding Icons & A Splash Screens
+
+Expo's Splash will produce icons for your app in different sizes and formats.
+___
+
 
 
 
