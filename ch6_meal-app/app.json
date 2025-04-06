@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ch6_meal-app",
+    "name": "Helmuts Meal App",
     "slug": "ch6_meal-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,9 +17,11 @@
       "**/*"
     ],
     "ios": {
+      "buildNumber": 1,
       "supportsTablet": true
     },
     "android": {
+      "versionCode": "1.0.0",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

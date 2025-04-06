@@ -2274,3 +2274,28 @@ By publishing we mean, putting the app into the google play store or apple app s
 ![img.png](img.png)
 ___
 
+## 14.3. Key Configuration items & Considerations
+
+![img_1.png](img_1.png)
+___
+
+## 14.4. Configuring App Name & Version
+
+We want to publish the Meal App which we have created in the Chapter 6. Since it's a expo managed app (Managed Workflow), we will build it with expo. For this we will use
+**Expo Application Services** (EAS) to build the app. EAS is a service provided by Expo to build and publish apps https://expo.dev/eas.
+
+To configure app.json: https://docs.expo.dev/versions/latest/config/app/
+
+* `app.json expo.name` : The name of the app that will be shown on the device and in the app store.
+* `app.json version` : The version of the app that will be shown in the app store.
+* `app.json ios.buildNumber` (string x.x.x) : The build number of the app in the apple store. It doesn't have to be the same as the version number. It should be incremented with every
+  new build.
+* `app.json android.versionCode` (integer) : The version code of the app in the google play store. It doesn't have to be the same as the version number. It should be incremented with
+  every new build.
+
+___
+
+
+
+
+
