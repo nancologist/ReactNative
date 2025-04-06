@@ -2306,6 +2306,73 @@ ___
 Expo's Splash will produce icons for your app in different sizes and formats.
 ___
 
+## 14.7. Building Expo Apps with EAS
+
+https://docs.expo.dev/build/introduction/
+
+1. First you need to create a free Expo account on expo.dev and then you can use the EAS CLI to build your app.
+2. Install the latest EAS CLI: `npm install -g eas-cli`
+3. Login to your Expo account: `eas login`
+4. Initialize EAS in your project: `eas build:configure` (Inside the project)
+
+Now we want to build application. Once for the App/Play Store and the other one to test on the device. (e.g. for Android it's an APK file and for iOS it's an IPA file). The other build
+which is suitable for the app stores is not installable on the device.
+
+We want first build the app for the test on the device, so we need the installable version first:
+
+1. for that we need to adjust the `eas.json` file first, adding `"android": {"buildType": "apk"}` to the `"build"."preview"`
+2. Now we can build the preview version for the android using: `eas build -p android --profile preview`
+3. There are lot of different questions you should answer during the build , one of them about the `Android Keystore` which you could do it manually (answer is then "no") or let the EAS
+   create this for you (answer: yes).
+
+**We could also publish the APK file manually to the android play store.**
+
+If your build fails you can review the problem and logs on your Expo.dev account.
+
+Anyway when the build is finished you can pick the .apk file from your account on expo.dev.
+
+Using **EAS Submit** you can publish your app automatically on the Google Play store or Apple Play store.
+___
+
+## 14.8. EAS for iOS (even without a Mac)
+
+... ist mir egal!
+___
+
+## 14.9. Publishing iOS Apps without EAS
+
+... ist mir egal!
+___
+
+## 14.10. Publishing Android Apps without EAS
+
+https://reactnative.dev/docs/signed-apk-android
+
+In a nutshell:
+
+1. Create the android keystore manually.
+2. setting up gradle variables (`gradle.properties`)
+3. ...
+4. At some point there will be a `app.aab` file generated. This is the signed APK file which you can upload to the Google Play Store.
+
+On Android Studio you can design and add the splash screen and icons for the app.
+___
+
+## 14.11. Configure Android Apps
+
+As shown earlier in the course (when adding native modules to non-Expo apps), you can manage certain aspects of your Android app with the AndroidManifest.xml file.
+
+There, you can configure three important things:
+
+- The **App name** as it appears on the home screen: https://stackoverflow.com/questions/5443304/how-to-change-an-android-apps-name
+
+- The **bundle identifier & package name** of the app (also requires tweaking in other files): https://developer.android.com/studio/build/application-id
+
+- The permissions of the app: https://developer.android.com/guide/topics/manifest/manifest-intro#perms
+
+You should also set an **app version** and change it with every app update. This is done in the build.gradle file, see: https://developer.android.com/studio/publish/versioning
+___
+
 
 
 
