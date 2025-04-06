@@ -2372,7 +2372,40 @@ There, you can configure three important things:
 
 You should also set an **app version** and change it with every app update. This is done in the build.gradle file, see: https://developer.android.com/studio/publish/versioning
 ___
+___
+___
 
+# 15. Push Notifications
+
+## 15.1. Module Introduction
+
+* Working with Local Notifications
+* Understanding Push Notifications
+* Example: Send + Handle Push Notifications
+
+___
+
+## 15.2. What are (Local) Notifications?
+
+* Local Notifications are notifications that are triggered by the app itself for the local device.
+* Why would we need local notifications? Why would we need to send notfications to ourself?
+    * For example, if we want to remind the user to do something in the app.
+    * For example, if we want to remind the user to do something outside of the app.
+    * For example, if we want to remind the user to do something at a specific time.
+    * For scheduling a notification to be triggered at a specific time in general.
+
+![img_2.png](img_2.png)
+___
+
+## 15.3. Adding the Expo Notifications Package
+
+To install an empty Typescript (TS) project, you can use the following command:
+
+```bash
+npx create-expo-app <app-name> --template blank-typescript
+```
+
+___
 
 
 
